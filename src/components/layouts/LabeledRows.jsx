@@ -7,8 +7,9 @@ const TOP = 265
 const BOTTOM = 990
 const TERM_WIDTH = 640
 
-export default function LabeledRows({ eyebrow, title, rows = [], accent = 'blue', slideNumber }) {
-  const rowHeight = Math.min(MAX_ROW_HEIGHT, (BOTTOM - TOP) / Math.max(rows.length, 1))
+export default function LabeledRows({ eyebrow, title, rows = [], closing, accent = 'blue', slideNumber }) {
+  const bottom = closing ? BOTTOM - 70 : BOTTOM
+  const rowHeight = Math.min(MAX_ROW_HEIGHT, (bottom - TOP) / Math.max(rows.length, 1))
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
       {rows.map((row, i) => (
@@ -23,6 +24,11 @@ export default function LabeledRows({ eyebrow, title, rows = [], accent = 'blue'
           <p className="text-[33px] text-rff-body">{row.definition}</p>
         </div>
       ))}
+      {closing && (
+        <p className="absolute text-[33px] font-bold text-rff-navy" style={{ left: 106, top: bottom + 20, width: 1708 }}>
+          {closing}
+        </p>
+      )}
     </ContentFrame>
   )
 }

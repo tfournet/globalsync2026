@@ -7,7 +7,7 @@ const ACCENT_TEXT = {
   gold: 'text-rff-gold',
 }
 
-export default function PullStatement({ eyebrow, statement, accent = 'gold' }) {
+export default function PullStatement({ eyebrow, statement, attribution, accent = 'gold' }) {
   return (
     <div className="relative h-full w-full bg-rff-dark text-white">
       <p
@@ -24,7 +24,7 @@ export default function PullStatement({ eyebrow, statement, accent = 'gold' }) {
       </p>
       <TriColorBar className="absolute" style={{ left: 106, top: 620 }} />
       <p className="absolute text-[32px] text-rff-muted-dark" style={{ left: 106, top: 930 }}>
-        {FOOTER.org}
+        {attribution || FOOTER.org}
       </p>
     </div>
   )

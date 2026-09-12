@@ -12,6 +12,7 @@ export default function ComparisonSlide({
   title,
   left,
   right,
+  closing,
   accent = 'blue',
   slideNumber,
 }) {
@@ -38,6 +39,14 @@ export default function ComparisonSlide({
           </ul>
         </div>
       ))}
+      {closing && (
+        <p
+          className="absolute text-center text-[33px] font-bold text-rff-navy"
+          style={{ left: 106, top: 910, width: 1708 }}
+        >
+          {closing}
+        </p>
+      )}
     </ContentFrame>
   )
 }
