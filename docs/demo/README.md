@@ -40,3 +40,21 @@ Notes for the deck
   Rather than spin a story about that on stage, the line was made unambiguous
   ("Do not use the phrase...") and rerun. First result of the rerun kept.
   Both outputs are in strong.json history if anyone wants the record.
+
+## Replay check
+
+`./replay.sh 3` reruns each prompt three times in fresh sessions under the
+same conditions and writes everything to `replays/`. Run on 12 September:
+
+- Weak: ticket number in the subject 3/3, placeholder sign-off 2/3, invented
+  monitoring promise 3/3, "certificate" explained to Dana 3/3. Jargon
+  passthrough (VPN/SSL/Fortigate) 0/3 this time. The Q2 flag was hidden in
+  the slide run but disclosed to Dana in 2/3 replays. The honest claim is
+  "the machine decided what to do with the Q2 flag," not "the machine hid
+  it." Notes for slide 6 say so.
+- Ask: every replay named the Q2 decision and what "on top of it" should
+  mean; 2/3 named the audience. The word "stance" appeared only in the slide
+  run. The four-item list on the slide is representative; the italic
+  punchline is one real phrasing, not the typical one.
+- Strong: 3/3 under 170 words, no jargon, no Q2, patient data, Friday,
+  signed, no "on top of it." Representative.
