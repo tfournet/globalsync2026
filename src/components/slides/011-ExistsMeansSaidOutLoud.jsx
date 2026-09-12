@@ -11,7 +11,7 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       paragraph='"We have an offboarding process." You have Mike.'
       points={[
         "It works until Mike isn't the one doing it",
-        'The list never had the CAD seats on it. Mike knew.',
+        'The list never had the Adobe seats on it. Mike knew.',
         'You find out when you reconcile the license bill',
       ]}
       cardTitle="Nothing failed"
