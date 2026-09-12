@@ -1,11 +1,5 @@
 import ContentFrame from '../chrome/ContentFrame'
 
-const ACCENT_TEXT = {
-  blue: 'text-rff-blue',
-  orange: 'text-rff-orange',
-  gold: 'text-rff-gold',
-}
-
 export default function TwoColumnSlide({
   eyebrow,
   title,
@@ -18,29 +12,31 @@ export default function TwoColumnSlide({
 }) {
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div className="grid h-full grid-cols-[1.4fr_1fr] gap-[46px]">
-        <div className="flex flex-col gap-[20px]">
-          <p className="text-[22px] leading-snug text-rff-body">{paragraph}</p>
-          <ul className="flex flex-col gap-[12px]">
-            {points.map((point, i) => (
-              <li key={i} className="text-[20px] text-rff-body/90">
-                {point}
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div className="rounded-lg bg-white p-[28px] shadow-sm">
-          <p className={`text-[18px] font-bold uppercase tracking-wide ${ACCENT_TEXT[accent]}`}>
-            {cardTitle}
-          </p>
-          <ul className="mt-[16px] flex flex-col gap-[12px]">
-            {cardItems.map((item, i) => (
-              <li key={i} className="text-[19px] text-rff-body/90">
-                {item}
-              </li>
-            ))}
-          </ul>
-        </div>
+      <p className="absolute text-[35px] leading-snug text-rff-body" style={{ left: 106, top: 265, width: 845 }}>
+        {paragraph}
+      </p>
+      <ul
+        className="absolute list-disc pl-[32px] text-[35px] leading-snug text-rff-body marker:text-rff-navy"
+        style={{ left: 106, top: 459, width: 845 }}
+      >
+        {points.map((point, i) => (
+          <li key={i} className="mt-[16px] first:mt-0">
+            {point}
+          </li>
+        ))}
+      </ul>
+      <div
+        className="absolute rounded-[4px] bg-rff-light p-[48px]"
+        style={{ left: 1066, top: 280, width: 691, height: 530 }}
+      >
+        <p className="text-[27px] font-bold uppercase text-rff-blue">{cardTitle}</p>
+        <ul className="mt-[24px] list-disc pl-[32px] text-[33px] leading-snug text-rff-body marker:text-rff-blue">
+          {cardItems.map((item, i) => (
+            <li key={i} className="mt-[16px] first:mt-0">
+              {item}
+            </li>
+          ))}
+        </ul>
       </div>
     </ContentFrame>
   )

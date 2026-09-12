@@ -1,27 +1,28 @@
 import ContentFrame from '../chrome/ContentFrame'
 
-const ACCENT_TEXT = {
-  blue: 'text-rff-blue',
-  orange: 'text-rff-orange',
-  gold: 'text-rff-gold',
-}
+const TERM_COLOR = ['text-rff-navy', 'text-rff-blue']
+const ROW_BG = ['bg-rff-light', 'bg-white']
+const MAX_ROW_HEIGHT = 203
+const TOP = 265
+const BOTTOM = 990
+const TERM_WIDTH = 640
 
 export default function LabeledRows({ eyebrow, title, rows = [], accent = 'blue', slideNumber }) {
+  const rowHeight = Math.min(MAX_ROW_HEIGHT, (BOTTOM - TOP) / Math.max(rows.length, 1))
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div className="flex h-full flex-col justify-center overflow-hidden rounded-lg">
-        {rows.map((row, i) => (
-          <div
-            key={i}
-            className={`grid grid-cols-[1fr_2fr] gap-[28px] px-[24px] py-[18px] ${
-              i % 2 === 0 ? 'bg-white' : 'bg-transparent'
-            }`}
-          >
-            <p className={`text-[20px] font-bold ${ACCENT_TEXT[accent]}`}>{row.term}</p>
-            <p className="text-[19px] text-rff-body/90">{row.definition}</p>
-          </div>
-        ))}
-      </div>
+      {rows.map((row, i) => (
+        <div
+          key={i}
+          className={`absolute flex items-center ${ROW_BG[i % 2]}`}
+          style={{ left: 106, right: 106, top: TOP + i * rowHeight, height: rowHeight }}
+        >
+          <p className={`text-[37px] font-bold ${TERM_COLOR[i % 2]}`} style={{ width: TERM_WIDTH, flexShrink: 0 }}>
+            {row.term}
+          </p>
+          <p className="text-[33px] text-rff-body">{row.definition}</p>
+        </div>
+      ))}
     </ContentFrame>
   )
 }

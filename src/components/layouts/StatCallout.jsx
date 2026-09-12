@@ -1,10 +1,12 @@
 import ContentFrame from '../chrome/ContentFrame'
 
-const ACCENT_TEXT = {
-  blue: 'text-rff-blue',
-  orange: 'text-rff-orange',
-  gold: 'text-rff-gold',
-}
+const FIGURE_COLORS = ['text-rff-blue', 'text-rff-orange', 'text-rff-navy']
+
+const GAP = 42
+const COL_WIDTH = (1708 - 2 * GAP) / 3
+const COL_X = [106, 106 + COL_WIDTH + GAP, 106 + 2 * (COL_WIDTH + GAP)]
+const TOP = 340
+const HEIGHT = 530
 
 export default function StatCallout({
   eyebrow,
@@ -17,20 +19,29 @@ export default function StatCallout({
 }) {
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div className="flex h-full flex-col justify-center gap-[28px]">
-        {intro && <p className="text-[20px] text-rff-body/80">{intro}</p>}
-        <div className="grid grid-cols-3 gap-[28px]">
-          {stats.map((stat, i) => (
-            <div key={i} className="rounded-lg bg-white p-[24px] text-center shadow-sm">
-              <p className={`text-[64px] font-bold ${ACCENT_TEXT[accent]}`}>{stat.value}</p>
-              <p className="mt-[8px] text-[18px] text-rff-body/80">{stat.label}</p>
-            </div>
-          ))}
+      {intro && (
+        <p className="absolute text-[35px] text-rff-body" style={{ left: 106, top: 265, width: 1708 }}>
+          {intro}
+        </p>
+      )}
+      {stats.map((stat, i) => (
+        <div
+          key={i}
+          className="absolute flex flex-col items-center justify-center rounded-[4px] bg-rff-light text-center"
+          style={{ left: COL_X[i], top: TOP, width: COL_WIDTH, height: HEIGHT }}
+        >
+          <p className={`text-[128px] font-bold ${FIGURE_COLORS[i % FIGURE_COLORS.length]}`}>{stat.value}</p>
+          <p className="mt-[16px] text-[32px] text-rff-body">{stat.label}</p>
         </div>
-        {takeaway && (
-          <p className="text-[20px] font-bold text-rff-navy">Takeaway: {takeaway}</p>
-        )}
-      </div>
+      ))}
+      {takeaway && (
+        <p
+          className="absolute text-[33px] font-bold text-rff-navy"
+          style={{ left: 106, top: 900, width: 1708 }}
+        >
+          Takeaway: {takeaway}
+        </p>
+      )}
     </ContentFrame>
   )
 }

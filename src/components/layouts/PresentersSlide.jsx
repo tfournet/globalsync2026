@@ -1,31 +1,37 @@
 import ContentFrame from '../chrome/ContentFrame'
 
+const GAP = 42
+const COL_WIDTH = (1708 - 2 * GAP) / 3
+const COL_X = [106, 106 + COL_WIDTH + GAP, 106 + 2 * (COL_WIDTH + GAP)]
+const TOP = 265
+const HEIGHT = 590
+
 export default function PresentersSlide({ eyebrow, title, presenters = [], accent = 'blue', slideNumber }) {
+  const single = presenters.length === 1
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div className="grid h-full grid-cols-3 gap-[28px]">
-        {presenters.map((p, i) => (
-          <div key={i} className="flex flex-col items-center gap-[12px] rounded-lg bg-white p-[24px] text-center shadow-sm">
-            {p.headshot ? (
-              <img
-                src={p.headshot}
-                alt={p.name}
-                className="h-[120px] w-[120px] rounded-full object-cover"
-              />
-            ) : (
-              <div className="flex h-[120px] w-[120px] items-center justify-center rounded-full bg-rff-light text-[30px] font-bold text-rff-navy">
-                {p.name
-                  .split(' ')
-                  .map((n) => n[0])
-                  .join('')}
-              </div>
-            )}
-            <p className="text-[20px] font-bold text-rff-navy">{p.name}</p>
-            <p className="text-[16px] font-bold text-rff-blue">{p.role}</p>
-            <p className="text-[16px] text-rff-body/80">{p.bio}</p>
-          </div>
-        ))}
-      </div>
+      {presenters.map((p, i) => (
+        <div
+          key={i}
+          className="absolute flex flex-col rounded-[4px] bg-rff-light p-[53px]"
+          style={
+            single
+              ? { left: 106, top: TOP, width: COL_WIDTH, height: HEIGHT }
+              : { left: COL_X[i], top: TOP, width: COL_WIDTH, height: HEIGHT }
+          }
+        >
+          {p.headshot && (
+            <img
+              src={p.headshot}
+              alt={p.name}
+              className="mb-[24px] h-[160px] w-[160px] rounded-full object-cover"
+            />
+          )}
+          <p className="text-[45px] font-bold text-rff-navy">{p.name}</p>
+          <p className="mt-[8px] text-[29px] font-bold text-rff-blue">{p.role}</p>
+          <p className="mt-[16px] text-[32px] text-rff-body">{p.bio}</p>
+        </div>
+      ))}
     </ContentFrame>
   )
 }

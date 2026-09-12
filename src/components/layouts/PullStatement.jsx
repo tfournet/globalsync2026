@@ -9,13 +9,23 @@ const ACCENT_TEXT = {
 
 export default function PullStatement({ eyebrow, statement, accent = 'gold' }) {
   return (
-    <div className="relative flex h-full w-full flex-col justify-center gap-[24px] bg-rff-dark px-[120px] text-white">
-      <p className={`text-[20px] font-bold uppercase tracking-[0.15em] ${ACCENT_TEXT[accent]}`}>
+    <div className="relative h-full w-full bg-rff-dark text-white">
+      <p
+        className={`absolute text-[29px] font-bold uppercase tracking-[0.15em] ${ACCENT_TEXT[accent]}`}
+        style={{ left: 106, top: 210 }}
+      >
         {eyebrow}
       </p>
-      <p className="max-w-[920px] text-[44px] font-bold leading-snug">{statement}</p>
-      <TriColorBar />
-      <p className="text-[18px] opacity-60">{FOOTER.org}</p>
+      <p
+        className="absolute text-[72px] font-bold leading-[1.15]"
+        style={{ left: 106, top: 327, width: 1613 }}
+      >
+        {statement}
+      </p>
+      <TriColorBar className="absolute" style={{ left: 106, top: 620 }} />
+      <p className="absolute text-[32px] text-rff-muted-dark" style={{ left: 106, top: 930 }}>
+        {FOOTER.org}
+      </p>
     </div>
   )
 }

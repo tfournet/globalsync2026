@@ -1,11 +1,5 @@
 import ContentFrame from '../chrome/ContentFrame'
 
-const ACCENT_TEXT = {
-  blue: 'text-rff-blue',
-  orange: 'text-rff-orange',
-  gold: 'text-rff-gold',
-}
-
 export default function ChartSlide({
   eyebrow,
   title,
@@ -17,17 +11,16 @@ export default function ChartSlide({
 }) {
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div className="grid h-full grid-cols-[2fr_1fr] gap-[32px]">
-        <div className="flex items-center justify-center rounded-lg bg-white p-[24px] shadow-sm">
-          {children}
-        </div>
-        <div className="rounded-lg bg-white p-[24px] shadow-sm">
-          <p className={`text-[18px] font-bold uppercase tracking-wide ${ACCENT_TEXT[accent]}`}>
-            Read this chart
-          </p>
-          <p className="mt-[12px] text-[19px] text-rff-body/90">{readThis}</p>
-          {source && <p className="mt-[20px] text-[14px] text-rff-body/50">{source}</p>}
-        </div>
+      <div className="absolute" style={{ left: 106, top: 265, width: 1220, height: 600 }}>
+        {children}
+      </div>
+      <div
+        className="absolute flex flex-col rounded-[4px] bg-rff-light p-[32px]"
+        style={{ left: 1325, top: 265, width: 490, height: 590 }}
+      >
+        <p className="text-[27px] font-bold uppercase text-rff-blue">Read this chart</p>
+        <p className="mt-[16px] text-[32px] text-rff-body">{readThis}</p>
+        {source && <p className="mt-auto text-[27px] text-rff-muted">{source}</p>}
       </div>
     </ContentFrame>
   )

@@ -11,12 +11,12 @@ export default function DataTable({
 }) {
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div className="flex h-full flex-col justify-center gap-[16px]">
-        <table className="w-full border-collapse overflow-hidden rounded-lg text-[18px]">
+      <div className="absolute" style={{ left: 106, top: 288, width: 1707 }}>
+        <table className="w-full border-collapse text-[33px]">
           <thead>
             <tr className="bg-rff-navy text-white">
               {columns.map((col, i) => (
-                <th key={i} className="px-[20px] py-[12px] text-left font-bold">
+                <th key={i} className="border border-rff-gray-line px-[28px] py-[20px] text-left font-bold">
                   {col}
                 </th>
               ))}
@@ -26,7 +26,7 @@ export default function DataTable({
             {rows.slice(0, 6).map((row, i) => (
               <tr key={i} className={i % 2 === 0 ? 'bg-white' : 'bg-rff-light'}>
                 {row.map((cell, j) => (
-                  <td key={j} className="px-[20px] py-[12px] text-rff-body/90">
+                  <td key={j} className="border border-rff-gray-line px-[28px] py-[20px] text-rff-body">
                     {cell}
                   </td>
                 ))}
@@ -34,7 +34,7 @@ export default function DataTable({
             ))}
           </tbody>
         </table>
-        {note && <p className="text-[16px] text-rff-body/60">{note}</p>}
+        {note && <p className="mt-[20px] text-[29px] text-rff-muted">{note}</p>}
       </div>
     </ContentFrame>
   )
