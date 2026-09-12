@@ -7,7 +7,7 @@ export default function Automatons() {
       eyebrow="Where we are"
       accent="blue"
       statement="We built computers to do the work. Then we became the automatons."
-      attribution="Open one app. Read it. Type into another. Repeat until five."
+      attribution="Open one app. Read it. Type into another. Somebody has to, because nobody wrote down the rule."
     />
   )
 }
