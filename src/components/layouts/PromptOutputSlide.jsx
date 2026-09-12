@@ -18,14 +18,13 @@ const EXTRA_LINE_SPACE = 70
 const QUOTED_LINE_SPACE = 110
 
 // Pick a contiguous run of source lines. `lines` is [from, to) over the text
-// split on newlines; omitted means the whole text. Markers say when the panel
-// is a window into something longer, so the slide never pretends the model
-// said less than it did.
+// split on newlines; omitted means the whole text. Windows are not marked on
+// the slide; the full text lives in src/data/demo.js and docs/demo/.
 function sliceLines(text, lines) {
   const all = text.split('\n')
-  if (!lines) return { lines: all, before: false, after: false }
+  if (!lines) return { lines: all }
   const [from, to] = lines
-  return { lines: all.slice(from, to), before: from > 0, after: to < all.length }
+  return { lines: all.slice(from, to) }
 }
 
 // Chat UIs render **bold** as bold; literal asterisks on a slide read as noise.
@@ -91,11 +90,7 @@ function Panel({ label, labelClass, text, lines, fontSize, columns, style }) {
       <div className="mt-[24px] min-h-0 flex-1 overflow-hidden">
         <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} />
       </div>
-      {(w.before || w.after) && (
-        <p className="mt-[12px] shrink-0 text-[22px] text-rff-muted">
-          {w.before && w.after ? 'excerpt' : w.before ? 'from the middle' : 'continues'}
-        </p>
-      )}
+
     </div>
   )
 }
