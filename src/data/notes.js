@@ -1,21 +1,21 @@
 // Presenter notes keyed by slide id. Kept separate from slide content so the
 // speaker-facing script can be edited without touching slide markup.
+// Target minute marks are cumulative from a 0:00 start of the 30 minute slot;
+// the outline's per-beat minutes sum to about 22, the rest is buffer.
 export const notes = {
-  cover: 'Welcome the room. Confirm this follows Henry\'s framing: people and margin break first.',
-  agenda: 'Move fast here. Thirty minutes total, this is the map, not the talk.',
-  'section-people': 'Land the constraint before the mechanics: headcount is not the lever.',
-  'two-column': 'Ask for a show of hands: who has a runbook that only lives in one head.',
-  'three-up': 'These three moves are sequential, not a menu. Say that explicitly.',
-  'labeled-rows': 'Slow down on runbook vs automation coverage, that distinction lands later.',
-  'stat-callout': 'These are illustrative. Swap in real numbers once the case study is confirmed.',
-  break: 'Not used in the live 30 minute slot. Keep for rehearsal and longer versions of this talk.',
-  'section-margin': 'Second half. Pull the room back from process into money.',
-  comparison: 'Read both columns aloud, do not just point at them.',
-  'process-flow': 'Emphasize step four. Most rooms do steps one through three and skip review.',
-  'data-table': 'Do not read every row. Point at patch failure follow-up as the outlier.',
-  chart: 'Pause here. Let them read the chart before you say anything.',
-  'pull-statement': 'Let this sit in silence for two full seconds before moving on.',
-  'pillar-grid': 'Quick beat, this is RFF context not our content. Keep it short.',
-  presenters: 'One breath. Name, company, one sentence, move on.',
-  closing: 'End on the Table 3 handoff, not a thank you. Point at the room.',
+  cover: 'Target 0:00. No verbatim line, this is the open. Land straight after Dawn and Dave\'s people-and-margin framing, do not re-explain it. Welcome the room and go.',
+  reflex: 'Target 0:30. No verbatim line. Name the hire as the default fix and cut it down fast: it is slow, it inherits the broken loop, it makes margin worse. Land on the reframe, the constraint was never headcount.',
+  'demo-weak': 'Target 2:30. Line to land: AI didn\'t fail to read your mind. It did exactly what you wrote. Let the weak output sit on screen a beat before saying it, the room should recognize the mediocrity themselves.',
+  'demo-strong': 'Target 5:30. Line to land: Your team has been covering for vague requests for years. AI is the first hire that won\'t. Point at the specificity in the brief, that is the whole lesson.',
+  'demo-ask': 'Target 7:30. No line to drop here, this is the practical takeaway. Read the missing pieces quickly, then land on the footnote: try this tonight on the last answer that disappointed you.',
+  'divider-articulation': 'Target 9:30. Quick transition into part one, articulation. One breath, then move.',
+  'aharons-law': 'Target 10:00. Line to land: you can\'t automate a process that doesn\'t exist, Aharon\'s first law. Let it sit in silence for two full seconds before moving on.',
+  'we-have-a-process': 'Target 10:30. Line to land: hire for the exception, automate the rule. Ask the room the closing question instead of telling a story, let owners answer in their heads, that lands harder than a stranger\'s numbers.',
+  'divider-where-ai-belongs': 'Target 13:30. Quick transition into part two, where AI belongs.',
+  'deterministic-vs-probabilistic': 'Target 14:00. Line to land: you already run a probabilistic system, it\'s called a tech at 4pm on a Tuesday, measure both. Read both columns aloud, do not just point at them.',
+  'guardrail-sandwich': 'Target 16:00. Callback to Right of Boom, two minutes not eight. Emphasize the check step, most rooms do gather, validate, draft and skip it. Land on: the AI never touches the customer or the system of record unguarded.',
+  'honest-limit': 'Target 19:00. Line to land: the cost of AI isn\'t tokens, it\'s review. Sets up Bradley Gross on contracts at 3:15: a client can\'t audit a vibe, they can audit a log.',
+  'what-you-do-with-the-hours': 'Target 21:00. Line to land: your best ticket-note writer is your best automation engineer. The goal is not fewer conversations, it is conversations where the human is present with the right data at the right speed.',
+  'one-action': 'Target 23:00. End on the Table 3 handoff, not a thank you. Point at the room. One hour, one page, bring it to the table.',
+  presenter: 'Target 24:00. One breath. Name, company, one sentence, move on. Roughly 5:30 left as buffer before the hard stop.',
 }
