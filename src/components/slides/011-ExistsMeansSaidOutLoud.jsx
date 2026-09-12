@@ -15,11 +15,11 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
         'The covering tech meant Microsoft',
         'Nine Adobe seats, billed for a year',
       ]}
-      cardTitle="Same failure as the email"
+      cardTitle="The cost, and the fix"
       cardItems={[
-        '"On top of it" lived in your head',
-        '"Software licenses" lived in Mike\'s',
-        'Neither was ever said out loud',
+        'A senior tech who cannot take vacation',
+        'Every offboarding done twice',
+        'One hour with Mike. Write down which licenses.',
       ]}
     />
   )
