@@ -20,15 +20,12 @@ export default function PresentersSlide({ eyebrow, title, presenters = [], accen
               : { left: COL_X[i], top: TOP, width: COL_WIDTH, height: HEIGHT }
           }
         >
-          {p.headshot ? (
+          {p.headshot && (
             <img
               src={p.headshot}
               alt={p.name}
               className="mb-[24px] h-[160px] w-[160px] rounded-full object-cover"
             />
-          ) : (
-            // TODO headshot
-            <div className="mb-[24px] h-[160px] w-[160px] rounded-full bg-rff-gray-line" />
           )}
           <p className="text-[45px] font-bold text-rff-navy">{p.name}</p>
           <div className="mt-[8px] flex items-center">
