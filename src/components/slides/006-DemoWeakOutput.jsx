@@ -13,8 +13,8 @@ export default function DemoWeakOutput({ slideNumber }) {
       slideNumber={slideNumber}
       only="output"
       output={weakOutput}
-      outputLines={[0, 9]}
-      outputFontSize={34}
+      outputFontSize={24}
+      outputColumns={2}
       punchline="You pasted the ticket. It decided what the client hears."
     />
   )
