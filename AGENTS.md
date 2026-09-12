@@ -61,6 +61,28 @@ Minimums against that canvas, do not go below these:
 - Eyebrow label: 18px
 - Stat figure: 56px
 
+## Type scale
+
+Matched to the RFF template pptx (1440x810pt source, x1.333 to reach the
+1920x1080 canvas). All sizes in px on that canvas.
+
+| Element | Size | Weight | Notes |
+|---|---|---|---|
+| Eyebrow label | 27px | bold | uppercase, tracking 0.12em |
+| Slide title | 75px | bold | navy, leading 1.1 |
+| Lead paragraph / bullets | 35px | regular | two-column body copy |
+| Card body | 33px | regular | inside `#F5F5F7` cards |
+| Card eyebrow (e.g. "What Good Looks Like") | 27px | bold | uppercase, always blue |
+| Footer | 23px | regular | org + slide number in `rff-muted`, URL in `rff-blue` |
+| Stat figure | 128px | bold | stat callout cards |
+| Section divider title | 107px | bold | leading 1.05 |
+| Cover title | 88px | bold | max two lines |
+| Pull statement | 72px | bold | leading 1.15 |
+
+Left/right content margin is 106px. Eyebrow sits at y=48, title top at
+y=96, content area starts at y=265, footer baseline region is y=1000-1030.
+Cards use `#F5F5F7` fill, no shadow, `rounded-[4px]` at most, 48px padding.
+
 The existing layout components in `src/components/layouts/` already respect
 these. If you add a new layout, match the sizing pattern already in use
 rather than inventing a new scale.

@@ -28,12 +28,20 @@ npm run dev      # http://localhost:1745
 | `ArrowLeft` | Previous slide |
 | `Home` / `End` | Jump to first / last slide |
 | Number keys, then `Enter` | Jump to slide N |
-| `N` | Toggle presenter notes drawer |
+| `N` | Toggle the presenter HUD (slide index, timer, notes) |
+| `G` | Toggle the slide overview grid |
 | `T` | Start or stop the timer |
 | `R` | Reset the timer |
 | `B` | Jump to the break slide |
 | `F` | Toggle fullscreen |
-| `Escape` | Close the presenter notes drawer |
+| `Escape` | Close the presenter HUD or the slide overview grid |
+
+The presenter HUD is a drawer in the bottom right corner of the stage. When
+the timer is running and the HUD is hidden, a small dot in the bottom right
+corner of the viewport shows the timer state at a glance (its color turns
+orange at 25 minutes and red at 30). The slide overview grid shows every
+slide as a scaled-down thumbnail; click one, or focus it and press `Enter`,
+to jump straight to it.
 
 The current slide is reflected in the URL as `#/7`, so reloading or sharing
 a link returns to the same slide.

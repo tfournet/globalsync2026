@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "pdf": "node scripts/generate-pdf.js",
+    "screenshots": "node scripts/screenshots.js",
     "lint:copy": "node scripts/lint-copy.js",
     "test": "node scripts/lint-copy.js && vitest run"
   },
@@ -18,7 +19,7 @@
   "devDependencies": {
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.1.0",
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^5.0.0",
     "@tailwindcss/vite": "^4.0.0",
     "jsdom": "^25.0.1",
     "playwright": "^1.49.1",
