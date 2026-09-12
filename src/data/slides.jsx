@@ -8,15 +8,16 @@ import DemoAsk from '../components/slides/007-DemoAsk.jsx'
 import DemoBrief from '../components/slides/008-DemoBrief.jsx'
 import DemoStrong from '../components/slides/009-DemoStrong.jsx'
 import AharonsLaw from '../components/slides/010-AharonsLaw.jsx'
-import TheWrongThings from '../components/slides/011-TheWrongThings.jsx'
-import WhereDeliveryLeaks from '../components/slides/012-WhereDeliveryLeaks.jsx'
-import DividerWhereAiBelongs from '../components/slides/013-DividerWhereAiBelongs.jsx'
-import DeterministicVsProbabilistic from '../components/slides/014-DeterministicVsProbabilistic.jsx'
-import GuardrailSandwich from '../components/slides/015-GuardrailSandwich.jsx'
-import HonestLimit from '../components/slides/016-HonestLimit.jsx'
-import TheMore from '../components/slides/017-TheMore.jsx'
-import OneAction from '../components/slides/018-OneAction.jsx'
-import Presenter from '../components/slides/019-Presenter.jsx'
+import ExistsMeansSaidOutLoud from '../components/slides/011-ExistsMeansSaidOutLoud.jsx'
+import TheWrongThings from '../components/slides/012-TheWrongThings.jsx'
+import WhereDeliveryLeaks from '../components/slides/013-WhereDeliveryLeaks.jsx'
+import DividerWhereAiBelongs from '../components/slides/014-DividerWhereAiBelongs.jsx'
+import DeterministicVsProbabilistic from '../components/slides/015-DeterministicVsProbabilistic.jsx'
+import GuardrailSandwich from '../components/slides/016-GuardrailSandwich.jsx'
+import HonestLimit from '../components/slides/017-HonestLimit.jsx'
+import TheMore from '../components/slides/018-TheMore.jsx'
+import OneAction from '../components/slides/019-OneAction.jsx'
+import Presenter from '../components/slides/020-Presenter.jsx'
 
 // Ordered slide registry. Each slide component owns its own content
 // (see AGENTS.md); this file only wires order, identity, and notes.
@@ -31,6 +32,7 @@ export const slides = [
   { id: 'demo-brief', component: DemoBrief, notesKey: 'demo-brief' },
   { id: 'demo-strong', component: DemoStrong, notesKey: 'demo-strong' },
   { id: 'aharons-law', component: AharonsLaw, notesKey: 'aharons-law' },
+  { id: 'exists-means-said-out-loud', component: ExistsMeansSaidOutLoud, notesKey: 'exists-means-said-out-loud' },
   { id: 'the-wrong-things', component: TheWrongThings, notesKey: 'the-wrong-things' },
   { id: 'where-delivery-leaks', component: WhereDeliveryLeaks, notesKey: 'where-delivery-leaks' },
   { id: 'divider-where-ai-belongs', component: DividerWhereAiBelongs, notesKey: 'divider-where-ai-belongs' },
