@@ -34,13 +34,13 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Beats and slides
 
-Roughly 16 slides, one accent per slide, layouts from the RFF template.
+Roughly 17 slides, one accent per slide, layouts from the RFF template.
 
 ### 1. Cover (dark cover)
 Doing More Without Adding Bodies. Tim Fournet, Rewst. Global Sync Meetup NYC, 17 September 2026.
 
 ### 2. The reflex (two-column, blue) about 1.5 min
-You just heard people and margin break first. The reflex is a hire. The hire is slow, expensive, and inherits the same broken loop. The constraint was never headcount; it is that intent gets lost every time it changes hands.
+You just heard people and margin break first. You feel it in delivery. The reflex is a hire. The hire is slow, expensive, and inherits the same broken loop. The constraint was never headcount; it is that intent gets lost every time it changes hands.
 
 ### 3. The real constraint (labeled rows, blue) about 2 min
 The thesis, before the word AI is spoken. Four human handoffs the room lived through this quarter: the redo (tech copied last time, nobody said last time was wrong), the escalation (ticket bounced three times, each person guessed), the angry client (they expected Tuesday, nobody said Thursday out loud), the owner (you know what done looks like, it lives only in your head).
@@ -68,28 +68,31 @@ It means "we have a person." First automation attempt is the first honest audit:
 Ask the room: when did you last watch your best tech do the thing you think you have a process for?
 Line: Hire for the exception. Automate the rule.
 
-### 10. Divider: Where AI belongs (dark divider, gold, Innovation)
+### 10. Where delivery leaks first (agenda layout, orange) about 2 min
+The tactical slide for Henry's delivery lane and the seed list for Table 3. Six recurring delivery processes, each with the one sentence that must exist before it can be automated: new user onboarding (what done looks like, per client, per role); offboarding (the checklist, and who confirms it); alert triage (the rule for noise, and who owns the rest); access requests (the identity check you actually do); client status updates (who gets told, when, in what words); license reconciliation (the source of truth, and the tolerance). Say: pick one.
 
-### 11. Deterministic vs probabilistic (comparison, gold) about 2 min
+### 11. Divider: Where AI belongs (dark divider, gold, Innovation)
+
+### 12. Deterministic vs probabilistic (comparison, gold) about 2 min
 Automation: same input, same output, cheap, auditable. AI: pattern, summary, draft, messy in, structured out; not the decision, not the record.
 Line: You already run a probabilistic system. It's called a tech at 4pm on a Tuesday. Measure both, then decide.
 
-### 12. The Guardrail Sandwich (process flow, gold) about 3 min
+### 13. The Guardrail Sandwich (process flow, gold) about 3 min
 Callback to Right of Boom, two minutes not eight. Deterministic in (gather, validate), probabilistic middle (classify, summarize, draft), deterministic out (check shape, approve, log). The AI never touches the customer or the system of record unguarded.
 
-### 13. The honest limit (two-column, gold) about 2 min
+### 14. The honest limit (two-column, gold) about 2 min
 The cost of AI isn't tokens, it's review. If you can't verify output cheaply, it isn't cheaper than a human, it's a human plus a subscription.
 Line: Determinism is something you can sell. A client can't audit a vibe; they can audit a log. (Sets up Bradley Gross on contracts at 3:15.)
 
-### 14. What you do with the hours (pull statement or two-column, blue) about 2 min
+### 15. What you do with the hours (pull statement or two-column, blue) about 2 min
 The goal is not fewer conversations, it is conversations where the human is present. Right data, right speed: automation delivers the human to the decision with everything already in front of them. Then point the same method at your customers' manual work; that is the growth story.
 Line: Your best ticket-note writer is your best automation engineer. Promote for it.
 
-### 15. One action for the next 30 days (closing layout, dark) about 1 min
-Sit with your best tech for one hour. Have them write down what they actually do when X happens. Notice how much of it you didn't know. Bring the page to Table 3.
+### 16. One action for the next 30 days (closing layout, dark) about 1 min
+Pick one process from the six. Sit with your best tech for an hour. Write down what they actually do. Bring the page to Table 3, Delivery and automation.
 Ecosystem line and copyright per RFF template.
 
-### 16. Presenters (single presenter variant)
+### 17. Presenters (single presenter variant)
 Headshot, Tim Fournet, title, one line, Rewst logo small next to the company name. Contact.
 
 ## Lines to drop verbatim, once each
@@ -105,6 +108,10 @@ Headshot, Tim Fournet, title, one line, Rewst logo small next to the company nam
 - If you can't write the rule, you can't hire your way out of it either.
 
 Six or seven in 30 minutes is the ceiling. No summary slide repeating them.
+
+## Delivery lane
+
+Henry's five buckets: the Sizers take people and margin, the fireside takes the founder, Bradley takes legal. This talk is delivery by position and by evidence (every example is a delivery failure), but the theme is one level up: intent transfer is the constraint. Slide 2 names the lane, slide 10 makes it tactical, the close points at Table 3. Do not turn it into a build workshop.
 
 ## Not in this talk
 
