@@ -20,7 +20,7 @@ const EXTRA_LINE_SPACE = 70
 // split on newlines; omitted means the whole text. Markers say when the panel
 // is a window into something longer, so the slide never pretends the model
 // said less than it did.
-function window(text, lines) {
+function sliceLines(text, lines) {
   const all = text.split('\n')
   if (!lines) return { lines: all, before: false, after: false }
   const [from, to] = lines
@@ -80,7 +80,7 @@ function Paragraphs({ lines, fontSize, columns }) {
 }
 
 function Panel({ label, labelClass, text, lines, fontSize, columns, style }) {
-  const w = window(text, lines)
+  const w = sliceLines(text, lines)
   return (
     <div
       className="absolute flex flex-col overflow-hidden rounded-[4px] bg-rff-light p-[40px]"
