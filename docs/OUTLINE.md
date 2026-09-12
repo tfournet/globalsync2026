@@ -12,7 +12,7 @@ Room: up to 100 MSP business owners, one track, hard stop, no product pitches
 
 ## Thesis
 
-Computers are automation tools, not automation recipients. We built them to do the work and became the automatons instead, because we abdicate rather than delegate: we hand over the work and the definition of done, then grade the result against the version in our heads. We did it to our techs for years and blamed the tech. AI made the habit visible because it hands the wrong result back in eight seconds with the request still on the screen. The remedy is the same for a tech, a workflow, and a model: say what good looks like. Then aim the machinery at the automaton work, yours first and then your customers', and spend the hours being present with them.
+Computers are automation tools, not automation recipients. We built them to do the work and became the automatons instead, because we abdicate rather than delegate: we hand over the work and the definition of done, then grade the result against the version in our heads. We got away with it because the best tech filled in what we meant; the habit only shows when the brief reaches someone without the context: the new hire, the vendor, the machine. AI made it visible because it has no context to fill in with and hands the result back in eight seconds with the request still on the screen. The remedy is the same for a tech, a workflow, and a model: say what good looks like. Then aim the machinery at the automaton work, yours first and then your customers', and spend the hours being present with them.
 
 Closing line: If you can't write the rule, you can't hire your way out of it either.
 
@@ -36,7 +36,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 1. Cover
 2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another, repeat until five.
-3. We abdicate, we think we delegate (comparison). Delegate: hand over the work, keep the definition of done, say what good looks like. Abdicate: hand over both, grade against the version in your head, blame the receiver. We did this to our techs for years; the wrong result came back a week later so we blamed the tech.
+3. We abdicate, we think we delegate (comparison). Delegate: hand over the work, keep the definition of done, say what good looks like. Abdicate: hand over both, grade against the version in your head, get away with it until you don't. The mechanism: the best tech fills in what you meant, so the vague brief works and you never learn it was vague. The new hire gets the same brief and no context, and you decide the new hire is not working out. Closing: your best tech has been filling in the blanks for years. The new hire couldn't. Neither can this.
 4. The demo never had a client (two-column). Every AI keynote is one sentence then magic; it works because the presenter has no stake in which game he gets. Then you go home and ask for a client email where every detail is the job. No vendor names. Twenty seconds.
 5. Abdicating to a machine (full-width ask). What everyone actually does: one line ("Write an email to the client about this. Apologize and let them know we're on top of it.") above a pasted PSA ticket. The ticket has everything a tech needs: full waiting room, FGT-60F, Phase 1, DigiCert, and the aside that this cert was flagged in the Q2 review and nobody approved the renewal. Every fact.
 6. What the client would have received (full-width output, whole, two columns). Ticket number in the subject. Incident-report headers. Placeholder sign-off. And in blue, the machine's own sentence to Dana: this certificate had actually been flagged for renewal in our Q2 review, and we're correcting the gap that let it lapse. The one line in the ticket you would never put in front of a client, now in an email she forwards to the practice owner. Reran it three times: disclosed twice, hidden once, you did not get a vote either way. Line: you pasted the ticket, it told your client what you never approved. Then: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
@@ -53,13 +53,14 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 16. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
 17. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
 18. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
-19. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down what done looks like. That is delegating. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
+19. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down everything they fill in that you never said. That is your definition of done. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
 20. Presenter.
 
 ## Lines to drop verbatim, once each
 
 - We built computers to do the work. Then we became the automatons.
 - Delegating is handing over the work and keeping the definition of done. Abdicating is handing over both.
+- Your best tech has been filling in the blanks for years. The new hire couldn't. Neither can this.
 - The demo never had a client.
 - It did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
 - Same tool. Same task. The only thing that changed was how you asked.

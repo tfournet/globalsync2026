@@ -13,9 +13,9 @@ export default function AbdicateNotDelegate({ slideNumber }) {
       }}
       right={{
         heading: 'Abdicate',
-        items: ['Hand over both', 'Grade against the version in your head', 'Blame the receiver'],
+        items: ['Hand over both', 'Grade against the version in your head', 'Get away with it, until you don\'t'],
       }}
-      closing="We have done this to our techs for years. The wrong result came back a week later, so we blamed the tech."
+      closing="Your best tech has been filling in the blanks for years. The new hire couldn't. Neither can this."
     />
   )
 }
