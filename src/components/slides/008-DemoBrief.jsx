@@ -7,7 +7,7 @@ export default function DemoBrief({ slideNumber }) {
   return (
     <PromptOutputSlide
       eyebrow="The second try"
-      title="Say it the way you would say it to your best tech"
+      title="Now with the judgment calls"
       accent="blue"
       slideNumber={slideNumber}
       only="prompt"
