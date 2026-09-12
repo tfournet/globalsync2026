@@ -10,7 +10,7 @@ export default function ClosingSlide({
 }) {
   return (
     <div className="relative flex h-full w-full flex-col items-center justify-center gap-[24px] bg-rff-navy px-[120px] text-center text-white">
-      <RffLogo className="h-[282px] w-[282px]" />
+      <RffLogo variant="badge" className="h-[282px] w-[282px]" />
       <h1 className="text-[85px] font-bold">{title}</h1>
       <TriColorBar />
       {action && <p className="max-w-[1400px] text-[37px] text-rff-light-text">{action}</p>}

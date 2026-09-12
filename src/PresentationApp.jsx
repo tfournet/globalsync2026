@@ -180,7 +180,7 @@ export default function PresentationApp() {
       </div>
 
       {showHud && (
-        <div className="absolute bottom-0 right-0 flex w-[480px] flex-col gap-[10px] rounded-[4px] bg-white p-[24px] text-rff-body shadow-2xl">
+        <div className="absolute bottom-[24px] right-[24px] flex w-[480px] flex-col gap-[10px] rounded-[4px] bg-white/95 p-[24px] text-rff-body shadow-2xl">
           <p className="text-[16px] font-bold text-rff-navy">
             Slide {index + 1} of {slides.length}
           </p>
@@ -201,7 +201,7 @@ export default function PresentationApp() {
       )}
 
       {showGrid && (
-        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 p-[40px]">
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-rff-dark p-[40px]">
           <div className="grid grid-cols-4 gap-[24px]">
             {slides.map((s, i) => {
               const SlideComponent = s.component

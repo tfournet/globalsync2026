@@ -40,6 +40,7 @@ export default function SectionDivider({
         </p>
       )}
       <RffLogo
+        variant={dark ? 'badge' : 'rocket'}
         className={dark ? 'absolute bottom-[80px] right-[106px] h-[192px] w-[192px]' : 'absolute bottom-[80px] right-[106px] h-[282px] w-[282px]'}
       />
     </div>

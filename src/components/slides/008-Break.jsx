@@ -10,7 +10,7 @@ export default function Break({ slideNumber }) {
       <h1 className="text-[107px] font-bold leading-[1.05]">Back in five minutes</h1>
       <TriColorBar />
       <p className="text-[35px] text-rff-muted-dark">Table 3, Delivery and Automation, is next.</p>
-      <RffLogo className="h-[140px] w-[140px]" />
+      <RffLogo variant="badge" className="h-[140px] w-[140px]" />
       <Footer slideNumber={slideNumber} light />
     </div>
   )

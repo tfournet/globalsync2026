@@ -20,7 +20,7 @@ export default function CoverSlide({
         dark ? 'bg-rff-navy text-white' : 'bg-rff-light text-rff-navy'
       }`}
     >
-      <RffLogo className="h-[307px] w-[307px]" />
+      <RffLogo variant={dark ? 'badge' : 'rocket'} className="h-[307px] w-[307px]" />
       <p className="leading-tight font-bold tracking-[0.18em] text-[45px]">
         <span className="block text-rff-blue-glow">{wordmarkLine1}</span>
         <span className="block text-rff-orange">{wordmarkLine2}</span>
