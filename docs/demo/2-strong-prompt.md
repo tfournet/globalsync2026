@@ -2,7 +2,7 @@ I need to send Dana Whitfield an email about this morning's outage. She's the of
 
 The ticket notes are below, but don't quote them. She doesn't need the equipment names or the timeline, and she definitely doesn't need to hear that we flagged this cert in the spring and the renewal never got approved. That's a conversation for me and Dr. Patel, not this email. What she needs to know is that all three offices were down together for about 90 minutes, why in one plain sentence, that everyone was back by 10:25, and that no patient data was touched, because that's what she asked me on the phone and what she's afraid of.
 
-The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" means, so say that instead of the phrase.
+The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" actually means, so say that. Do not use the phrase "on top of it" anywhere in the email.
 
 Keep it under 150 words, plain language. Own it without groveling. Sign it from me, Tim at Northline IT.
 

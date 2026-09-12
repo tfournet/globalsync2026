@@ -50,7 +50,7 @@ export const strongPrompt = `I need to send Dana Whitfield an email about this m
 
 The ticket notes are below, but don't quote them. She doesn't need the equipment names or the timeline, and she definitely doesn't need to hear that we flagged this cert in the spring and the renewal never got approved. That's a conversation for me and Dr. Patel, not this email. What she needs to know is that all three offices were down together for about 90 minutes, why in one plain sentence, that everyone was back by 10:25, and that no patient data was touched, because that's what she asked me on the phone and what she's afraid of.
 
-The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" means, so say that instead of the phrase.
+The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" actually means, so say that. Do not use the phrase "on top of it" anywhere in the email.
 
 Keep it under 150 words, plain language. Own it without groveling. Sign it from me, Tim at Northline IT.
 
@@ -79,21 +79,21 @@ export const strongBrief = `I need to send Dana Whitfield an email about this mo
 
 The ticket notes are below, but don't quote them. She doesn't need the equipment names or the timeline, and she definitely doesn't need to hear that we flagged this cert in the spring and the renewal never got approved. That's a conversation for me and Dr. Patel, not this email. What she needs to know is that all three offices were down together for about 90 minutes, why in one plain sentence, that everyone was back by 10:25, and that no patient data was touched, because that's what she asked me on the phone and what she's afraid of.
 
-The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" means, so say that instead of the phrase.
+The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" actually means, so say that. Do not use the phrase "on top of it" anywhere in the email.
 
 Keep it under 150 words, plain language. Own it without groveling. Sign it from me, Tim at Northline IT.`
 
-export const strongOutput = `Subject: Update on This Morning's Outage – All Clear
+export const strongOutput = `Subject: This Morning's Outage — Resolved
 
-Hi Dana,
+Dana,
 
-Sorry for the disruption this morning. All three offices lost connectivity to Dentrix for about 90 minutes because a security certificate on our network equipment expired. All locations were back up and confirmed working by 10:25 am.
+This morning's Dentrix outage at all three offices was caused by a network security certificate on our end that expired overnight. It's a straightforward fix once identified, but it did knock all three locations offline together, starting around 8:47 AM. Riverside and Midtown were back up by 10:15, and we had all three sites fully verified by 10:25 — about 90 minutes total.
 
-No patient data was touched — your Dentrix server itself never went down, the offices just couldn't reach it during that window.
+No patient data was affected. The server itself was never down or at risk; the offices simply couldn't reach it while the connection was out.
 
-We're already on top of it: we're putting monitoring in place that will warn us 30 days before any certificate is set to expire, so this specific issue won't happen again. That'll be live by Friday.
+We're putting in place monitoring that will alert us 30 days before any certificate is set to expire, so this specific failure mode can't catch us again. That'll be live by Friday.
 
-Thanks for your patience this morning, and please pass this along to Dr. Patel.
+Sorry for the disruption to your morning — I know a full waiting room makes this worse. Let me know if you have any questions.
 
 Tim
 Northline IT`

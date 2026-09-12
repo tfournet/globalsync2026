@@ -10,7 +10,7 @@ export default function DemoStrong({ slideNumber }) {
       slideNumber={slideNumber}
       only="output"
       output={strongOutput}
-      outputFontSize={30}
+      outputFontSize={28}
       punchline="Same tool. Same task. The only thing that changed was how you asked."
     />
   )

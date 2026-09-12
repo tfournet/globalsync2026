@@ -35,5 +35,8 @@ Notes for the deck
   sign-off anyway.
 - Harbor Dental Group, Dana Whitfield, Northline IT, and the Dentrix/VPN
   incident are invented for the brief. They are not a customer.
-- The strong prompt and output were generated in the first round and kept;
-  the strong prompt already contains the "in your head" details by design.
+- The strong prompt was regenerated once. The first version said "say that
+  instead of the phrase" and the model kept the phrase "on top of it" anyway.
+  Rather than spin a story about that on stage, the line was made unambiguous
+  ("Do not use the phrase...") and rerun. First result of the rerun kept.
+  Both outputs are in strong.json history if anyone wants the record.
