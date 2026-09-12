@@ -16,7 +16,7 @@ export default function Reflex({ slideNumber }) {
       cardTitle="What if"
       cardItems={[
         'The constraint was never headcount',
-        'The constraint is that nobody can say what done looks like',
+        'The constraint is that intent gets lost every time it changes hands',
         'That is fixable this month',
       ]}
     />

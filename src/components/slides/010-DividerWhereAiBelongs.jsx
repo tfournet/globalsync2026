@@ -5,7 +5,7 @@ export default function DividerWhereAiBelongs() {
     <SectionDivider
       variant="dark"
       pillar="gold"
-      part="02"
+      part="01"
       title="Where AI belongs"
       description="Probabilistic tools are useful exactly where deterministic ones stop, and dangerous everywhere else."
     />

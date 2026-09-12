@@ -1,10 +1,10 @@
 import Cover from '../components/slides/001-Cover.jsx'
 import Reflex from '../components/slides/002-Reflex.jsx'
-import DemoWeak from '../components/slides/003-DemoWeak.jsx'
-import DemoBrief from '../components/slides/004-DemoBrief.jsx'
-import DemoStrong from '../components/slides/005-DemoStrong.jsx'
-import DemoAsk from '../components/slides/006-DemoAsk.jsx'
-import DividerArticulation from '../components/slides/007-DividerArticulation.jsx'
+import TheRealConstraint from '../components/slides/003-TheRealConstraint.jsx'
+import DemoWeak from '../components/slides/004-DemoWeak.jsx'
+import DemoBrief from '../components/slides/005-DemoBrief.jsx'
+import DemoStrong from '../components/slides/006-DemoStrong.jsx'
+import DemoAsk from '../components/slides/007-DemoAsk.jsx'
 import AharonsLaw from '../components/slides/008-AharonsLaw.jsx'
 import WeHaveAProcess from '../components/slides/009-WeHaveAProcess.jsx'
 import DividerWhereAiBelongs from '../components/slides/010-DividerWhereAiBelongs.jsx'
@@ -20,11 +20,11 @@ import Presenter from '../components/slides/016-Presenter.jsx'
 export const slides = [
   { id: 'cover', component: Cover, notesKey: 'cover' },
   { id: 'reflex', component: Reflex, notesKey: 'reflex' },
+  { id: 'the-real-constraint', component: TheRealConstraint, notesKey: 'the-real-constraint' },
   { id: 'demo-weak', component: DemoWeak, notesKey: 'demo-weak' },
   { id: 'demo-brief', component: DemoBrief, notesKey: 'demo-brief' },
   { id: 'demo-strong', component: DemoStrong, notesKey: 'demo-strong' },
   { id: 'demo-ask', component: DemoAsk, notesKey: 'demo-ask' },
-  { id: 'divider-articulation', component: DividerArticulation, notesKey: 'divider-articulation' },
   { id: 'aharons-law', component: AharonsLaw, notesKey: 'aharons-law' },
   { id: 'we-have-a-process', component: WeHaveAProcess, notesKey: 'we-have-a-process' },
   { id: 'divider-where-ai-belongs', component: DividerWhereAiBelongs, notesKey: 'divider-where-ai-belongs' },

@@ -6,8 +6,8 @@ import { weakPrompt, weakOutput } from '../../data/demo.js'
 export default function DemoWeak({ slideNumber }) {
   return (
     <PromptOutputSlide
-      eyebrow="The bad conversation"
-      title="What most of us typed the first time"
+      eyebrow="A new participant"
+      title="A request we would give a person, given to a machine"
       accent="blue"
       slideNumber={slideNumber}
       prompt={weakPrompt}
