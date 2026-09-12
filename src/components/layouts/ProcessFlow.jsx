@@ -14,8 +14,8 @@ const CIRCLE_TEXT = {
   gold: 'text-rff-navy',
 }
 
-const CIRCLE_SIZE = 167
-const CIRCLE_CENTER_Y = 480
+const CIRCLE_SIZE = 200
+const CIRCLE_CENTER_Y = 520
 const CIRCLE_TOP = CIRCLE_CENTER_Y - CIRCLE_SIZE / 2
 const CONNECTOR_HEIGHT = 13
 
@@ -42,9 +42,9 @@ export default function ProcessFlow({
                 className={`flex items-center justify-center rounded-full ${CIRCLE_BG[fill]} ${CIRCLE_TEXT[fill]}`}
                 style={{ width: CIRCLE_SIZE, height: CIRCLE_SIZE }}
               >
-                <span className="text-[53px] font-bold">{i + 1}</span>
+                <span className="text-[64px] font-bold">{i + 1}</span>
               </div>
-              <p className="mt-[24px] max-w-[490px] text-[40px] font-bold leading-tight text-rff-navy">
+              <p className="mt-[28px] max-w-[490px] text-[44px] font-bold leading-tight text-rff-navy">
                 {step.title}
               </p>
               <p className="mt-[12px] max-w-[490px] text-[31px] text-rff-body">{step.description}</p>

@@ -28,11 +28,11 @@ export default function ComparisonSlide({
             <p className="text-[32px] font-bold uppercase tracking-[0.1em] text-white">{panel.data.heading}</p>
           </div>
           <ul
-            className="list-disc bg-rff-light p-[48px] pl-[68px] text-[33px] leading-snug text-rff-body marker:text-rff-navy"
+            className="flex flex-col justify-center list-disc bg-rff-light p-[48px] pl-[68px] text-[40px] leading-snug text-rff-body marker:text-rff-navy"
             style={{ height: BODY_BOTTOM - HEADER_TOP - HEADER_HEIGHT }}
           >
             {panel.data.items.map((item, j) => (
-              <li key={j} className="mt-[16px] first:mt-0">
+              <li key={j} className="mt-[28px] first:mt-0">
                 {item}
               </li>
             ))}

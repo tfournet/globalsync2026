@@ -87,3 +87,14 @@ Fastest fix next time: paste in whatever you already have (ticket notes, Slack t
 
 If you want, give me those details now and I'll write the real version.`
 
+
+// Same answer, headings only: each numbered label is the model's own bold
+// text, the explanations after the dash are omitted. Full text above.
+export const askOutputHeadings = `A few things were missing that made me default to a generic template instead of a real email:
+
+1. **Which client and which system/service**
+2. **What actually happened**
+3. **Impact on the client specifically**
+4. **Current status**
+5. **Relationship/tone context**
+6. **Source material**`

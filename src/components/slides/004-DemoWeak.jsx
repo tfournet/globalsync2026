@@ -11,9 +11,10 @@ export default function DemoWeak({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       prompt={weakPrompt}
+      promptFontSize={44}
       output={weakOutput}
-      outputLines={[0, 11]}
-      outputFontSize={28}
+      outputLines={[8, 11]}
+      outputFontSize={34}
       punchline="AI didn't fail to read your mind. It did exactly what you wrote."
     />
   )

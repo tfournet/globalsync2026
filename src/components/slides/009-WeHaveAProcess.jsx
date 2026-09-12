@@ -10,19 +10,19 @@ export default function WeHaveAProcess({ slideNumber }) {
       rows={[
         {
           term: 'We have a process',
-          definition: 'We have a person, and the process leaves when they do.',
+          definition: 'We have a person. It leaves when they do.',
         },
         {
           term: 'It broke on the first exception',
-          definition: 'Nobody wrote down the exception. The rule was never finished.',
+          definition: 'Nobody wrote the exception down.',
         },
         {
           term: 'Three techs, three ways',
-          definition: 'The first automation attempt is the first honest audit of the shop. That is the finding, not the failure.',
+          definition: 'Your first automation is your first honest audit.',
         },
         {
           term: 'The question',
-          definition: 'When did you last watch your best tech do the thing you think you have a process for?',
+          definition: 'When did you last watch your best tech do it?',
         },
       ]}
       closing="Hire for the exception. Automate the rule."

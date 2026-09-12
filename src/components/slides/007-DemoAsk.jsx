@@ -1,8 +1,8 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { askPrompt, askOutput } from '../../data/demo.js'
+import { askPrompt, askOutputHeadings } from '../../data/demo.js'
 
-// Output window: the model's intro and its first four missing items. Items 5
-// and 6 and the closing offer are in docs/demo/3-ask-output.md.
+// Headings only. The model's explanations and closing offer are in
+// docs/demo/3-ask-output.md and src/data/demo.js askOutput.
 export default function DemoAsk({ slideNumber }) {
   return (
     <PromptOutputSlide
@@ -11,9 +11,9 @@ export default function DemoAsk({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       prompt={askPrompt}
-      output={askOutput}
-      outputLines={[0, 6]}
-      outputFontSize={30}
+      promptFontSize={38}
+      output={askOutputHeadings}
+      outputFontSize={34}
       footnote="Try this tonight on the last answer that disappointed you."
     />
   )

@@ -7,7 +7,7 @@ export default function DividerWhereAiBelongs() {
       pillar="gold"
       part="01"
       title="Where AI belongs"
-      description="Probabilistic tools are useful exactly where deterministic ones stop, and dangerous everywhere else."
+      description="Useful exactly where deterministic tools stop. Dangerous everywhere else."
     />
   )
 }

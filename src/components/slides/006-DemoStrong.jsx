@@ -10,7 +10,7 @@ export default function DemoStrong({ slideNumber }) {
       slideNumber={slideNumber}
       only="output"
       output={strongOutput}
-      outputFontSize={30}
+      outputFontSize={34}
       punchline="Your team has been covering for vague requests for years. AI is the first hire that won't."
     />
   )

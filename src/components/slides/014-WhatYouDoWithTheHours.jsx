@@ -7,17 +7,17 @@ export default function WhatYouDoWithTheHours({ slideNumber }) {
       title="Fewer interruptions, not fewer conversations"
       accent="blue"
       slideNumber={slideNumber}
-      paragraph="Automation's job is to deliver the human to the decision with everything already in front of them. Right data, right speed."
+      paragraph="Deliver the human to the decision with everything in front of them."
       points={[
-        'The QBR that happens on time',
+        'The QBR that happens',
         'The ticket update that says something',
         "The onboarding call that isn't data entry",
       ]}
       cardTitle="Then"
       cardItems={[
-        "Point the same method at your customers' manual work",
-        'That is where growth comes from',
-        'Your best ticket-note writer is your best automation engineer, promote for it',
+        "Point the method at your customers' busywork",
+        'That is the growth',
+        'Promote your best ticket-note writer',
       ]}
     />
   )
