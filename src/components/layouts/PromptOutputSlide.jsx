@@ -7,6 +7,7 @@ const ACCENT_TEXT = {
 }
 
 const GAP = 36
+const LEFT = 106
 const CONTENT_WIDTH = 1708
 const LEFT_WIDTH = Math.round((CONTENT_WIDTH - GAP) * 0.4)
 const RIGHT_WIDTH = CONTENT_WIDTH - GAP - LEFT_WIDTH
@@ -15,62 +16,147 @@ const FOOTER_TOP = 1000
 const BOTTOM_MARGIN = 20
 const EXTRA_LINE_SPACE = 70
 
-function truncate(text, truncateAfter) {
-  if (!truncateAfter) return { text, truncated: false }
-  const lines = text.split('\n')
-  if (lines.length <= truncateAfter) return { text, truncated: false }
-  return { text: lines.slice(0, truncateAfter).join('\n'), truncated: true }
+// Pick a contiguous run of source lines. `lines` is [from, to) over the text
+// split on newlines; omitted means the whole text. Markers say when the panel
+// is a window into something longer, so the slide never pretends the model
+// said less than it did.
+function window(text, lines) {
+  const all = text.split('\n')
+  if (!lines) return { lines: all, before: false, after: false }
+  const [from, to] = lines
+  return { lines: all.slice(from, to), before: from > 0, after: to < all.length }
 }
 
+// Chat UIs render **bold** as bold; literal asterisks on a slide read as noise.
+// Text is otherwise untouched.
+function renderInline(line, key) {
+  const parts = line.split(/(\*\*[^*]+\*\*)/g).filter(Boolean)
+  return (
+    <span key={key}>
+      {parts.map((p, i) =>
+        p.startsWith('**') && p.endsWith('**') ? (
+          <strong key={i} className="font-bold text-rff-navy">
+            {p.slice(2, -2)}
+          </strong>
+        ) : (
+          <span key={i}>{p}</span>
+        ),
+      )}
+    </span>
+  )
+}
+
+// Blank source lines become paragraph gaps (about a third of a line) instead
+// of full empty lines, which is what buys the room-legible font size.
+function Paragraphs({ lines, fontSize, columns }) {
+  const paras = []
+  let cur = []
+  for (const l of lines) {
+    if (l.trim() === '') {
+      if (cur.length) paras.push(cur)
+      cur = []
+    } else {
+      cur.push(l)
+    }
+  }
+  if (cur.length) paras.push(cur)
+  return (
+    <div
+      className="leading-[1.3] text-rff-body"
+      style={{ fontSize, columnCount: columns, columnGap: 48 }}
+    >
+      {paras.map((p, i) => (
+        <p key={i} className={i === 0 ? '' : 'mt-[0.45em]'} style={{ breakInside: 'avoid' }}>
+          {p.map((l, j) => (
+            <span key={j}>
+              {renderInline(l, j)}
+              {j < p.length - 1 && <br />}
+            </span>
+          ))}
+        </p>
+      ))}
+    </div>
+  )
+}
+
+function Panel({ label, labelClass, text, lines, fontSize, columns, style }) {
+  const w = window(text, lines)
+  return (
+    <div
+      className="absolute flex flex-col overflow-hidden rounded-[4px] bg-rff-light p-[40px]"
+      style={style}
+    >
+      <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${labelClass}`}>{label}</p>
+      {w.before && <p className="mt-[16px] text-[22px] text-rff-muted">continued from above</p>}
+      <div className="mt-[24px] min-h-0 flex-1">
+        <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} />
+      </div>
+      {w.after && <p className="mt-[16px] text-[22px] text-rff-muted">continues</p>}
+    </div>
+  )
+}
+
+// Slides 3 to 5: a prompt and what came back. `only` renders a single
+// full-width panel for long texts that need the whole stage to stay legible.
 export default function PromptOutputSlide({
   eyebrow,
   title,
   accent = 'blue',
   slideNumber,
-  askLabel = 'THE ASK',
-  outputLabel = 'WHAT CAME BACK',
+  askLabel = 'The ask',
+  outputLabel = 'What came back',
   prompt,
   output,
-  promptTruncateAfter,
-  outputTruncateAfter,
-  promptFontSize = 30,
-  outputFontSize = 24,
+  promptLines,
+  outputLines,
+  promptFontSize = 32,
+  outputFontSize = 32,
+  promptColumns = 1,
+  outputColumns = 1,
+  only,
   punchline,
   footnote,
 }) {
   const hasExtraLine = Boolean(punchline || footnote)
   const bottom = FOOTER_TOP - BOTTOM_MARGIN - (hasExtraLine ? EXTRA_LINE_SPACE : 0)
   const height = bottom - TOP
-  const left = truncate(prompt, promptTruncateAfter)
-  const right = truncate(output, outputTruncateAfter)
   const labelClass = ACCENT_TEXT[accent]
+
+  const leftStyle = only
+    ? { left: LEFT, top: TOP, width: CONTENT_WIDTH, height }
+    : { left: LEFT, top: TOP, width: LEFT_WIDTH, height }
+  const rightStyle = only
+    ? { left: LEFT, top: TOP, width: CONTENT_WIDTH, height }
+    : { left: LEFT + LEFT_WIDTH + GAP, top: TOP, width: RIGHT_WIDTH, height }
 
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>
-      <div
-        className="absolute flex flex-col overflow-hidden rounded-[4px] bg-rff-light p-[40px]"
-        style={{ left: 106, top: TOP, width: LEFT_WIDTH, height }}
-      >
-        <p className={`text-[27px] font-bold uppercase ${labelClass}`}>{askLabel}</p>
-        <p className="mt-[24px] whitespace-pre-wrap leading-snug text-rff-body" style={{ fontSize: promptFontSize }}>
-          {left.text}
-        </p>
-        {left.truncated && <p className="mt-[16px] text-[20px] text-rff-muted">continues</p>}
-      </div>
-      <div
-        className="absolute flex flex-col overflow-hidden rounded-[4px] bg-rff-light p-[40px]"
-        style={{ left: 106 + LEFT_WIDTH + GAP, top: TOP, width: RIGHT_WIDTH, height }}
-      >
-        <p className={`text-[27px] font-bold uppercase ${labelClass}`}>{outputLabel}</p>
-        <p className="mt-[24px] whitespace-pre-wrap leading-snug text-rff-body" style={{ fontSize: outputFontSize }}>
-          {right.text}
-        </p>
-        {right.truncated && <p className="mt-[16px] text-[20px] text-rff-muted">continues</p>}
-      </div>
+      {only !== 'output' && (
+        <Panel
+          label={askLabel}
+          labelClass={labelClass}
+          text={prompt}
+          lines={promptLines}
+          fontSize={promptFontSize}
+          columns={promptColumns}
+          style={leftStyle}
+        />
+      )}
+      {only !== 'prompt' && (
+        <Panel
+          label={outputLabel}
+          labelClass={labelClass}
+          text={output}
+          lines={outputLines}
+          fontSize={outputFontSize}
+          columns={outputColumns}
+          style={rightStyle}
+        />
+      )}
       {punchline && (
         <p
           className="absolute text-[33px] font-bold text-rff-navy"
-          style={{ left: 106, top: bottom + BOTTOM_MARGIN, width: CONTENT_WIDTH }}
+          style={{ left: LEFT, top: bottom + BOTTOM_MARGIN, width: CONTENT_WIDTH }}
         >
           {punchline}
         </p>
@@ -78,7 +164,7 @@ export default function PromptOutputSlide({
       {footnote && (
         <p
           className="absolute text-[27px] text-rff-muted"
-          style={{ left: 106, top: bottom + BOTTOM_MARGIN, width: CONTENT_WIDTH }}
+          style={{ left: LEFT, top: bottom + BOTTOM_MARGIN, width: CONTENT_WIDTH }}
         >
           {footnote}
         </p>

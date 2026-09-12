@@ -32,7 +32,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Beats and slides
 
-Roughly 15 slides, one accent per slide, layouts from the RFF template.
+Roughly 16 slides, one accent per slide, layouts from the RFF template.
 
 ### 1. Cover (dark cover)
 Doing More Without Adding Bodies. Tim Fournet, Rewst. Global Sync Meetup NYC, 17 September 2026.
@@ -44,8 +44,11 @@ You just heard people and margin break first. The reflex is a hire. The hire is 
 Weak prompt, verbatim, top. Output below. It is mediocre and plausible, exactly what they got.
 Line: AI didn't fail to read your mind. It did exactly what you wrote.
 
-### 4. The same request, briefed (same layout) about 2 min
-Same task with who the client is, what broke, what is fixed, what is pending, tone, length. Output below. The room recognizes the second brief as the ticket they wish their techs wrote.
+### 4. The same request, briefed (full-width prompt panel) about 1 min
+Same task with who the client is, what broke, what is fixed, what is pending, tone, length. The brief gets its own slide so it is legible from the back row. The room recognizes it as the ticket they wish their techs wrote.
+
+### 4b. What came back (full-width output panel) about 1 min
+The forwardable email, verbatim.
 Line: Your team has been covering for your vague requests for years. AI is the first hire that won't.
 
 ### 5. Ask it (same layout) about 2 min
@@ -106,7 +109,7 @@ Six or seven in 30 minutes is the ceiling. No summary slide repeating them.
 - Industry statistics Tim didn't generate.
 - Founder-as-bottleneck in depth; the 2:30 fireside owns it.
 - Definitions slide for automation vs AI; folded into beat 11.
-- Any product UI, logo outside slides 1 and 15, category comparisons, customer case studies, platform-specific time-saved claims.
+- Any product UI, logo outside the cover and presenter slides, category comparisons, customer case studies, platform-specific time-saved claims.
 
 ## Open items
 

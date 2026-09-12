@@ -1,17 +1,16 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { strongPrompt, strongOutput } from '../../data/demo.js'
+import { strongOutput } from '../../data/demo.js'
 
 export default function DemoStrong({ slideNumber }) {
   return (
     <PromptOutputSlide
       eyebrow="The same request"
-      title="The brief a good tech would have needed anyway"
+      title="Forwardable without edits"
       accent="blue"
       slideNumber={slideNumber}
-      prompt={strongPrompt}
+      only="output"
       output={strongOutput}
-      promptFontSize={16}
-      outputFontSize={16}
+      outputFontSize={30}
       punchline="Your team has been covering for vague requests for years. AI is the first hire that won't."
     />
   )
