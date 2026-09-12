@@ -12,9 +12,7 @@ Room: up to 100 MSP business owners, one track, hard stop, no product pitches
 
 ## Thesis
 
-Stated on slide 3, before the word AI is spoken, as four human handoffs that failed. The demo is evidence for it, not the opening.
-
-The MSPs who do more without adding bodies are the ones who can say exactly what they want done. Automation and AI do not reward the most technical shop; they reward the shop that can articulate intent. They also make the gap impossible to hide.
+Computers are automation tools, not automation recipients. We built them to do the work and became the automatons instead, because we abdicate rather than delegate: we hand over the work and the definition of done, then grade the result against the version in our heads. We did it to our techs for years and blamed the tech. AI made the habit visible because it hands the wrong result back in eight seconds with the request still on the screen. The remedy is the same for a tech, a workflow, and a model: say what good looks like. Then aim the machinery at the automaton work, yours first and then your customers', and spend the hours being present with them.
 
 Closing line: If you can't write the rule, you can't hire your way out of it either.
 
@@ -34,80 +32,43 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Beats and slides
 
-Roughly 17 slides, one accent per slide, layouts from the RFF template.
+19 slides, about 26 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
 
-### 1. Cover (dark cover)
-Doing More Without Adding Bodies. Tim Fournet, Rewst. Global Sync Meetup NYC, 17 September 2026.
-
-### 2. The reflex (two-column, blue) about 1.5 min
-You just heard people and margin break first. You feel it in delivery. The reflex is a hire. The hire is slow, expensive, and inherits the same broken loop. The constraint was never headcount; it is that intent gets lost every time it changes hands.
-
-### 3. The real constraint (labeled rows, blue) about 2 min
-The thesis, before the word AI is spoken. Four human handoffs the room lived through this quarter: the redo (tech copied last time, nobody said last time was wrong), the escalation (ticket bounced three times, each person guessed), the angry client (they expected Tuesday, nobody said Thursday out loud), the owner (you know what done looks like, it lives only in your head).
-Closing: Every lost hour goes to someone who was not told what done looks like. That is older than any tool.
-
-### 4. A new participant (prompt/output, blue) about 2 min
-Bridge: same problem, new participant, one that will not cover for you. Weak prompt verbatim, output windowed to the bracketed placeholders.
-Line: AI didn't fail to read your mind. It did exactly what you wrote.
-
-### 5. The same request, briefed (full-width prompt panel) about 1 min
-The brief alone so it is legible from the back row. The room recognizes it as the ticket they wish their techs wrote.
-
-### 6. What came back (full-width output panel) about 1.5 min
-The forwardable email, verbatim.
-Line: Your team has been covering for vague requests for years. AI is the first hire that won't.
-
-### 7. Ask it (prompt/output, blue) about 2 min
-Prompt: how could I have asked so you'd produce something closer to what I needed. Its answer, windowed to the first four missing items. The machine describes the communication problem from slide 3. Footnote: try this tonight on the last answer that disappointed you.
-
-### 8. Aharon's first law of automation (pull statement, dark)
-"You can't automate a process that doesn't exist." Aharon Chernin, Rewst. Same law, different machine.
-
-### 9. What "we have a process" means (labeled rows, orange) about 3 min
-It means "we have a person." First automation attempt is the first honest audit: three techs, three ways, nobody can say what done means. That is the finding, not the failure.
-Ask the room: when did you last watch your best tech do the thing you think you have a process for?
-Line: Hire for the exception. Automate the rule.
-
-### 10. Where delivery leaks first (agenda layout, orange) about 2 min
-The tactical slide for Henry's delivery lane and the seed list for Table 3. Six recurring delivery processes, each with the one sentence that must exist before it can be automated: new user onboarding (what done looks like, per client, per role); offboarding (the checklist, and who confirms it); alert triage (the rule for noise, and who owns the rest); access requests (the identity check you actually do); client status updates (who gets told, when, in what words); license reconciliation (the source of truth, and the tolerance). Say: pick one.
-
-### 11. Divider: Where AI belongs (dark divider, gold, Innovation)
-
-### 12. Deterministic vs probabilistic (comparison, gold) about 2 min
-Automation: same input, same output, cheap, auditable. AI: pattern, summary, draft, messy in, structured out; not the decision, not the record.
-Line: You already run a probabilistic system. It's called a tech at 4pm on a Tuesday. Measure both, then decide.
-
-### 13. The Guardrail Sandwich (process flow, gold) about 3 min
-Callback to Right of Boom, two minutes not eight. Deterministic in (gather, validate), probabilistic middle (classify, summarize, draft), deterministic out (check shape, approve, log). The AI never touches the customer or the system of record unguarded.
-
-### 14. The honest limit (two-column, gold) about 2 min
-The cost of AI isn't tokens, it's review. If you can't verify output cheaply, it isn't cheaper than a human, it's a human plus a subscription.
-Line: Determinism is something you can sell. A client can't audit a vibe; they can audit a log. (Sets up Bradley Gross on contracts at 3:15.)
-
-### 15. What you do with the hours (pull statement or two-column, blue) about 2 min
-The goal is not fewer conversations, it is conversations where the human is present. Right data, right speed: automation delivers the human to the decision with everything already in front of them. Then point the same method at your customers' manual work; that is the growth story.
-Line: Your best ticket-note writer is your best automation engineer. Promote for it.
-
-### 16. One action for the next 30 days (closing layout, dark) about 1 min
-Pick one process from the six. Sit with your best tech for an hour. Write down what they actually do. Bring the page to Table 3, Delivery and automation.
-Ecosystem line and copyright per RFF template.
-
-### 17. Presenters (single presenter variant)
-Headshot, Tim Fournet, title, one line, Rewst logo small next to the company name. Contact.
+1. Cover
+2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another, repeat until five.
+3. We abdicate, we think we delegate (comparison). Delegate: hand over the work, keep the definition of done, say what good looks like. Abdicate: hand over both, grade against the version in your head, blame the receiver. We did this to our techs for years; the wrong result came back a week later so we blamed the tech.
+4. The demo never had a client (two-column). Every AI keynote is one sentence then magic; it works because the presenter has no stake in which game he gets. Then you go home and ask for a client email where every detail is the job. No vendor names. Twenty seconds.
+5. Abdicating to a machine (prompt/output). Weak ask, bracketed result. Line: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
+6. Delegating to the same machine (full brief). Read it aloud. This is delegating.
+7. Forwardable without edits (full output). Line: same tool, same task, the only thing that changed was you.
+8. Ask it what you left out (prompt/output, headings only). It describes your delegation habits back to you. Footnote: try this tonight.
+9. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. Same habit, bigger scale.
+10. What "we have a process" means (labeled rows, orange). We have a person we abdicated to. Nobody said what the exception was. First automation is the first honest audit. When did you last watch your best tech do it? Line: hire for the exception, automate the rule.
+11. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.
+12. Six processes, one sentence each (agenda, orange). SLOW. Onboarding so the client's first day works; offboarding so nothing is left open; alert triage so a human only sees what needs one; access requests so the identity check happens; status updates so they hear it from you first; license reconciliation so you stop paying for ghosts. Pick one. Table 3 works from this.
+13. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
+14. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
+15. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
+16. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
+17. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
+18. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down what done looks like. That is delegating. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
+19. Presenter.
 
 ## Lines to drop verbatim, once each
 
-- AI didn't fail to read your mind. It did exactly what you wrote.
-- Your team has been covering for your vague requests for years. AI is the first hire that won't.
+- We built computers to do the work. Then we became the automatons.
+- Delegating is handing over the work and keeping the definition of done. Abdicating is handing over both.
+- The demo never had a client.
+- It did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
+- Same tool. Same task. The only thing that changed was you.
 - Aharon's first law: you can't automate a process that doesn't exist.
 - Hire for the exception. Automate the rule.
+- Automate to give time back to the customer. Not to hide from them.
 - You already run a probabilistic system. It's called a tech at 4pm on a Tuesday.
 - The cost of AI isn't tokens. It's review.
-- Determinism is something you can sell. A client can't audit a vibe.
-- Your best ticket-note writer is your best automation engineer.
-- If you can't write the rule, you can't hire your way out of it either.
+- Your customers have automatons too.
 
-Six or seven in 30 minutes is the ceiling. No summary slide repeating them.
+Not every one needs to land. The first three and the last one are the talk.
 
 ## Delivery lane
 

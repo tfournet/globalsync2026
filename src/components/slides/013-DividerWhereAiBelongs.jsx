@@ -7,7 +7,7 @@ export default function DividerWhereAiBelongs() {
       pillar="gold"
       part="01"
       title="Where AI belongs"
-      description="Useful exactly where deterministic tools stop. Dangerous everywhere else."
+      description="Fast is only a gift once you have said what good looks like."
     />
   )
 }

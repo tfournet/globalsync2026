@@ -4,7 +4,7 @@ import { slides } from '../data/slides.jsx'
 
 const NO_FOOTER_IDS = new Set([
   'cover',
-  'divider-articulation',
+  'automatons',
   'aharons-law',
   'divider-where-ai-belongs',
   'one-action',
@@ -28,7 +28,7 @@ describe('slide registry', () => {
   }
 
   it('a content slide has a white background', () => {
-    const twoColumn = slides.find((s) => s.id === 'reflex')
+    const twoColumn = slides.find((s) => s.id === 'the-demo-never-had-a-client')
     const { container } = render(<twoColumn.component slideNumber={1} />)
     expect(container.querySelector('.bg-white')).toBeInTheDocument()
   })

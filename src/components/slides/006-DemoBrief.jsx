@@ -5,8 +5,8 @@ import { strongPrompt } from '../../data/demo.js'
 export default function DemoBrief({ slideNumber }) {
   return (
     <PromptOutputSlide
-      eyebrow="The same request"
-      title="The brief a good tech would have needed anyway"
+      eyebrow="The mirror"
+      title="Delegating to the same machine"
       accent="blue"
       slideNumber={slideNumber}
       only="prompt"

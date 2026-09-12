@@ -6,8 +6,8 @@ import { askPrompt, askOutputHeadings } from '../../data/demo.js'
 export default function DemoAsk({ slideNumber }) {
   return (
     <PromptOutputSlide
-      eyebrow="Ask it"
-      title="Let it tell you what was missing"
+      eyebrow="The mirror"
+      title="Ask it what you left out"
       accent="blue"
       slideNumber={slideNumber}
       prompt={askPrompt}
