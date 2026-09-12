@@ -10,9 +10,9 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       slideNumber={slideNumber}
       paragraph='"We have an offboarding process." You have Mike.'
       points={[
-        "It works until the request comes from someone Mike doesn't know",
+        "It works until Mike isn't the one doing it",
         'The OneDrive sync was in his head, not on the checklist',
-        'The first automation attempt is when you find out',
+        'The first time someone else runs it, you find out',
       ]}
       cardTitle="Nothing failed"
       cardItems={[
