@@ -32,7 +32,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Beats and slides
 
-20 slides, about 26 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
+19 slides, about 24 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
 
 1. Cover
 2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another, repeat until five.
@@ -44,17 +44,16 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 8. Now with the judgment calls (full brief). Earned by the previous slide. Same ticket pasted underneath; these are the words that went above it, in prose: who Dana is and that she forwards to Dr. Patel; do not quote the ticket; the Q2 conversation is for me and the owner, not this email; no patient data touched because that is what she asked on the phone; what on top of it actually means, monitoring by Friday. This is delegating.
 9. Forwardable without edits (full output). Under 150 words, Dr. Patel named. Loud: same tool, same task, the only thing that changed was how you asked. Bridge to Aharon, spoken: that is communication, hand over the judgment calls, not just the facts. Now take it to something bigger than an email. When you say we onboard new users, what you have is a ticket with the facts; the judgment calls are in someone's head. You just saw what happens when you hand that to a machine.
 
-10. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. The meaning here: exists means has been said out loud. The law is not about the shop with no process; it is about the shop that thinks it has one and actually has a person who knows what the owner meant. The first automation attempt is the first receiver that cannot nod and fill in the blanks, which is why it is worth doing even if it never ships. Nothing failed; you found out cheaply.
-11. What "we have a process" means (labeled rows, orange). We have a person we abdicated to. Nobody said what the exception was. First automation is the first honest audit. When did you last watch your best tech do it? Line: hire for the exception, automate the rule.
-12. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.
-13. Six processes, one sentence each (agenda, orange). SLOW. Onboarding so the client's first day works; offboarding so nothing is left open; alert triage so a human only sees what needs one; access requests so the identity check happens; status updates so they hear it from you first; license reconciliation so you stop paying for ghosts. Pick one. Table 3 works from this.
-14. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
-15. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
-16. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
-17. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
-18. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
-19. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down everything they fill in that you never said. That is your definition of done. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
-20. Presenter.
+10. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. The meaning here: exists means has been said out loud. The law is not about the shop with no process; it is about the shop that thinks it has one and actually has a person who knows what the owner meant. The first automation attempt is the first receiver that cannot nod and fill in the blanks, which is why it is worth doing even if it never ships. Nothing failed; you found out cheaply. Bridge out, spoken: hire for the exception, automate the rule. Then straight to the wrong things; the old 'we have a process' slide was cut as restatement.
+11. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.
+12. Six processes, one sentence each (agenda, orange). SLOW. Onboarding so the client's first day works; offboarding so nothing is left open; alert triage so a human only sees what needs one; access requests so the identity check happens; status updates so they hear it from you first; license reconciliation so you stop paying for ghosts. Pick one. Table 3 works from this.
+13. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
+14. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
+15. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
+16. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
+17. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
+18. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down everything they fill in that you never said. That is your definition of done. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
+19. Presenter.
 
 ## Lines to drop verbatim, once each
 
@@ -66,7 +65,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 - Same tool. Same task. The only thing that changed was how you asked.
 - I put it in. That's a 50/50 guess I shouldn't have made silently. (the machine's line, read off the slide)
 - Aharon's first law: you can't automate a process that doesn't exist.
-- Hire for the exception. Automate the rule.
+- Hire for the exception. Automate the rule. (spoken, bridge out of Aharon's law)
 - Automate to give time back to the customer. Not to hide from them.
 - You already run a probabilistic system. It's called a tech at 4pm on a Tuesday.
 - The cost of AI isn't tokens. It's review.
