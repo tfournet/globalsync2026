@@ -25,25 +25,25 @@ Resolution: Expired SSL cert on HQ Fortigate caused IPsec P1 failure for branch 
 Time: 1.5h
 Root cause: cert expiry, no monitoring/alerting on cert dates. Recommend adding to RMM.`
 
-export const weakOutput = `Subject: Resolved – Dentrix Access Outage at Midtown & Riverside (Ticket #48213)
+export const weakOutput = `Subject: Resolved – Dentrix Outage at Midtown & Riverside (Ticket #48213)
 
-Dana,
+Hi Dana,
 
-I want to sincerely apologize for the disruption this morning at Midtown and Riverside — I know a full waiting room with no access to Dentrix is the last thing you need, and we're sorry for the stress it caused your team.
+I want to sincerely apologize for the disruption this morning at your Midtown and Riverside offices. I know a full waiting room with no access to Dentrix is incredibly stressful for your team and your patients, and I'm sorry we didn't catch this before it caused an issue.
 
-Here's a quick summary of what happened and what we did:
+**What happened:** A security certificate on your main office firewall expired overnight, which broke the secure network connection between HQ and the two branch offices. This prevented Midtown and Riverside from reaching the Dentrix server — the server itself and your patient data were never at risk or offline at any point.
 
-**What happened:** The secure network connection (VPN tunnel) between your branch offices and the main office server expired due to an SSL certificate that lapsed overnight. This caused Midtown and Riverside to lose their connection to the Dentrix database, even though the server itself was never down and no patient data was affected or at risk.
+**What we did:** Our team identified the cause within minutes of your call, issued and installed a renewed certificate, and restored connectivity. Riverside was back online at 10:12 AM and Midtown at 10:15 AM. We confirmed all three sites were fully operational before closing the ticket.
 
-**What we did:** Our team caught the tunnel failures shortly after you called, identified the expired certificate as the root cause, and immediately requested a new one. Once issued, we installed it and restored the connections. All three sites were confirmed back up and working normally by 10:25 AM — total downtime was under two hours.
+**Total impact:** Approximately 1.5 hours of intermittent access issues at the two branch locations. No data was lost or compromised.
 
-**Going forward:** We've identified that this certificate wasn't being actively monitored for expiration, and we're on top of it — we're adding automated alerting for certificate expiration dates to our monitoring system so this type of issue is caught and resolved before it can impact your sites again.
+**What we're doing to prevent this going forward:** This certificate had actually been flagged for renewal in our Q2 review, and we're correcting the gap that let it lapse. We're adding automated certificate expiration monitoring to our systems so we get advance alerts well before any certificate nears expiration — this will ensure we catch and renew these proactively going forward, rather than reactively.
 
-Thank you for your patience while we worked through this, and please don't hesitate to reach out if you have any questions or if anything still seems off at either location.
+Thank you for your patience this morning, and please don't hesitate to reach out if you have any questions or if anything seems off at any of the sites.
 
 Best regards,
-[Your Name]
-[Company Name] Service Desk`
+Tim
+[Your Company Name] – Service Desk`
 
 // Same ticket pasted below the same way; only the words above it changed.
 export const strongPrompt = `I need to send Dana Whitfield an email about this morning's outage. She's the office manager at Harbor Dental, three locations, and she's the one the front desk complains to. She isn't technical and doesn't want to be. She'll forward whatever I send straight to Dr. Patel, who owns the practice, so it has to stand on its own with no editing.
@@ -100,29 +100,41 @@ Northline IT`
 
 export const askPrompt = `That's not the email I needed, and I don't want you to just take another swing at it. Look at how I asked you. What should I have told you up front so you could have written the one I had in my head? Teach me to ask better, not just to get a better email this once.`
 
-export const askOutput = `Fair. Here's what was missing from the ask itself, not from the ticket:
+export const askOutput = `Fair. Here's what was missing, concretely:
 
-**You gave me the facts and the outcome, but not the judgment calls.** "Write an email, apologize, say we're on top of it" tells me the shape of the email but not the one decision that actually matters here: what to do with the Q2 detail. That's not a fact I was missing — it was right there in your notes. What I was missing was your *call* on it. You knew it was in there when you handed it to me; I didn't know you wanted me to decide what to do with it, or that you already had a decision and just didn't say it.
+**1. Who's actually reading it, and what's their relationship to the incident.**
+I didn't know if this goes to Dana alone, or if it also lands in front of the practice owner/doctor. Dana was upset and dealing with a packed waiting room — that's a different email than one written for someone reviewing vendor performance. "Client" is a role, not a person; I need the person.
 
-That's the general pattern for client-facing writing: the ticket gives me the *what happened*, but the email needs a *stance*, and the stance is the one thing that only lives in your head. For anything reputational, I need you to tell me, up front:
+**2. What "on top of it" was supposed to mean, specifically.**
+That phrase can mean three different things:
+- We fixed it fast (speed)
+- We know why it happened (competence)
+- We're making sure it doesn't happen again (accountability)
 
-1. **What's the one uncomfortable fact in here, and how do you want it handled** — disclosed straight, softened, or left out. (Here: the Q2 flag with no approved renewal. Own it, bury it, or split the blame — that's your call, not mine to guess.)
-2. **Who's actually reading this and what do they already know.** Dana lived it and got a live call at 10:15 — that changes what the email needs to *do* versus a cold recap to someone who wasn't there.
-3. **What you want the email to accomplish beyond "apologize."** Keep the account. Protect against a credit request. Set up the RMM pitch as a value-add rather than an admission. Those produce different letters even with identical facts.
-4. **Who's signing it and in what voice** — you, the tech, a manager — changes register and how much ownership language is appropriate.
+I guessed all three and gave equal weight to each. You probably had one that mattered most — tell me which.
 
-Shorthand for next time: when the ask is a document that carries judgment (an apology, a client email, anything with reputational weight), give me the stance along with the facts. If you don't have the stance yet, say "help me decide what to do with X" instead of "write the email" — that's a different, better task for me, and it's the one you actually had.`
+**3. Whether the Q2-review detail was a feature or a liability.**
+"This is the same cert we flagged in Q2 that nobody approved" is the single riskiest line in that ticket. It's either something you want to own transparently ("we caught this and should have pushed harder") or something you don't want anywhere near a client's inbox because it reads as "we knew and didn't fix it." I put it in. That's a 50/50 guess I shouldn't have made silently — this is the kind of thing to flag rather than decide for you.
 
-// Same answer, excerpted: its opening sentence, the lead-in, and the four
-// bold labels. Explanations omitted. Full text above.
-export const askOutputHeadings = `**You gave me the facts and the outcome, but not the judgment calls.**
+**4. Tone register.**
+"Apologize" ranges from a two-line "sorry, it's fixed, here's why" to a full incident letter with a remediation plan. Length and formality are load-bearing here, not decoration.
 
-For anything reputational, I need you to tell me, up front:
+**5. Whether there's a business ask riding along.**
+Service credit? Renewed SLA conversation? Nothing at all, just goodwill? If there's a commercial angle, the email is doing double duty and I need to know that going in.
 
-1. **What's the one uncomfortable fact in here, and how do you want it handled**
-2. **Who's actually reading this and what do they already know**
-3. **What you want the email to accomplish beyond "apologize."**
-4. **Who's signing it and in what voice**`
+**The reusable version of this:** when you hand me a raw ticket and say "write the email," give me the shape, not just the topic — *who reads it, what one thing they should feel/conclude, and any line that's off-limits or must-include.* One sentence of that (e.g., "short note to Dana only, focus on speed-of-fix, leave out that we missed the Q2 renewal, no ask") would've gotten you the email you had in your head on the first pass.
 
-// One sentence from the same answer, unedited apart from dropping its markdown emphasis.
-export const askOutputConfession = `The ticket gives me the what happened, but the email needs a stance, and the stance is the one thing that only lives in your head.`
+Want to give me those four things now and I'll take a real swing?`
+
+// Same answer, excerpted: its opening line and the five bold labels.
+// Explanations omitted. Full text above.
+export const askOutputHeadings = `Fair. Here's what was missing, concretely:
+
+1. **Who's actually reading it, and what's their relationship to the incident**
+2. **What "on top of it" was supposed to mean, specifically**
+3. **Whether the Q2-review detail was a feature or a liability**
+4. **Tone register**
+5. **Whether there's a business ask riding along**`
+
+// Two sentences from item 3 of the same answer, unedited.
+export const askOutputConfession = `I put it in. That's a 50/50 guess I shouldn't have made silently.`

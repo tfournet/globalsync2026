@@ -48,13 +48,15 @@ same conditions and writes everything to `replays/`. Run on 12 September:
 
 - Weak: ticket number in the subject 3/3, placeholder sign-off 2/3, invented
   monitoring promise 3/3, "certificate" explained to Dana 3/3. Jargon
-  passthrough (VPN/SSL/Fortigate) 0/3 this time. The Q2 flag was hidden in
-  the slide run but disclosed to Dana in 2/3 replays. The honest claim is
-  "the machine decided what to do with the Q2 flag," not "the machine hid
-  it." Notes for slide 6 say so.
+  passthrough (VPN/SSL/Fortigate) 0/3. The Q2 flag was hidden in the first
+  run but disclosed to Dana in 2/3 replays. Because the leak is the majority
+  outcome and the worse one, replay 3 (the most explicit disclosure) and its
+  paired ask are now the canonical outputs on the slides. The first-run pair
+  is kept as 1-weak-output.first-run.md and 3-ask-output.first-run.md.
 - Ask: every replay named the Q2 decision and what "on top of it" should
-  mean; 2/3 named the audience. The word "stance" appeared only in the slide
-  run. The four-item list on the slide is representative; the italic
-  punchline is one real phrasing, not the typical one.
+  mean; 2/3 named the audience. The slide shows replay 3's five items and its
+  own sentence about the leak: "I put it in. That's a 50/50 guess I shouldn't
+  have made silently." The first-run phrasing ("the stance is the one thing
+  that only lives in your head") is in the first-run file.
 - Strong: 3/3 under 170 words, no jargon, no Q2, patient data, Friday,
   signed, no "on top of it." Representative.
