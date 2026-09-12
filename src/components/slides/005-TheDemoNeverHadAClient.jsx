@@ -16,7 +16,7 @@ export default function TheDemoNeverHadAClient({ slideNumber }) {
       ]}
       cardTitle="Then you go home"
       cardItems={[
-        'Write the onboarding email',
+        'Write the client email',
         'Every detail is the job',
         'The client checks all of them',
       ]}

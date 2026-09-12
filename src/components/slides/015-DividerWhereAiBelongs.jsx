@@ -5,7 +5,7 @@ export default function DividerWhereAiBelongs() {
     <SectionDivider
       variant="dark"
       pillar="gold"
-      part="01"
+      eyebrow="The second machine"
       title="Where AI belongs"
       description="Fast is only a gift once you have said what good looks like."
     />

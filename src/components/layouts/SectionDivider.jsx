@@ -15,13 +15,12 @@ const PILLAR_BG = {
 
 export default function SectionDivider({
   variant = 'dark',
-  part,
+  eyebrow,
   title,
   description,
   pillar = 'blue',
 }) {
   const dark = variant === 'dark'
-  const partNumber = String(part).padStart(2, '0')
   return (
     <div
       className={`relative flex h-full w-full flex-col justify-center gap-[24px] px-[106px] ${
@@ -30,7 +29,7 @@ export default function SectionDivider({
     >
       {!dark && <div className={`absolute inset-y-0 left-0 w-[60px] ${PILLAR_BG[pillar]}`} />}
       <p className={`text-[29px] font-bold uppercase tracking-[0.15em] ${PILLAR_TEXT[pillar]}`}>
-        Part {partNumber}
+        {eyebrow}
       </p>
       <h1 className="max-w-[1600px] text-[107px] font-bold leading-[1.05]">{title}</h1>
       <TriColorBar />

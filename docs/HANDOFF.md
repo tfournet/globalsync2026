@@ -47,17 +47,20 @@ regenerate without reason; if you do, first run stays.
 
 ## What is unresolved
 
-Slide 3. Tim's last words on it: "reads like slop." The idea is his and it
-is the hinge of the talk: every screen-to-screen step is five minutes of
-motion fused to five seconds of judgment ("standard build, unless it is the
-client that always gets the exception"), and the judgment is why a person is
-still doing the motion. The previous session put a generated 3D conveyor
-image on it with two captions and an invented quote. The captions and quote
-have been stripped; the image remains, title only. Twelve generated
-candidates are in docs/concepts/ with prompts. Options on the table: keep
-image and title only; replace with the plain SVG belt (git history,
-commit 860d38c^ has it); cut the slide and say the idea on slide 2. Decide
-by arguing with Tim, not by polishing.
+Slide 3 is text-only: three concrete decisions (which alert is noise, which
+client gets the short version, which ticket gets a phone call) and the claim
+in orange: your best tech decides that all day, nobody has ever asked them
+how. Changed 12 Sep evening. The earlier sentence repeated slide 2's footer;
+a slogan replacement ("the knowing hides inside the doing") was rejected by
+Tim as not saying anything. Rule from Tim: slides should make sense and be
+worth photographing, not be clever one-liners. The conveyor is removed
+from the slide; the generated assets remain in the repo.
+The bridge to slide 4 uses slide 3's vocabulary (deciding, doing, asked):
+nobody asked because it worked, so the owner handed over the deciding along
+with the doing and never found out. Slide 4's note picks up "deciding" before
+landing delegate vs abdicate. Slide 4 establishes abdication before
+AI enters. Do not jump straight from slide 3 to AI, add an example, or replace
+the statement with a metaphor. Notes, outline, and screenshot 03 are updated.
 
 Other open items: headshot (none, card renders without one); GitHub repo
 not created, nothing pushed; joint from slide 14 to the divider at 15 has a
