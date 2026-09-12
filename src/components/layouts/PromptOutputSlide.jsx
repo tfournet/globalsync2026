@@ -27,19 +27,42 @@ function sliceLines(text, lines) {
   return { lines: all.slice(from, to) }
 }
 
+function escapeRegExp(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
+}
+
 // Chat UIs render **bold** as bold; literal asterisks on a slide read as noise.
-// Text is otherwise untouched.
-function renderInline(line, key) {
-  const parts = line.split(/(\*\*[^*]+\*\*)/g).filter(Boolean)
+// `emphasize` marks exact substrings in the accent color. Text is otherwise
+// untouched: the data file stays verbatim and the marks live on the slide.
+function renderInline(line, key, emphasize = [], emphasisClass = '') {
+  const boldParts = line.split(/(\*\*[^*]+\*\*)/g).filter(Boolean)
+  const emphRe = emphasize.length ? new RegExp(`(${emphasize.map(escapeRegExp).join('|')})`, 'g') : null
+  const mark = (text, k) => {
+    if (!emphRe) return <span key={k}>{text}</span>
+    const pieces = text.split(emphRe).filter(Boolean)
+    return (
+      <span key={k}>
+        {pieces.map((piece, i) =>
+          emphasize.includes(piece) ? (
+            <span key={i} className={`font-bold ${emphasisClass}`}>
+              {piece}
+            </span>
+          ) : (
+            <span key={i}>{piece}</span>
+          ),
+        )}
+      </span>
+    )
+  }
   return (
     <span key={key}>
-      {parts.map((p, i) =>
+      {boldParts.map((p, i) =>
         p.startsWith('**') && p.endsWith('**') ? (
           <strong key={i} className="font-bold text-rff-navy">
             {p.slice(2, -2)}
           </strong>
         ) : (
-          <span key={i}>{p}</span>
+          mark(p, i)
         ),
       )}
     </span>
@@ -48,7 +71,7 @@ function renderInline(line, key) {
 
 // Blank source lines become paragraph gaps (about a third of a line) instead
 // of full empty lines, which is what buys the room-legible font size.
-function Paragraphs({ lines, fontSize, columns }) {
+function Paragraphs({ lines, fontSize, columns, emphasize, emphasisClass }) {
   const paras = []
   let cur = []
   for (const l of lines) {
@@ -69,7 +92,7 @@ function Paragraphs({ lines, fontSize, columns }) {
         <p key={i} className={i === 0 ? '' : 'mt-[0.45em]'} style={{ breakInside: 'avoid' }}>
           {p.map((l, j) => (
             <span key={j}>
-              {renderInline(l, j)}
+              {renderInline(l, j, emphasize, emphasisClass)}
               {j < p.length - 1 && <br />}
             </span>
           ))}
@@ -79,7 +102,7 @@ function Paragraphs({ lines, fontSize, columns }) {
   )
 }
 
-function Panel({ label, labelClass, text, lines, fontSize, columns, style }) {
+function Panel({ label, labelClass, text, lines, fontSize, columns, style, emphasize, emphasisClass }) {
   const w = sliceLines(text, lines)
   return (
     <div
@@ -88,7 +111,7 @@ function Panel({ label, labelClass, text, lines, fontSize, columns, style }) {
     >
       <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${labelClass}`}>{label}</p>
       <div className="mt-[24px] min-h-0 flex-1 overflow-hidden">
-        <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} />
+        <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} emphasize={emphasize} emphasisClass={emphasisClass} />
       </div>
 
     </div>
@@ -112,6 +135,8 @@ export default function PromptOutputSlide({
   outputFontSize = 32,
   promptColumns = 1,
   outputColumns = 1,
+  promptEmphasize = [],
+  outputEmphasize = [],
   only,
   punchline,
   punchlineQuoted = false,
@@ -140,6 +165,8 @@ export default function PromptOutputSlide({
           fontSize={promptFontSize}
           columns={promptColumns}
           style={leftStyle}
+          emphasize={promptEmphasize}
+          emphasisClass={labelClass}
         />
       )}
       {only !== 'prompt' && (
@@ -151,6 +178,8 @@ export default function PromptOutputSlide({
           fontSize={outputFontSize}
           columns={outputColumns}
           style={rightStyle}
+          emphasize={outputEmphasize}
+          emphasisClass={labelClass}
         />
       )}
       {punchline && (

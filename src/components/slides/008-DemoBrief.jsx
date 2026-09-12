@@ -13,8 +13,17 @@ export default function DemoBrief({ slideNumber }) {
       only="prompt"
       askLabel="Same ticket pasted below. This went above it this time."
       prompt={strongBrief}
-      promptFontSize={29}
+      promptFontSize={28}
       promptColumns={2}
+      promptEmphasize={[
+        "She isn't technical and doesn't want to be",
+        "She'll forward whatever I send straight to Dr. Patel",
+        "don't quote them",
+        "That's a conversation for me and Dr. Patel, not this email",
+        "that's what she asked me on the phone and what she's afraid of",
+        'That\'s what "on top of it" means, so say that instead of the phrase',
+        'Sign it from me, Tim at Northline IT',
+      ]}
     />
   )
 }
