@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.claude/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.tmp/
+*.log
