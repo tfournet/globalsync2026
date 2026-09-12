@@ -4,9 +4,9 @@ import AbdicateNotDelegate from '../components/slides/003-AbdicateNotDelegate.js
 import TheDemoNeverHadAClient from '../components/slides/004-TheDemoNeverHadAClient.jsx'
 import DemoWeak from '../components/slides/005-DemoWeak.jsx'
 import DemoWeakOutput from '../components/slides/006-DemoWeakOutput.jsx'
-import DemoBrief from '../components/slides/007-DemoBrief.jsx'
-import DemoStrong from '../components/slides/008-DemoStrong.jsx'
-import DemoAsk from '../components/slides/009-DemoAsk.jsx'
+import DemoAsk from '../components/slides/007-DemoAsk.jsx'
+import DemoBrief from '../components/slides/008-DemoBrief.jsx'
+import DemoStrong from '../components/slides/009-DemoStrong.jsx'
 import AharonsLaw from '../components/slides/010-AharonsLaw.jsx'
 import WeHaveAProcess from '../components/slides/011-WeHaveAProcess.jsx'
 import TheWrongThings from '../components/slides/012-TheWrongThings.jsx'
@@ -28,9 +28,9 @@ export const slides = [
   { id: 'the-demo-never-had-a-client', component: TheDemoNeverHadAClient, notesKey: 'the-demo-never-had-a-client' },
   { id: 'demo-weak', component: DemoWeak, notesKey: 'demo-weak' },
   { id: 'demo-weak-output', component: DemoWeakOutput, notesKey: 'demo-weak-output' },
+  { id: 'demo-ask', component: DemoAsk, notesKey: 'demo-ask' },
   { id: 'demo-brief', component: DemoBrief, notesKey: 'demo-brief' },
   { id: 'demo-strong', component: DemoStrong, notesKey: 'demo-strong' },
-  { id: 'demo-ask', component: DemoAsk, notesKey: 'demo-ask' },
   { id: 'aharons-law', component: AharonsLaw, notesKey: 'aharons-law' },
   { id: 'we-have-a-process', component: WeHaveAProcess, notesKey: 'we-have-a-process' },
   { id: 'the-wrong-things', component: TheWrongThings, notesKey: 'the-wrong-things' },

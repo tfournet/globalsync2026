@@ -1,1 +1,1 @@
-That email wasn't what I needed. Looking back at what I gave you, what was missing from my request that you would have needed to write the one I had in my head?
+That's not the email I needed, and I don't want you to just take another swing at it. Look at how I asked you. What should I have told you up front so you could have written the one I had in my head? Teach me to ask better, not just to get a better email this once.

@@ -40,9 +40,9 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 4. The demo never had a client (two-column). Every AI keynote is one sentence then magic; it works because the presenter has no stake in which game he gets. Then you go home and ask for a client email where every detail is the job. No vendor names. Twenty seconds.
 5. Abdicating to a machine (full-width ask). What everyone actually does: one line ("Write an email to the client about this. Apologize and let them know we're on top of it.") above a pasted PSA ticket. The ticket has everything a tech needs: full waiting room, FGT-60F, Phase 1, DigiCert, and the aside that this cert was flagged in the Q2 review and nobody approved the renewal. Every fact.
 6. What the client would have received (full-width output). Ticket number in the subject. VPN tunnel and SSL certificate explained to an office manager. "We're on top of it" verbatim. And the machine quietly decided to omit the Q2 flag and say the cert was not being monitored. A decision about what the client hears, made without you. Line: you pasted the ticket, it decided what the client hears. Then: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
-7. Delegating to the same machine (full brief). Same ticket pasted underneath; these are the words that went above it, in prose: who Dana is and that she forwards to Dr. Patel; do not quote the ticket; the Q2 conversation is for me and the owner, not this email; no patient data touched because that is what she asked on the phone; what on top of it actually means, monitoring by Friday. This is delegating.
-8. Forwardable without edits (full output). Under 150 words, Dr. Patel named. Line: same tool, same task, the only thing that changed was you.
-9. Ask it what you left out (prompt/output, headings only). Its six headings, then its own last sentence as the punchline, unedited: it hid the Q2 flag and knows that is the detail that mattered. Nobody asked it to say that. It just described your head. Try this tonight.
+7. Ask it how to ask better (prompt/output). Bridge, said aloud first: this is where most people get frustrated and stop. Do not stop, and do not just ask it to try again. Ask it how you should have asked. Its answer, excerpted: you gave me the facts and the outcome, but not the judgment calls. Four things it wants up front: the one uncomfortable fact and how to handle it, who is reading and what they already know, what the email should accomplish beyond apologize, who is signing and in what voice. Punchline, its own sentence: the ticket gives me the what happened, but the email needs a stance, and the stance is the one thing that only lives in your head. Quiet. Try this tonight.
+8. Say it the way you would say it to your best tech (full brief). Earned by the previous slide. Same ticket pasted underneath; these are the words that went above it, in prose: who Dana is and that she forwards to Dr. Patel; do not quote the ticket; the Q2 conversation is for me and the owner, not this email; no patient data touched because that is what she asked on the phone; what on top of it actually means, monitoring by Friday. This is delegating.
+9. Forwardable without edits (full output). Under 150 words, Dr. Patel named. Loud: same tool, same task, the only thing that changed was how you asked.
 
 10. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. Same habit, bigger scale.
 11. What "we have a process" means (labeled rows, orange). We have a person we abdicated to. Nobody said what the exception was. First automation is the first honest audit. When did you last watch your best tech do it? Line: hire for the exception, automate the rule.
@@ -62,7 +62,8 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 - Delegating is handing over the work and keeping the definition of done. Abdicating is handing over both.
 - The demo never had a client.
 - It did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
-- Same tool. Same task. The only thing that changed was you.
+- Same tool. Same task. The only thing that changed was how you asked.
+- The stance is the one thing that only lives in your head. (the machine's line, read off the slide)
 - Aharon's first law: you can't automate a process that doesn't exist.
 - Hire for the exception. Automate the rule.
 - Automate to give time back to the customer. Not to hide from them.
