@@ -10,15 +10,15 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       slideNumber={slideNumber}
       paragraph='"We have an offboarding process." You have Mike.'
       points={[
-        "It works until Mike isn't the one doing it",
-        'The list never had the Adobe seats on it. Mike knew.',
-        'You find out when you reconcile the license bill',
+        'The list said "cancel software licenses"',
+        'The covering tech canceled Microsoft. Mike meant Microsoft and Adobe.',
+        'You find out at the next license reconciliation',
       ]}
       cardTitle="Nothing failed"
       cardItems={[
-        'The automation ran the checklist perfectly',
-        'Nine ex-employees, licensed for a year',
-        'Now you know what Mike knows',
+        'Everyone did what the list said',
+        'The list said what Mike meant',
+        'Now write down what Mike meant',
       ]}
     />
   )
