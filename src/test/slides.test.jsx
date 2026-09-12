@@ -2,7 +2,13 @@ import { describe, expect, it } from 'vitest'
 import { render } from '@testing-library/react'
 import { slides } from '../data/slides.jsx'
 
-const NO_FOOTER_IDS = new Set(['cover', 'section-people', 'section-margin', 'pull-statement', 'closing'])
+const NO_FOOTER_IDS = new Set([
+  'cover',
+  'divider-articulation',
+  'aharons-law',
+  'divider-where-ai-belongs',
+  'one-action',
+])
 
 describe('slide registry', () => {
   it.each(slides.map((slide, i) => [slide, i]))('renders slide %#: %s without throwing', (slide) => {
@@ -22,7 +28,7 @@ describe('slide registry', () => {
   }
 
   it('a content slide has a white background', () => {
-    const twoColumn = slides.find((s) => s.id === 'two-column')
+    const twoColumn = slides.find((s) => s.id === 'reflex')
     const { container } = render(<twoColumn.component slideNumber={1} />)
     expect(container.querySelector('.bg-white')).toBeInTheDocument()
   })
