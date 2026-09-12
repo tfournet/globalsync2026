@@ -21,3 +21,15 @@ open metric-compatible clone of Calibri, as local woff2 files under
 `docs/reference/RFF-Presentation-Template.pptx` (`ppt/media/image4.png`,
 720x720, the highest-resolution copy of the rocket logo in the deck). No
 placeholder was needed.
+
+## Rewst logo (presenter and closing slides only)
+
+Source: rewst.io site header and footer SVGs, matching the primary logo on
+styleguide.rewst.io/logos (Stewart mascot plus black wordmark on light;
+white wordmark on dark). Rules from the styleguide: horizontal primary logo
+preferred, minimum 100px wide, clearspace equal to the lowercase "e", no
+grayscale, no rotation, no drop shadow, no recoloring, mascot never paired
+with a custom variant. Files:
+
+- public/brand/rewst-logo-on-light.svg (black wordmark, use on white)
+- public/brand/rewst-logo-on-dark.svg (white wordmark, use on navy)
