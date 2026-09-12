@@ -1,1 +1,1 @@
-That first draft wasn't what I needed. Looking back at how I asked, how could I have asked so you'd produce something closer to what I actually needed?
+That email wasn't what I needed. Looking back at what I gave you, what was missing from my request that you would have needed to write the one I had in my head?

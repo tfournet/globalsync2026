@@ -11,10 +11,10 @@ export default function DemoAsk({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       prompt={askPrompt}
-      promptFontSize={38}
+      promptFontSize={34}
       output={askOutputHeadings}
-      outputFontSize={34}
-      footnote="Try this tonight on the last answer that disappointed you."
+      outputFontSize={32}
+      footnote="It just described your head. Try this tonight on the last answer that disappointed you."
     />
   )
 }

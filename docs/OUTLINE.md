@@ -26,7 +26,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 ## Decisions (recommendations, override as needed)
 
 - Title: "Doing More Without Adding Bodies" on the cover, matching the program. "Doing more with less" not used; it names the wrong idea.
-- Demo: pre-generated text only. No network, no live model call. Prompts shown verbatim so anyone can reproduce that night. Generate the weak-prompt output honestly (first plausible run, not the worst of five).
+- Demo: pre-generated text only. No network, no live model call. Prompts shown verbatim so anyone can reproduce that night. The weak prompt is what an owner actually types (all the facts, none of the intent), not a one-liner; a one-liner proves nothing the room disputes. Generated honestly, first run kept.
 - No customer story. A Rewst customer before/after is platform evidence however it is narrated, there is no strong recent case, and the 30 minutes are already full. The demo (slides 4 to 7) is the before/after; it is about articulation, not hours saved.
 - Rewst presence: name and logo on the presenters slide and closing slide only. Aharon's law attributed by name. No product UI, no comparisons, no customer stories, no time-saved claims tied to the platform.
 
@@ -38,10 +38,10 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another, repeat until five.
 3. We abdicate, we think we delegate (comparison). Delegate: hand over the work, keep the definition of done, say what good looks like. Abdicate: hand over both, grade against the version in your head, blame the receiver. We did this to our techs for years; the wrong result came back a week later so we blamed the tech.
 4. The demo never had a client (two-column). Every AI keynote is one sentence then magic; it works because the presenter has no stake in which game he gets. Then you go home and ask for a client email where every detail is the job. No vendor names. Twenty seconds.
-5. Abdicating to a machine (prompt/output). Weak ask, bracketed result. Line: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
-6. Delegating to the same machine (full brief). Read it aloud. This is delegating.
+5. Abdicating to a machine (prompt/output). The realistic weak ask: every fact Tim was thinking about (Dana, Harbor Dental, Dentrix, 90 minutes, expired cert, fixed, apologize, on top of it). The email back is competent and generic. Point at what it gets wrong, which is exactly what stayed in Tim's head: explains certificates to a non-technical office manager; says on top of it with nothing behind it; never mentions patient data, the one thing she is afraid of; she forwards this to the practice owner as-is. Line: every fact you were thinking about, none of the ones in your head. Then: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
+6. Delegating to the same machine (full brief). Same facts plus what was in the head: who Dana is, what she does with it, what on top of it means (monitoring by Friday), no data lost, forwardable. This is delegating.
 7. Forwardable without edits (full output). Line: same tool, same task, the only thing that changed was you.
-8. Ask it what you left out (prompt/output, headings only). It describes your delegation habits back to you. Footnote: try this tonight.
+8. Ask it what you left out (prompt/output, headings only). Its seven headings: who is signing, relationship and tone, how technical Dana is, what on top of it should claim, first occurrence or repeat, length, SLA. It just described your head. Try this tonight.
 9. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. Same habit, bigger scale.
 10. What "we have a process" means (labeled rows, orange). We have a person we abdicated to. Nobody said what the exception was. First automation is the first honest audit. When did you last watch your best tech do it? Line: hire for the exception, automate the rule.
 11. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.

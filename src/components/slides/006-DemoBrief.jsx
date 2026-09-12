@@ -1,7 +1,8 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
 import { strongPrompt } from '../../data/demo.js'
 
-// The full brief gets its own slide so it stays legible from the back row.
+// Same facts, plus the things that were in Tim's head: who Dana is, what
+// she does with the email, what "on top of it" means, what she is afraid of.
 export default function DemoBrief({ slideNumber }) {
   return (
     <PromptOutputSlide
@@ -10,7 +11,7 @@ export default function DemoBrief({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       only="prompt"
-      askLabel="The ask, second try"
+      askLabel="Same facts, plus what was in your head"
       prompt={strongPrompt}
       promptFontSize={32}
       promptColumns={2}

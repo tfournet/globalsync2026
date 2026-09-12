@@ -1,45 +1,23 @@
-// Verbatim model prompts and outputs for slides 3 to 5 (see docs/demo/).
+// Verbatim model prompts and outputs for the mirror slides (see docs/demo/).
 // Quoted model output, not Tim's writing -- exempt from scripts/lint-copy.js
 // (em dashes and other brand-lint rules do not apply to quoted third-party text).
 
-export const weakPrompt = `Write an email to a client about the outage today`
+export const weakPrompt = `Write an email to Dana at Harbor Dental about this morning's Dentrix outage. It was down about 90 minutes because of an expired cert on the VPN. It's fixed now. Apologize and let her know we're on top of it.`
 
-export const weakOutput = `I don't have any details about a specific outage (what was affected, timing, duration, root cause, or which client this is for). I can draft a solid template now and you can fill in the specifics, or you can give me the details and I'll tailor it.
+export const weakOutput = `Subject: Follow-up on This Morning's Dentrix Outage
 
-Here's a ready-to-use draft:
+Hi Dana,
 
----
+I wanted to follow up on the Dentrix outage this morning and apologize for the disruption it caused at Harbor Dental. We know how much you rely on that system to keep the front desk and scheduling running smoothly, and I'm sorry for the trouble it caused.
 
-**Subject: Service Outage on September 12, 2026 – Summary and Next Steps**
+The issue was caused by an expired certificate on the VPN connection, which affected access to Dentrix for about 90 minutes. It's fully resolved now, and Dentrix should be back to normal.
 
-Hi [Client Name],
+We're keeping an eye on things to make sure it stays stable, and we're on top of it. If you notice anything unusual or run into any further issues, please reach out right away and we'll jump on it.
 
-I'm writing to let you know about a service outage that occurred earlier today, [start time]–[end time] [timezone].
+Thanks for your patience, and sorry again for the inconvenience.
 
-**What happened:**
-[Brief description of the issue, e.g., "Our [system/service] experienced an interruption due to [cause]."]
-
-**Impact:**
-[What the client would have noticed, e.g., "You may have experienced [errors/downtime/degraded performance] during this window."]
-
-**Resolution:**
-The issue was identified and resolved at [time]. We've confirmed that [system/service] is now operating normally.
-
-**Next steps:**
-We're conducting a full review to understand the root cause and to put safeguards in place to prevent a recurrence. [If applicable: We'll follow up with a detailed post-incident report by [date].]
-
-We know outages like this can disrupt your work, and we apologize for the inconvenience. Please don't hesitate to reach out if you noticed any lingering issues or have questions.
-
-Thank you for your patience.
-
-Best regards,
-Tim
-[Title/Company]
-tim@rewst.io
-
----
-
-Let me know the actual details (system name, timing, cause, impact, resolution) and I'll fill this in precisely.`
+Best,
+Tim`
 
 export const strongPrompt = `Write an email to a client about the outage today.
 
@@ -72,29 +50,34 @@ Let me know if you have any questions.
 Tim
 Northline IT`
 
-export const askPrompt = `That first draft wasn't what I needed. Looking back at how I asked, how could I have asked so you'd produce something closer to what I actually needed?`
+export const askPrompt = `That email wasn't what I needed. Looking back at what I gave you, what was missing from my request that you would have needed to write the one I had in my head?`
 
-export const askOutput = `A few things were missing that made me default to a generic template instead of a real email:
+export const askOutput = `Looking back, here's what I had to guess at rather than know:
 
-1. **Which client and which system/service** — I didn't know the audience or what actually broke, so I couldn't name anything concrete.
-2. **What actually happened** — cause, start/end time, what was affected. Without that I had to write placeholders like "[cause]" instead of real content.
-3. **Impact on the client specifically** — did they see errors, downtime, data delay? That's usually the part they care about most.
-4. **Current status** — resolved, monitoring, or still degraded? Changes the tone entirely.
-5. **Relationship/tone context** — is this a first notice, a follow-up after they complained, or does it need to reference an SLA/credit? That changes how apologetic vs. matter-of-fact it should be.
-6. **Source material** — if there's an incident ticket, Slack thread, status page post, or postmortem doc, pointing me at it (or pasting it in) would let me pull real facts instead of guessing.
+1. **Who I'm signing as / what company** — I used "Tim" with no company name or title. If this is from an MSP or IT provider to a client, Dana needs to know who's writing and what firm, not just a first name.
 
-Fastest fix next time: paste in whatever you already have (ticket notes, Slack thread, status page update) and just say "turn this into a client email for [client]." I'll extract the specifics rather than templating around gaps.
+2. **Relationship/tone** — I don't know if you and Dana are on a first-name, casual basis or if this needs to be more formal client-facing correspondence. That changes word choice a lot.
 
-If you want, give me those details now and I'll write the real version.`
+3. **Level of technical detail Dana wants** — I named "VPN" and "certificate" explicitly. You may not want to expose the technical cause to a client at all, or want it phrased in plainer terms ("a routine security credential expired").
 
+4. **What "on top of it" should actually claim** — I wrote a vague "we're monitoring it." If there's a concrete fix (e.g., "we've set up alerts so this can't happen without warning again" or "we've extended the cert validity/added auto-renewal"), that's a much stronger and more honest thing to say than generic reassurance.
+
+5. **Whether this is a first occurrence or a repeat** — that changes whether the tone should be light regret or a more serious accountability statement.
+
+6. **Length/format expectations** — you didn't say short-and-direct vs. a fuller explanation, so I defaulted to a longer, more formal shape that may not match what you'd actually send.
+
+7. **Any SLA/credit/compensation angle** — some outage notices need to mention a credit or reference a support ticket number; I don't know if that applies here.
+
+If you tell me your role/company, your relationship with Dana, and whether there's a concrete preventive fix in place, I can rewrite it to match what you actually had in mind.`
 
 // Same answer, headings only: each numbered label is the model's own bold
 // text, the explanations after the dash are omitted. Full text above.
-export const askOutputHeadings = `A few things were missing that made me default to a generic template instead of a real email:
+export const askOutputHeadings = `Looking back, here's what I had to guess at rather than know:
 
-1. **Which client and which system/service**
-2. **What actually happened**
-3. **Impact on the client specifically**
-4. **Current status**
-5. **Relationship/tone context**
-6. **Source material**`
+1. **Who I'm signing as / what company**
+2. **Relationship/tone**
+3. **Level of technical detail Dana wants**
+4. **What "on top of it" should actually claim**
+5. **Whether this is a first occurrence or a repeat**
+6. **Length/format expectations**
+7. **Any SLA/credit/compensation angle**`

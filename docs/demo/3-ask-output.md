@@ -1,12 +1,17 @@
-A few things were missing that made me default to a generic template instead of a real email:
+Looking back, here's what I had to guess at rather than know:
 
-1. **Which client and which system/service** — I didn't know the audience or what actually broke, so I couldn't name anything concrete.
-2. **What actually happened** — cause, start/end time, what was affected. Without that I had to write placeholders like "[cause]" instead of real content.
-3. **Impact on the client specifically** — did they see errors, downtime, data delay? That's usually the part they care about most.
-4. **Current status** — resolved, monitoring, or still degraded? Changes the tone entirely.
-5. **Relationship/tone context** — is this a first notice, a follow-up after they complained, or does it need to reference an SLA/credit? That changes how apologetic vs. matter-of-fact it should be.
-6. **Source material** — if there's an incident ticket, Slack thread, status page post, or postmortem doc, pointing me at it (or pasting it in) would let me pull real facts instead of guessing.
+1. **Who I'm signing as / what company** — I used "Tim" with no company name or title. If this is from an MSP or IT provider to a client, Dana needs to know who's writing and what firm, not just a first name.
 
-Fastest fix next time: paste in whatever you already have (ticket notes, Slack thread, status page update) and just say "turn this into a client email for [client]." I'll extract the specifics rather than templating around gaps.
+2. **Relationship/tone** — I don't know if you and Dana are on a first-name, casual basis or if this needs to be more formal client-facing correspondence. That changes word choice a lot.
 
-If you want, give me those details now and I'll write the real version.
+3. **Level of technical detail Dana wants** — I named "VPN" and "certificate" explicitly. You may not want to expose the technical cause to a client at all, or want it phrased in plainer terms ("a routine security credential expired").
+
+4. **What "on top of it" should actually claim** — I wrote a vague "we're monitoring it." If there's a concrete fix (e.g., "we've set up alerts so this can't happen without warning again" or "we've extended the cert validity/added auto-renewal"), that's a much stronger and more honest thing to say than generic reassurance.
+
+5. **Whether this is a first occurrence or a repeat** — that changes whether the tone should be light regret or a more serious accountability statement.
+
+6. **Length/format expectations** — you didn't say short-and-direct vs. a fuller explanation, so I defaulted to a longer, more formal shape that may not match what you'd actually send.
+
+7. **Any SLA/credit/compensation angle** — some outage notices need to mention a credit or reference a support ticket number; I don't know if that applies here.
+
+If you tell me your role/company, your relationship with Dana, and whether there's a concrete preventive fix in place, I can rewrite it to match what you actually had in mind.

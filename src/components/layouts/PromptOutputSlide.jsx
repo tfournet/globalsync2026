@@ -87,11 +87,14 @@ function Panel({ label, labelClass, text, lines, fontSize, columns, style }) {
       style={style}
     >
       <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${labelClass}`}>{label}</p>
-      {w.before && <p className="mt-[16px] text-[22px] text-rff-muted">continued from above</p>}
-      <div className="mt-[24px] min-h-0 flex-1">
+      <div className="mt-[24px] min-h-0 flex-1 overflow-hidden">
         <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} />
       </div>
-      {w.after && <p className="mt-[16px] text-[22px] text-rff-muted">continues</p>}
+      {(w.before || w.after) && (
+        <p className="mt-[12px] shrink-0 text-[22px] text-rff-muted">
+          {w.before && w.after ? 'excerpt' : w.before ? 'from the middle' : 'continues'}
+        </p>
+      )}
     </div>
   )
 }

@@ -1,1 +1,1 @@
-Write an email to a client about the outage today
+Write an email to Dana at Harbor Dental about this morning's Dentrix outage. It was down about 90 minutes because of an expired cert on the VPN. It's fixed now. Apologize and let her know we're on top of it.

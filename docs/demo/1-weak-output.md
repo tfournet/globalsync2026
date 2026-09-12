@@ -1,36 +1,14 @@
-I don't have any details about a specific outage (what was affected, timing, duration, root cause, or which client this is for). I can draft a solid template now and you can fill in the specifics, or you can give me the details and I'll tailor it.
+Subject: Follow-up on This Morning's Dentrix Outage
 
-Here's a ready-to-use draft:
+Hi Dana,
 
----
+I wanted to follow up on the Dentrix outage this morning and apologize for the disruption it caused at Harbor Dental. We know how much you rely on that system to keep the front desk and scheduling running smoothly, and I'm sorry for the trouble it caused.
 
-**Subject: Service Outage on September 12, 2026 – Summary and Next Steps**
+The issue was caused by an expired certificate on the VPN connection, which affected access to Dentrix for about 90 minutes. It's fully resolved now, and Dentrix should be back to normal.
 
-Hi [Client Name],
+We're keeping an eye on things to make sure it stays stable, and we're on top of it. If you notice anything unusual or run into any further issues, please reach out right away and we'll jump on it.
 
-I'm writing to let you know about a service outage that occurred earlier today, [start time]–[end time] [timezone].
+Thanks for your patience, and sorry again for the inconvenience.
 
-**What happened:**
-[Brief description of the issue, e.g., "Our [system/service] experienced an interruption due to [cause]."]
-
-**Impact:**
-[What the client would have noticed, e.g., "You may have experienced [errors/downtime/degraded performance] during this window."]
-
-**Resolution:**
-The issue was identified and resolved at [time]. We've confirmed that [system/service] is now operating normally.
-
-**Next steps:**
-We're conducting a full review to understand the root cause and to put safeguards in place to prevent a recurrence. [If applicable: We'll follow up with a detailed post-incident report by [date].]
-
-We know outages like this can disrupt your work, and we apologize for the inconvenience. Please don't hesitate to reach out if you noticed any lingering issues or have questions.
-
-Thank you for your patience.
-
-Best regards,
+Best,
 Tim
-[Title/Company]
-tim@rewst.io
-
----
-
-Let me know the actual details (system name, timing, cause, impact, resolution) and I'll fill this in precisely.
