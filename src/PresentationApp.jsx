@@ -8,6 +8,10 @@ const STAGE_HEIGHT = 1080
 const BUDGET_SECONDS = EVENT.sessionDurationMinutes * 60
 const WARN_SECONDS = 25 * 60
 
+const THUMB_WIDTH = 440
+const THUMB_SCALE = THUMB_WIDTH / STAGE_WIDTH
+const THUMB_HEIGHT = STAGE_HEIGHT * THUMB_SCALE
+
 function slideIndexFromHash() {
   const match = window.location.hash.match(/^#\/(\d+)$/)
   if (!match) return 0
@@ -37,7 +41,8 @@ function useStageScale() {
 
 export default function PresentationApp() {
   const [index, setIndex] = useState(slideIndexFromHash)
-  const [showNotes, setShowNotes] = useState(false)
+  const [showHud, setShowHud] = useState(false)
+  const [showGrid, setShowGrid] = useState(false)
   const [timerRunning, setTimerRunning] = useState(false)
   const [elapsed, setElapsed] = useState(0)
   const numberBufferRef = useRef('')
@@ -72,6 +77,11 @@ export default function PresentationApp() {
     function onKeyDown(e) {
       const key = e.key
 
+      if (showGrid) {
+        if (key === 'Escape') setShowGrid(false)
+        return
+      }
+
       if (/^[0-9]$/.test(key)) {
         numberBufferRef.current += key
         return
@@ -103,7 +113,11 @@ export default function PresentationApp() {
           break
         case 'n':
         case 'N':
-          setShowNotes((v) => !v)
+          setShowHud((v) => !v)
+          break
+        case 'g':
+        case 'G':
+          setShowGrid(true)
           break
         case 't':
         case 'T':
@@ -127,7 +141,7 @@ export default function PresentationApp() {
           }
           break
         case 'Escape':
-          setShowNotes(false)
+          setShowHud(false)
           break
         default:
           break
@@ -136,51 +150,91 @@ export default function PresentationApp() {
 
     window.addEventListener('keydown', onKeyDown)
     return () => window.removeEventListener('keydown', onKeyDown)
-  }, [index, goTo, breakIndex])
+  }, [index, goTo, breakIndex, showGrid])
 
   const slide = slides[index]
   const Component = slide.component
   const slideNotes = slide.notesKey ? notes[slide.notesKey] : undefined
 
-  let timerColorClass = 'text-white'
-  if (elapsed >= BUDGET_SECONDS) timerColorClass = 'text-red-500'
-  else if (elapsed >= WARN_SECONDS) timerColorClass = 'text-orange-400'
+  let timerColorClass = 'text-rff-body'
+  let timerDotClass = 'bg-rff-body'
+  if (elapsed >= BUDGET_SECONDS) {
+    timerColorClass = 'text-red-600'
+    timerDotClass = 'bg-red-600'
+  } else if (elapsed >= WARN_SECONDS) {
+    timerColorClass = 'text-rff-orange'
+    timerDotClass = 'bg-rff-orange'
+  }
 
   return (
-    <div className="flex h-screen w-screen flex-col bg-black">
-      <div className="relative flex flex-1 items-center justify-center overflow-hidden">
-        <div
-          style={{
-            width: STAGE_WIDTH,
-            height: STAGE_HEIGHT,
-            transform: `scale(${scale})`,
-          }}
-          className="relative shrink-0 overflow-hidden bg-rff-light shadow-2xl"
-        >
-          <Component slideNumber={index + 1} />
-        </div>
+    <div className="relative flex h-screen w-screen items-center justify-center overflow-hidden bg-black">
+      <div
+        style={{
+          width: STAGE_WIDTH,
+          height: STAGE_HEIGHT,
+          transform: `scale(${scale})`,
+        }}
+        className="shrink-0 overflow-hidden shadow-2xl"
+      >
+        <Component slideNumber={index + 1} />
+      </div>
 
-        <div className="pointer-events-none absolute left-4 top-4 flex items-center gap-3 font-mono text-sm text-white/80">
-          <span className={timerColorClass}>{formatTime(elapsed)}</span>
-          {timerRunning && <span className="text-emerald-400">running</span>}
-        </div>
-
-        {showNotes && (
-          <div className="absolute bottom-6 right-6 flex max-h-[45vh] w-[420px] flex-col gap-2 overflow-y-auto rounded-lg bg-white/95 p-4 text-sm text-rff-body shadow-2xl">
-            <p className="text-xs font-bold uppercase tracking-wide text-rff-blue">
-              Presenter notes — slide {index + 1} of {slides.length}
-            </p>
-            <p className="whitespace-pre-wrap">{slideNotes || 'No notes for this slide.'}</p>
+      {showHud && (
+        <div className="absolute bottom-0 right-0 flex w-[480px] flex-col gap-[10px] rounded-[4px] bg-white p-[24px] text-rff-body shadow-2xl">
+          <p className="text-[16px] font-bold text-rff-navy">
+            Slide {index + 1} of {slides.length}
+          </p>
+          <div className="flex items-center gap-[12px]">
+            <span className={`font-mono text-[28px] font-bold ${timerColorClass}`}>{formatTime(elapsed)}</span>
+            <span className="text-[14px] uppercase tracking-wide text-rff-muted">
+              {timerRunning ? 'Running' : 'Stopped'}
+            </span>
           </div>
-        )}
-      </div>
+          <p className="max-h-[280px] overflow-y-auto whitespace-pre-wrap text-[15px]">
+            {slideNotes || 'No notes for this slide.'}
+          </p>
+        </div>
+      )}
 
-      <div className="h-1 w-full bg-white/10">
-        <div
-          className="h-full bg-rff-blue transition-all duration-300 ease-out"
-          style={{ width: `${((index + 1) / slides.length) * 100}%` }}
-        />
-      </div>
+      {timerRunning && !showHud && (
+        <div className={`absolute bottom-0 right-0 h-[6px] w-[6px] ${timerDotClass}`} />
+      )}
+
+      {showGrid && (
+        <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 p-[40px]">
+          <div className="grid grid-cols-4 gap-[24px]">
+            {slides.map((s, i) => {
+              const SlideComponent = s.component
+              return (
+                <button
+                  key={s.id}
+                  type="button"
+                  onClick={() => {
+                    goTo(i)
+                    setShowGrid(false)
+                  }}
+                  className="relative overflow-hidden rounded-[4px] border-2 border-transparent outline-none focus:border-rff-blue"
+                  style={{ width: THUMB_WIDTH, height: THUMB_HEIGHT }}
+                >
+                  <div
+                    style={{
+                      width: STAGE_WIDTH,
+                      height: STAGE_HEIGHT,
+                      transform: `scale(${THUMB_SCALE})`,
+                      transformOrigin: 'top left',
+                    }}
+                  >
+                    <SlideComponent slideNumber={i + 1} />
+                  </div>
+                  <span className="absolute bottom-[4px] right-[6px] rounded-[4px] bg-black/60 px-[6px] text-[12px] font-bold text-white">
+                    {i + 1}
+                  </span>
+                </button>
+              )
+            })}
+          </div>
+        </div>
+      )}
     </div>
   )
 }
