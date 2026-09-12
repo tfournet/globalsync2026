@@ -41,6 +41,10 @@
   --color-rff-dark: #1C1E2A;
   --color-rff-body: #272B33;
   --color-rff-light: #F5F5F7;
+  --color-rff-gray-line: #E0E0E0;
+  --color-rff-muted: #5F6570;
+  --color-rff-muted-dark: #A9AEB8;
+  --color-rff-light-text: #E0E0E0;
 
   --font-sans: 'Carlito', 'Calibri', system-ui, -apple-system, sans-serif;
 }

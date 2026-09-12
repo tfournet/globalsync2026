@@ -10,6 +10,10 @@ export const COLORS = {
   darkBg: '#1C1E2A',
   bodyText: '#272B33',
   lightBg: '#F5F5F7',
+  grayLine: '#E0E0E0',
+  muted: '#5F6570',
+  mutedDark: '#A9AEB8',
+  lightText: '#E0E0E0',
 }
 
 // Pillar mapping: each RFF "pillar" has one canonical accent color.

@@ -1,8 +1,6 @@
-export default function SlideTitle({ children, className = '', light = false }) {
+export default function SlideTitle({ children, className = '' }) {
   return (
-    <h1
-      className={`text-[56px] font-bold leading-tight ${light ? 'text-white' : 'text-rff-navy'} ${className}`}
-    >
+    <h1 className={`text-[75px] font-bold leading-[1.1] text-rff-navy ${className}`}>
       {children}
     </h1>
   )

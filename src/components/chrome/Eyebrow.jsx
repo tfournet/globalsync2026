@@ -7,7 +7,7 @@ const ACCENT_TEXT = {
 export default function Eyebrow({ children, accent = 'blue', className = '' }) {
   return (
     <p
-      className={`text-[20px] font-bold uppercase tracking-[0.15em] ${ACCENT_TEXT[accent]} ${className}`}
+      className={`text-[27px] font-bold uppercase tracking-[0.12em] ${ACCENT_TEXT[accent]} ${className}`}
     >
       {children}
     </p>
