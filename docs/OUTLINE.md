@@ -26,33 +26,35 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 ## Decisions (recommendations, override as needed)
 
 - Title: "Doing More Without Adding Bodies" on the cover, matching the program. "Doing more with less" not used; it names the wrong idea.
-- Demo: pre-generated text only. No network, no live model call. Prompts shown verbatim so anyone can reproduce that night. The weak prompt is what an owner actually types (all the facts, none of the intent), not a one-liner; a one-liner proves nothing the room disputes. Generated honestly, first run kept.
+- Demo: pre-generated text only. No network, no live model call. Prompts shown verbatim so anyone can reproduce that night. The weak prompt is what an owner actually does: one line above a pasted PSA ticket. All the facts, none of the intent. A one-liner alone proves nothing the room disputes. Generated honestly, first run kept.
 - No customer story. A Rewst customer before/after is platform evidence however it is narrated, there is no strong recent case, and the 30 minutes are already full. The demo (slides 4 to 7) is the before/after; it is about articulation, not hours saved.
 - Rewst presence: name and logo on the presenters slide and closing slide only. Aharon's law attributed by name. No product UI, no comparisons, no customer stories, no time-saved claims tied to the platform.
 
 ## Beats and slides
 
-19 slides, about 26 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
+20 slides, about 26 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
 
 1. Cover
 2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another, repeat until five.
 3. We abdicate, we think we delegate (comparison). Delegate: hand over the work, keep the definition of done, say what good looks like. Abdicate: hand over both, grade against the version in your head, blame the receiver. We did this to our techs for years; the wrong result came back a week later so we blamed the tech.
 4. The demo never had a client (two-column). Every AI keynote is one sentence then magic; it works because the presenter has no stake in which game he gets. Then you go home and ask for a client email where every detail is the job. No vendor names. Twenty seconds.
-5. Abdicating to a machine (prompt/output). The realistic weak ask: every fact Tim was thinking about (Dana, Harbor Dental, Dentrix, 90 minutes, expired cert, fixed, apologize, on top of it). The email back is competent and generic. Point at what it gets wrong, which is exactly what stayed in Tim's head: explains certificates to a non-technical office manager; says on top of it with nothing behind it; never mentions patient data, the one thing she is afraid of; she forwards this to the practice owner as-is. Line: every fact you were thinking about, none of the ones in your head. Then: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
-6. Delegating to the same machine (full brief). Same facts plus what was in the head: who Dana is, what she does with it, what on top of it means (monitoring by Friday), no data lost, forwardable. This is delegating.
-7. Forwardable without edits (full output). Line: same tool, same task, the only thing that changed was you.
-8. Ask it what you left out (prompt/output, headings only). Its seven headings: who is signing, relationship and tone, how technical Dana is, what on top of it should claim, first occurrence or repeat, length, SLA. It just described your head. Try this tonight.
-9. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. Same habit, bigger scale.
-10. What "we have a process" means (labeled rows, orange). We have a person we abdicated to. Nobody said what the exception was. First automation is the first honest audit. When did you last watch your best tech do it? Line: hire for the exception, automate the rule.
-11. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.
-12. Six processes, one sentence each (agenda, orange). SLOW. Onboarding so the client's first day works; offboarding so nothing is left open; alert triage so a human only sees what needs one; access requests so the identity check happens; status updates so they hear it from you first; license reconciliation so you stop paying for ghosts. Pick one. Table 3 works from this.
-13. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
-14. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
-15. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
-16. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
-17. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
-18. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down what done looks like. That is delegating. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
-19. Presenter.
+5. Abdicating to a machine (full-width ask). What everyone actually does: one line ("Write an email to the client about this. Apologize and let them know we're on top of it.") above a pasted PSA ticket. The ticket has everything a tech needs: full waiting room, FGT-60F, Phase 1, DigiCert, and the aside that this cert was flagged in the Q2 review and nobody approved the renewal. Every fact.
+6. What the client would have received (full-width output). Ticket number in the subject. VPN tunnel and SSL certificate explained to an office manager. "We're on top of it" verbatim. And the machine quietly decided to omit the Q2 flag and say the cert was not being monitored. A decision about what the client hears, made without you. Line: you pasted the ticket, it decided what the client hears. Then: it did exactly what you wrote. So did your tech. This one was fast enough for you to notice.
+7. Delegating to the same machine (full brief). Same ticket pasted underneath; these are the words that went above it, in prose: who Dana is and that she forwards to Dr. Patel; do not quote the ticket; the Q2 conversation is for me and the owner, not this email; no patient data touched because that is what she asked on the phone; what on top of it actually means, monitoring by Friday. This is delegating.
+8. Forwardable without edits (full output). Under 150 words, Dr. Patel named. Line: same tool, same task, the only thing that changed was you.
+9. Ask it what you left out (prompt/output, headings only). Its six headings, then its own last sentence as the punchline, unedited: it hid the Q2 flag and knows that is the detail that mattered. Nobody asked it to say that. It just described your head. Try this tonight.
+
+10. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. Same habit, bigger scale.
+11. What "we have a process" means (labeled rows, orange). We have a person we abdicated to. Nobody said what the exception was. First automation is the first honest audit. When did you last watch your best tech do it? Line: hire for the exception, automate the rule.
+12. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.
+13. Six processes, one sentence each (agenda, orange). SLOW. Onboarding so the client's first day works; offboarding so nothing is left open; alert triage so a human only sees what needs one; access requests so the identity check happens; status updates so they hear it from you first; license reconciliation so you stop paying for ghosts. Pick one. Table 3 works from this.
+14. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
+15. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
+16. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
+17. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
+18. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
+19. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down what done looks like. That is delegating. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
+20. Presenter.
 
 ## Lines to drop verbatim, once each
 

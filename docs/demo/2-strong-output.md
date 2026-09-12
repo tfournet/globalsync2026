@@ -1,16 +1,14 @@
-Subject: Today's Dentrix Outage — What Happened and What We Fixed
+Subject: Update on This Morning's Outage – All Clear
 
 Hi Dana,
 
-This morning, Dentrix was down at all three offices from 8:40 to 10:15am. The cause was a security certificate on our VPN equipment that expired — the branch offices connect through the main office, so all three went down together.
+Sorry for the disruption this morning. All three offices lost connectivity to Dentrix for about 90 minutes because a security certificate on our network equipment expired. All locations were back up and confirmed working by 10:25 am.
 
-We replaced the certificate and confirmed all three locations back online by 10:25am. No patient data was lost or affected.
+No patient data was touched — your Dentrix server itself never went down, the offices just couldn't reach it during that window.
 
-To make sure this doesn't happen again without warning, we're adding a monitoring alert that flags certificates 30 days before they expire. That will be in place by Friday.
+We're already on top of it: we're putting monitoring in place that will warn us 30 days before any certificate is set to expire, so this specific issue won't happen again. That'll be live by Friday.
 
-We're sorry for the disruption to your patients and front desk today. Feel free to forward this along to Dr. [Owner] if helpful.
-
-Let me know if you have any questions.
+Thanks for your patience this morning, and please pass this along to Dr. Patel.
 
 Tim
 Northline IT

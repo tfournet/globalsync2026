@@ -1,17 +1,15 @@
-Looking back, here's what I had to guess at rather than know:
+A few things I didn't have that would've changed the letter:
 
-1. **Who I'm signing as / what company** — I used "Tim" with no company name or title. If this is from an MSP or IT provider to a client, Dana needs to know who's writing and what firm, not just a first name.
+1. **Who the "client" recipient actually is.** I aimed it at Dana, but if this is going to the practice owner or a different stakeholder, the tone/detail level shifts — Dana already lived through this and got a call at 10:15; she may not need the full recap.
 
-2. **Relationship/tone** — I don't know if you and Dana are on a first-name, casual basis or if this needs to be more formal client-facing correspondence. That changes word choice a lot.
+2. **How to handle the Q2 cert flag.** The ticket says this cert was flagged in Q2 review and nobody approved the renewal. I glossed over that entirely and just said "we've identified... wasn't being monitored" — which isn't accurate and dodges the real story. I didn't know: was the non-approval on us (we didn't escalate hard enough) or on them (they sat on it)? That fact determines whether this is a clean apology or one that needs to gently note shared responsibility without sounding defensive. I guessed wrong by omitting it.
 
-3. **Level of technical detail Dana wants** — I named "VPN" and "certificate" explicitly. You may not want to expose the technical cause to a client at all, or want it phrased in plainer terms ("a routine security credential expired").
+3. **Whether a credit/compensation is expected.** P1, patient-facing, ~90 min outage across two sites — some MSPs proactively offer an SLA credit or a line about "no charge for this incident." I didn't know your policy, so I left it out rather than guess.
 
-4. **What "on top of it" should actually claim** — I wrote a vague "we're monitoring it." If there's a concrete fix (e.g., "we've set up alerts so this can't happen without warning again" or "we've extended the cert validity/added auto-renewal"), that's a much stronger and more honest thing to say than generic reassurance.
+4. **Sender identity and signoff details.** I left placeholders. Who's actually signing this — you, a manager, the tech who worked it?
 
-5. **Whether this is a first occurrence or a repeat** — that changes whether the tone should be light regret or a more serious accountability statement.
+5. **Concrete commitment/date for the RMM fix**, not just "we're adding it." Clients often want a "by when," not an intention.
 
-6. **Length/format expectations** — you didn't say short-and-direct vs. a fuller explanation, so I defaulted to a longer, more formal shape that may not match what you'd actually send.
+6. **Desired length/formality.** You didn't say short-and-warm vs. detailed-and-technical — I defaulted to a fairly full incident-report style, which may be more than Dana wants after already being walked through it live.
 
-7. **Any SLA/credit/compensation angle** — some outage notices need to mention a credit or reference a support ticket number; I don't know if that applies here.
-
-If you tell me your role/company, your relationship with Dana, and whether there's a concrete preventive fix in place, I can rewrite it to match what you actually had in mind.
+The biggest one is #2 — I effectively hid the fact that this was a known, previously-flagged risk, which is the detail most likely to matter to "the email you had in your head."

@@ -1,9 +1,8 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { weakPrompt, weakOutput } from '../../data/demo.js'
+import { weakPrompt } from '../../data/demo.js'
 
-// The realistic weak ask: every fact Tim was thinking about, none of the
-// ones in his head. Output shown whole (minus subject and sign-off) because
-// the point is that it looks fine.
+// What owners actually do: one line, then paste the PSA ticket. Full width so
+// the ticket is recognizable from the back row. Resolution block omitted.
 export default function DemoWeak({ slideNumber }) {
   return (
     <PromptOutputSlide
@@ -11,12 +10,12 @@ export default function DemoWeak({ slideNumber }) {
       title="Abdicating to a machine"
       accent="blue"
       slideNumber={slideNumber}
+      only="prompt"
+      askLabel="The ask"
       prompt={weakPrompt}
-      promptFontSize={34}
-      output={weakOutput}
-      outputLines={[2, 9]}
-      outputFontSize={28}
-      punchline="Every fact you were thinking about. None of the ones in your head."
+      promptLines={[0, 14]}
+      promptFontSize={28}
+      promptColumns={2}
     />
   )
 }

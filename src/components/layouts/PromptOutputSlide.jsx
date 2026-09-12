@@ -15,6 +15,7 @@ const TOP = 265
 const FOOTER_TOP = 1000
 const BOTTOM_MARGIN = 20
 const EXTRA_LINE_SPACE = 70
+const QUOTED_LINE_SPACE = 110
 
 // Pick a contiguous run of source lines. `lines` is [from, to) over the text
 // split on newlines; omitted means the whole text. Markers say when the panel
@@ -118,10 +119,11 @@ export default function PromptOutputSlide({
   outputColumns = 1,
   only,
   punchline,
+  punchlineQuoted = false,
   footnote,
 }) {
   const hasExtraLine = Boolean(punchline || footnote)
-  const bottom = FOOTER_TOP - BOTTOM_MARGIN - (hasExtraLine ? EXTRA_LINE_SPACE : 0)
+  const bottom = FOOTER_TOP - BOTTOM_MARGIN - (hasExtraLine ? (punchlineQuoted ? QUOTED_LINE_SPACE : EXTRA_LINE_SPACE) : 0)
   const height = bottom - TOP
   const labelClass = ACCENT_TEXT[accent]
 
@@ -158,10 +160,10 @@ export default function PromptOutputSlide({
       )}
       {punchline && (
         <p
-          className="absolute text-[33px] font-bold text-rff-navy"
+          className={`absolute text-[33px] font-bold text-rff-navy ${punchlineQuoted ? 'italic' : ''}`}
           style={{ left: LEFT, top: bottom + BOTTOM_MARGIN, width: CONTENT_WIDTH }}
         >
-          {punchline}
+          {punchlineQuoted ? renderInline(punchline, 'q') : punchline}
         </p>
       )}
       {footnote && (

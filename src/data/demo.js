@@ -2,82 +2,130 @@
 // Quoted model output, not Tim's writing -- exempt from scripts/lint-copy.js
 // (em dashes and other brand-lint rules do not apply to quoted third-party text).
 
-export const weakPrompt = `Write an email to Dana at Harbor Dental about this morning's Dentrix outage. It was down about 90 minutes because of an expired cert on the VPN. It's fixed now. Apologize and let her know we're on top of it.`
+// One line above a pasted PSA ticket. The ticket is invented; the shape is not.
+export const weakPrompt = `Write an email to the client about this. Apologize and let them know we're on top of it.
 
-export const weakOutput = `Subject: Follow-up on This Morning's Dentrix Outage
+Ticket #48213 - Harbor Dental - Dentrix down all sites
+Status: Resolved
+Priority: P1
+Opened: 09/12 08:47 by Dana W (client)
+Contact: Dana Whitfield, Office Mgr
+Board: Service Desk
+Type: Network / Outage
+
+08:47 - Dana called, front desk at Midtown and Riverside can't open Dentrix, main office is fine. Users getting "cannot connect to database server." She's pretty upset, says they have a full waiting room. Told her we're looking.
+08:52 - Tunnels from Midtown and Riverside to HQ FGT-60F are down. Phase 1 failing. Cert on the FGT expired 09/11 23:59. This is the same cert we flagged in the Q2 review that nobody approved the renewal on.
+09:10 - Regenerated CSR, submitted to DigiCert. Waiting on issuance.
+09:48 - Cert issued. Installed on FGT-60F, rebound to IPsec Phase 1.
+10:12 - Tunnels up. Riverside confirmed Dentrix working. Midtown confirmed 10:15.
+10:15 - Called Dana back, told her it's up. She asked if any patient records were lost, told her no, the server was never down, they just couldn't reach it.
+10:25 - Verified all three sites. Closing.
+
+Resolution: Expired SSL cert on HQ Fortigate caused IPsec P1 failure for branch tunnels. Renewed cert via DigiCert, rebound, tunnels restored.
+Time: 1.5h
+Root cause: cert expiry, no monitoring/alerting on cert dates. Recommend adding to RMM.`
+
+export const weakOutput = `Subject: Resolved – Dentrix Access Outage at Midtown & Riverside (Ticket #48213)
+
+Dana,
+
+I want to sincerely apologize for the disruption this morning at Midtown and Riverside — I know a full waiting room with no access to Dentrix is the last thing you need, and we're sorry for the stress it caused your team.
+
+Here's a quick summary of what happened and what we did:
+
+**What happened:** The secure network connection (VPN tunnel) between your branch offices and the main office server expired due to an SSL certificate that lapsed overnight. This caused Midtown and Riverside to lose their connection to the Dentrix database, even though the server itself was never down and no patient data was affected or at risk.
+
+**What we did:** Our team caught the tunnel failures shortly after you called, identified the expired certificate as the root cause, and immediately requested a new one. Once issued, we installed it and restored the connections. All three sites were confirmed back up and working normally by 10:25 AM — total downtime was under two hours.
+
+**Going forward:** We've identified that this certificate wasn't being actively monitored for expiration, and we're on top of it — we're adding automated alerting for certificate expiration dates to our monitoring system so this type of issue is caught and resolved before it can impact your sites again.
+
+Thank you for your patience while we worked through this, and please don't hesitate to reach out if you have any questions or if anything still seems off at either location.
+
+Best regards,
+[Your Name]
+[Company Name] Service Desk`
+
+// Same ticket pasted below the same way; only the words above it changed.
+export const strongPrompt = `I need to send Dana Whitfield an email about this morning's outage. She's the office manager at Harbor Dental, three locations, and she's the one the front desk complains to. She isn't technical and doesn't want to be. She'll forward whatever I send straight to Dr. Patel, who owns the practice, so it has to stand on its own with no editing.
+
+The ticket notes are below, but don't quote them. She doesn't need the equipment names or the timeline, and she definitely doesn't need to hear that we flagged this cert in the spring and the renewal never got approved. That's a conversation for me and Dr. Patel, not this email. What she needs to know is that all three offices were down together for about 90 minutes, why in one plain sentence, that everyone was back by 10:25, and that no patient data was touched, because that's what she asked me on the phone and what she's afraid of.
+
+The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" means, so say that instead of the phrase.
+
+Keep it under 150 words, plain language. Own it without groveling. Sign it from me, Tim at Northline IT.
+
+Ticket #48213 - Harbor Dental - Dentrix down all sites
+Status: Resolved
+Priority: P1
+Opened: 09/12 08:47 by Dana W (client)
+Contact: Dana Whitfield, Office Mgr
+Board: Service Desk
+Type: Network / Outage
+
+08:47 - Dana called, front desk at Midtown and Riverside can't open Dentrix, main office is fine. Users getting "cannot connect to database server." She's pretty upset, says they have a full waiting room. Told her we're looking.
+08:52 - Tunnels from Midtown and Riverside to HQ FGT-60F are down. Phase 1 failing. Cert on the FGT expired 09/11 23:59. This is the same cert we flagged in the Q2 review that nobody approved the renewal on.
+09:10 - Regenerated CSR, submitted to DigiCert. Waiting on issuance.
+09:48 - Cert issued. Installed on FGT-60F, rebound to IPsec Phase 1.
+10:12 - Tunnels up. Riverside confirmed Dentrix working. Midtown confirmed 10:15.
+10:15 - Called Dana back, told her it's up. She asked if any patient records were lost, told her no, the server was never down, they just couldn't reach it.
+10:25 - Verified all three sites. Closing.
+
+Resolution: Expired SSL cert on HQ Fortigate caused IPsec P1 failure for branch tunnels. Renewed cert via DigiCert, rebound, tunnels restored.
+Time: 1.5h
+Root cause: cert expiry, no monitoring/alerting on cert dates. Recommend adding to RMM.`
+
+// The brief alone, without the pasted ticket, for the slide.
+export const strongBrief = `I need to send Dana Whitfield an email about this morning's outage. She's the office manager at Harbor Dental, three locations, and she's the one the front desk complains to. She isn't technical and doesn't want to be. She'll forward whatever I send straight to Dr. Patel, who owns the practice, so it has to stand on its own with no editing.
+
+The ticket notes are below, but don't quote them. She doesn't need the equipment names or the timeline, and she definitely doesn't need to hear that we flagged this cert in the spring and the renewal never got approved. That's a conversation for me and Dr. Patel, not this email. What she needs to know is that all three offices were down together for about 90 minutes, why in one plain sentence, that everyone was back by 10:25, and that no patient data was touched, because that's what she asked me on the phone and what she's afraid of.
+
+The part I actually care about is what comes next. We're adding monitoring that warns us thirty days before any certificate expires, and it'll be in place by Friday. That's what "on top of it" means, so say that instead of the phrase.
+
+Keep it under 150 words, plain language. Own it without groveling. Sign it from me, Tim at Northline IT.`
+
+export const strongOutput = `Subject: Update on This Morning's Outage – All Clear
 
 Hi Dana,
 
-I wanted to follow up on the Dentrix outage this morning and apologize for the disruption it caused at Harbor Dental. We know how much you rely on that system to keep the front desk and scheduling running smoothly, and I'm sorry for the trouble it caused.
+Sorry for the disruption this morning. All three offices lost connectivity to Dentrix for about 90 minutes because a security certificate on our network equipment expired. All locations were back up and confirmed working by 10:25 am.
 
-The issue was caused by an expired certificate on the VPN connection, which affected access to Dentrix for about 90 minutes. It's fully resolved now, and Dentrix should be back to normal.
+No patient data was touched — your Dentrix server itself never went down, the offices just couldn't reach it during that window.
 
-We're keeping an eye on things to make sure it stays stable, and we're on top of it. If you notice anything unusual or run into any further issues, please reach out right away and we'll jump on it.
+We're already on top of it: we're putting monitoring in place that will warn us 30 days before any certificate is set to expire, so this specific issue won't happen again. That'll be live by Friday.
 
-Thanks for your patience, and sorry again for the inconvenience.
-
-Best,
-Tim`
-
-export const strongPrompt = `Write an email to a client about the outage today.
-
-Who it is for: Dana Whitfield, office manager at Harbor Dental Group, a 3-location dental practice. She is not technical and she is the one who gets the complaints from the front desk.
-
-What happened: their practice management software (Dentrix) was unreachable from all three offices from 8:40am to 10:15am Eastern. Cause was an expired certificate on the VPN appliance at the main office; the branch offices route through it.
-
-What is fixed: the certificate was replaced at 10:15am and all three offices confirmed back online by 10:25am. No data was lost.
-
-What is still pending: we are adding certificate expiry monitoring with a 30 day warning so this cannot recur silently. That will be in place by Friday.
-
-Tone: plain, direct, no jargon, take responsibility without groveling. She should be able to forward it to the practice owner without editing it.
-
-Length: under 150 words. Sign it from Tim at Northline IT.`
-
-export const strongOutput = `Subject: Today's Dentrix Outage — What Happened and What We Fixed
-
-Hi Dana,
-
-This morning, Dentrix was down at all three offices from 8:40 to 10:15am. The cause was a security certificate on our VPN equipment that expired — the branch offices connect through the main office, so all three went down together.
-
-We replaced the certificate and confirmed all three locations back online by 10:25am. No patient data was lost or affected.
-
-To make sure this doesn't happen again without warning, we're adding a monitoring alert that flags certificates 30 days before they expire. That will be in place by Friday.
-
-We're sorry for the disruption to your patients and front desk today. Feel free to forward this along to Dr. [Owner] if helpful.
-
-Let me know if you have any questions.
+Thanks for your patience this morning, and please pass this along to Dr. Patel.
 
 Tim
 Northline IT`
 
 export const askPrompt = `That email wasn't what I needed. Looking back at what I gave you, what was missing from my request that you would have needed to write the one I had in my head?`
 
-export const askOutput = `Looking back, here's what I had to guess at rather than know:
+export const askOutput = `A few things I didn't have that would've changed the letter:
 
-1. **Who I'm signing as / what company** — I used "Tim" with no company name or title. If this is from an MSP or IT provider to a client, Dana needs to know who's writing and what firm, not just a first name.
+1. **Who the "client" recipient actually is.** I aimed it at Dana, but if this is going to the practice owner or a different stakeholder, the tone/detail level shifts — Dana already lived through this and got a call at 10:15; she may not need the full recap.
 
-2. **Relationship/tone** — I don't know if you and Dana are on a first-name, casual basis or if this needs to be more formal client-facing correspondence. That changes word choice a lot.
+2. **How to handle the Q2 cert flag.** The ticket says this cert was flagged in Q2 review and nobody approved the renewal. I glossed over that entirely and just said "we've identified... wasn't being monitored" — which isn't accurate and dodges the real story. I didn't know: was the non-approval on us (we didn't escalate hard enough) or on them (they sat on it)? That fact determines whether this is a clean apology or one that needs to gently note shared responsibility without sounding defensive. I guessed wrong by omitting it.
 
-3. **Level of technical detail Dana wants** — I named "VPN" and "certificate" explicitly. You may not want to expose the technical cause to a client at all, or want it phrased in plainer terms ("a routine security credential expired").
+3. **Whether a credit/compensation is expected.** P1, patient-facing, ~90 min outage across two sites — some MSPs proactively offer an SLA credit or a line about "no charge for this incident." I didn't know your policy, so I left it out rather than guess.
 
-4. **What "on top of it" should actually claim** — I wrote a vague "we're monitoring it." If there's a concrete fix (e.g., "we've set up alerts so this can't happen without warning again" or "we've extended the cert validity/added auto-renewal"), that's a much stronger and more honest thing to say than generic reassurance.
+4. **Sender identity and signoff details.** I left placeholders. Who's actually signing this — you, a manager, the tech who worked it?
 
-5. **Whether this is a first occurrence or a repeat** — that changes whether the tone should be light regret or a more serious accountability statement.
+5. **Concrete commitment/date for the RMM fix**, not just "we're adding it." Clients often want a "by when," not an intention.
 
-6. **Length/format expectations** — you didn't say short-and-direct vs. a fuller explanation, so I defaulted to a longer, more formal shape that may not match what you'd actually send.
+6. **Desired length/formality.** You didn't say short-and-warm vs. detailed-and-technical — I defaulted to a fairly full incident-report style, which may be more than Dana wants after already being walked through it live.
 
-7. **Any SLA/credit/compensation angle** — some outage notices need to mention a credit or reference a support ticket number; I don't know if that applies here.
+The biggest one is #2 — I effectively hid the fact that this was a known, previously-flagged risk, which is the detail most likely to matter to "the email you had in your head."`
 
-If you tell me your role/company, your relationship with Dana, and whether there's a concrete preventive fix in place, I can rewrite it to match what you actually had in mind.`
+// Same answer, headings only: each label is the model's own bold text, the
+// explanations are omitted. Full text above.
+export const askOutputHeadings = `A few things I didn't have that would've changed the letter:
 
-// Same answer, headings only: each numbered label is the model's own bold
-// text, the explanations after the dash are omitted. Full text above.
-export const askOutputHeadings = `Looking back, here's what I had to guess at rather than know:
+1. **Who the "client" recipient actually is**
+2. **How to handle the Q2 cert flag**
+3. **Whether a credit/compensation is expected**
+4. **Sender identity and signoff details**
+5. **Concrete commitment/date for the RMM fix**
+6. **Desired length/formality**`
 
-1. **Who I'm signing as / what company**
-2. **Relationship/tone**
-3. **Level of technical detail Dana wants**
-4. **What "on top of it" should actually claim**
-5. **Whether this is a first occurrence or a repeat**
-6. **Length/format expectations**
-7. **Any SLA/credit/compensation angle**`
+// The model's own closing sentence from the same answer, unedited.
+export const askOutputConfession = `The biggest one is #2 — I effectively hid the fact that this was a known, previously-flagged risk, which is the detail most likely to matter to "the email you had in your head."`
