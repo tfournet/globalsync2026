@@ -12,28 +12,28 @@ const MAX = 70
 function MarginBars() {
   return (
     <div className="flex h-full w-full flex-col gap-[16px]">
-      <div className="flex items-center gap-[16px] text-[16px] text-rff-body/80">
-        <span className="flex items-center gap-[6px]">
-          <span className="inline-block h-[12px] w-[12px] rounded-sm bg-rff-blue" /> Gross margin
+      <div className="flex items-center gap-[24px] text-[20px] text-rff-body">
+        <span className="flex items-center gap-[8px]">
+          <span className="inline-block h-[16px] w-[16px] rounded-sm bg-rff-blue" /> Gross margin
         </span>
-        <span className="flex items-center gap-[6px]">
-          <span className="inline-block h-[12px] w-[12px] rounded-sm bg-rff-orange" /> Target
+        <span className="flex items-center gap-[8px]">
+          <span className="inline-block h-[16px] w-[16px] rounded-sm bg-rff-orange" /> Target
         </span>
       </div>
       <div className="flex flex-1 items-end justify-around gap-[24px]">
         {QUARTERS.map((q) => (
-          <div key={q.label} className="flex flex-1 flex-col items-center gap-[8px]">
-            <div className="flex h-[280px] items-end gap-[8px]">
+          <div key={q.label} className="flex h-full flex-1 flex-col items-center justify-end gap-[16px]">
+            <div className="flex h-full items-end gap-[12px]">
               <div
-                className="w-[36px] rounded-t-sm bg-rff-blue"
+                className="w-[56px] rounded-t-sm bg-rff-blue"
                 style={{ height: `${(q.margin / MAX) * 100}%` }}
               />
               <div
-                className="w-[36px] rounded-t-sm bg-rff-orange"
+                className="w-[56px] rounded-t-sm bg-rff-orange"
                 style={{ height: `${(q.target / MAX) * 100}%` }}
               />
             </div>
-            <span className="text-[16px] text-rff-body/70">{q.label}</span>
+            <span className="text-[20px] text-rff-muted">{q.label}</span>
           </div>
         ))}
       </div>
