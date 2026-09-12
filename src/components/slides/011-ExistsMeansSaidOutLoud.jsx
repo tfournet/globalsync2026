@@ -16,9 +16,9 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       ]}
       cardTitle="Nothing failed"
       cardItems={[
-        'You found out in a sandbox',
+        'You found the gap at a whiteboard',
         "Not from the client's attorney",
-        'Now write down what Mike does',
+        'Now write down what Mike knows',
       ]}
     />
   )
