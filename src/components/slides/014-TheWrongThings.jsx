@@ -10,7 +10,7 @@ export default function TheWrongThings({ slideNumber }) {
       slideNumber={slideNumber}
       left={{
         heading: 'Automating the customer away',
-        items: ['Ticket auto-replies', 'Templated QBRs', 'Onboarding nobody attends'],
+        items: ['Ticket auto-replies', 'Templated QBRs', 'Kickoff calls nobody attends'],
       }}
       right={{
         heading: 'Automating the automaton',

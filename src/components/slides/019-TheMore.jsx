@@ -10,7 +10,7 @@ export default function TheMore({ slideNumber }) {
       slideNumber={slideNumber}
       paragraph="Automating your own shop is the starting line."
       points={[
-        'Invoices, approvals, onboarding, renewals',
+        'Invoices, approvals, new hires, renewals',
         'Same screens, same retyping, same 4pm Tuesday',
         'Nobody is selling them the fix',
       ]}

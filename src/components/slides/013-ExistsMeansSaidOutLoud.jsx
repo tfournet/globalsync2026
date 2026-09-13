@@ -18,7 +18,7 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       cardTitle="The cost, and the fix"
       cardItems={[
         'A senior tech who cannot take vacation',
-        'Every offboarding done twice',
+        'Every departure handled twice',
         'One hour with Mike. Write down which licenses.',
       ]}
     />
