@@ -74,10 +74,10 @@ landing delegate vs abdicate. Slide 4 establishes abdication before
 AI enters. Do not jump straight from slide 3 to AI, add an example, or replace
 the statement with a metaphor. Notes, outline, and screenshot 03 are updated.
 
-Other open items: headshot (none, card renders without one); GitHub repo
-not created, nothing pushed; joint from slide 14 to the divider at 15 has a
-placeholder bridge in the notes; Tim runs fast when nervous, SLOW slides
-are marked in notes.
+Repo: https://github.com/tfournet/globalsync2026 (private), main tracks
+origin/main. No headshot by Tim's decision; the card renders without one.
+The 14 to 15 bridge is written into the slide 14 note. Tim runs fast when
+nervous; SLOW slides are marked in notes.
 
 ## How Tim works
 

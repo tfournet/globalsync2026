@@ -36,7 +36,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 1. Cover
 2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another. Somebody has to, because nobody wrote down the rule. This is the symptom; slide 3 is the cause. The typing cannot leave the person until the rule does.
-3. Which alert is noise. Which client gets the short version. Which ticket gets a phone call. Your best tech decides that all day. Nobody has ever asked them how. (Statement, three navy lines, orange payoff.) SLOW. No illustration. Slide 2 is the symptom (typing), slide 3 names the decisions hiding inside the typing and why they never got written down. No Adobe here; that line belongs to Mike at slide 12. Photographable: concrete lines the room recognizes, not a slogan. Bridge to 4, spoken: why has nobody asked? Because it worked. You handed over the deciding along with the doing and never found out. We call that delegating. It is not. Bridge to slide 4, not straight to AI: your best tech kept filling in the blanks, and the work got done. That let you believe your instructions were complete.
+3. Which alert is noise. Which client gets the short version. Which ticket gets a phone call. Your best tech decides that all day. Nobody has ever asked them how. (Statement, three navy lines, orange payoff.) SLOW. No illustration. Slide 2 is the symptom (typing), slide 3 names the decisions hiding inside the typing and why they never got written down. No Adobe here; that line belongs to Mike at slide 12. Photographable: concrete lines the room recognizes, not a slogan. Bridge to 4, spoken: why has nobody asked? Because it worked. You handed over the deciding along with the doing and never found out. We call that delegating. It is not. Go to slide 4, not straight to AI.
 
 4. We abdicate, we think we delegate (comparison). Delegate: hand over the work, keep the definition of done, say what good looks like. Abdicate: hand over both, grade against the version in your head, get away with it until you don't. The mechanism: the best tech fills in what you meant, so the vague brief works and you never learn it was vague. The new hire gets the same brief and no context, and you decide the new hire is not working out. Closing: your best tech has been filling in the blanks for years. The new hire couldn't. Neither can this.
 5. The demo never had a client (three bullets, blue). Every AI keynote is one sentence, then magic. It works because the presenter has no stake in what comes back. Back at work, every detail is the job, and somebody else checks them. Bullets are Tim's own outline sentences so the photo matches the rant. Tim rants over it, about a minute. No vendor names, nothing about the email; slide 6 opens cold. Astra launch frames and transcript were tried and dropped (docs/astra/); a picture of the demo does not show the absence of a client.
@@ -92,7 +92,7 @@ Henry's five buckets: the Sizers take people and margin, the fireside takes the 
 
 - [ ] Generate the three prompt/output pairs honestly; save prompts and outputs verbatim
 - [ ] Confirm Aharon's law wording and attribution; second law?
-- [ ] Headshot
+- [x] Headshot: not needed for this one (Tim, 12 Sep)
 - [ ] Confirm the 30-day action wording fits the Table 3 report-out format
 - [ ] Tech check at lunch (11:45 to 12:45): laptop, clicker, display. No network dependency by design.
 
