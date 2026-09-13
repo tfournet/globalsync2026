@@ -45,6 +45,18 @@ with the judgment calls highlighted; slide 10 the forwardable email.
 Everything verbatim in docs/demo/ with README and replay counts. Do not
 regenerate without reason; if you do, first run stays.
 
+## Slide 5 (12 Sep evening)
+
+Three plain bullets in Tim's own outline wording; he rants over them. Five
+versions were tried and dropped the same evening: a comparison layout (its
+desk-side example spoiled the demo), two stills from the GPT-6 Astra launch
+video (a picture of a demo does not show the absence of a client), the
+demo's verbatim dialogue (needed explaining), and two "three lines plus a
+colored kicker" statements (Tim: AI-sounding slogans). Lesson: that shape
+reads as a slogan regardless of words; use his sentences. Frames and sources remain in docs/astra/ and
+public/illustrations/astra-*.png in case a use appears. HiddenDecisionSlide.jsx
+is unused.
+
 ## What is unresolved
 
 Slide 3 is text-only: three concrete decisions (which alert is noise, which
