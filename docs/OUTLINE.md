@@ -21,7 +21,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 - 1:00 Henry Timm: the five things that break in MSPs (people, margin, delivery, the founder, legal exposure)
 - 1:15 Dawn and Dave Sizer: people and margin break first
 - The reflexive fix is a hire, which makes margin worse. This talk answers that reflex. The problem statement is already done; skip it.
-- Output feeds Table 3 (Delivery and automation) at 4:15. Each table produces one takeaway and each attendee a 30-day commitment, so the talk must leave something usable.
+- 4:15 roundtables: attendees pick a table, work a real problem, one takeaway per table and one 30-day commitment per participant. Speakers are not asked to brief tables. The talk ends on one action per the brand rule; that is all it owes the program.
 
 ## Decisions (recommendations, override as needed)
 
@@ -32,7 +32,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Beats and slides
 
-21 slides, about 27 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
+20 slides, about 25 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
 
 1. Cover
 2. Automatons (pull statement, blue). SLOW. We built computers to do the work. Then we became the automatons. Open one app, read it, type into another. Somebody has to, because nobody wrote down the rule. This is the symptom; slide 3 is the cause. The typing cannot leave the person until the rule does.
@@ -47,17 +47,16 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 10. Forwardable without edits (full output). Under 150 words, Dr. Patel named. Loud: same tool, same task, the only thing that changed was how you asked. Bridge to Aharon, spoken: that is communication, hand over the judgment calls, not just the facts. Now take it to something bigger than an email. When you say we onboard new users, what you have is a ticket with the facts; the judgment calls are in someone's head. You just saw what happens when you hand that to a machine.
 
 11. Aharon's first law (pull statement). SLOW. You can't automate a process that doesn't exist. Aharon Chernin, Rewst. The meaning here: exists means has been said out loud. The law is not about the shop with no process; it is about the shop that thinks it has one and actually has a person who knows what the owner meant. The first automation attempt is the first receiver that cannot nod and fill in the blanks, which is why it is worth doing even if it never ships. Nothing failed; you found out cheaply. Then click to the offboarding example, which is where the meaning lands on a shop instead of a prompt.
-12. The list was followed. The process still didn't exist. (two-column, orange) The shop example, no AI in it. "We have an offboarding process." You have Mike. The list said "cancel software licenses." The covering tech canceled Microsoft; Mike meant Microsoft, Adobe, and the two tools you forgot. Found at the next license reconciliation: nine ex-employees holding Adobe seats for a year. Nobody skipped a step; the line was there, the meaning was not. Same failure as "on top of it": a phrase with a full definition in the writer's head and a smaller one in the reader's. Card, what it cost and what it costs to fix: a senior tech who cannot take vacation; every offboarding done twice; one hour, ask Mike which licenses, write it down. This is where the title lives: the hire was insurance against a definition of done that lived in one person. Say it out loud and you do not need the insurance. More with less means fewer people needed to make a process safe, not fewer people. Bridge out: true of every one of the six, and why most shops automate the wrong ones.
+12. The list was followed. The process still didn't exist. (two-column, orange) The shop example, no AI in it. "We have an offboarding process." You have Mike. The list said "cancel software licenses." The covering tech canceled Microsoft; Mike meant Microsoft, Adobe, and the two tools you forgot. Found at the next license reconciliation: nine ex-employees holding Adobe seats for a year. Nobody skipped a step; the line was there, the meaning was not. Same failure as "on top of it": a phrase with a full definition in the writer's head and a smaller one in the reader's. Card, what it cost and what it costs to fix: a senior tech who cannot take vacation; every offboarding done twice; one hour, ask Mike which licenses, write it down. This is where the title lives: the hire was insurance against a definition of done that lived in one person. Say it out loud and you do not need the insurance. More with less means fewer people needed to make a process safe, not fewer people. Bridge out: true of every process that lives in one person, and why most shops automate the wrong ones.
 
-13. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them.
-14. Six processes, one sentence each (agenda, orange). SLOW. Onboarding so the client's first day works; offboarding so nothing is left open; alert triage so a human only sees what needs one; access requests so the identity check happens; status updates so they hear it from you first; license reconciliation so you stop paying for ghosts. Pick one. Table 3 works from this.
-15. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
-16. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
-17. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
-18. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
-19. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
-20. One action (closing). Pick one of the six. Sit with your best tech for an hour. Write down everything they fill in that you never said. That is your definition of done. Bring the page to Table 3. Hand to Erik and Atul: the version where the person the process lives in is you.
-21. Presenter.
+13. Most MSPs automate the wrong things (comparison, orange). Automating the customer away: ticket auto-replies, templated QBRs, onboarding nobody attends. Automating the automaton: reading one screen and typing into another, checking the same thing every morning, chasing the same approval. Line: automate to give time back to the customer, not to hide from them. Bridge: once the automaton work is written down, two machines can take it; the next three slides are which gets what.
+14. Divider: Where AI belongs (gold). Fast is only a gift once you have said what good looks like.
+15. Two different tools (comparison, gold). Automation: same in same out, cheap to audit, owns the decision and the record. AI: messy in structured out, drafts and classifies, never the decision or the record. Line: you already run a probabilistic system, it's called a tech at 4pm on a Tuesday.
+16. The Guardrail Sandwich (process flow, gold). Gather, validate, draft, check, log. The AI never touches the customer or the record unguarded. Right of Boom callback, two minutes.
+17. The honest limit (two-column, gold). The cost of AI isn't tokens, it's review. A client can't audit a vibe; they can audit a log. Sets up Bradley.
+18. The more (two-column, blue). SLOW. Your customers have automatons too: invoices, approvals, onboarding, renewals. Nobody is selling them the fix. You get hours to be present, a case study they watched you build, the next line on the invoice.
+19. One action (closing). Tim's words: sit with one employee you would hate to lose. Ask what they do at least once a month that they dread. Work out the unwritten process behind it and write it down. Then two questions: could anyone else follow this, could some or all of it be automated. Say "this month" aloud. Hand to Erik and Atul: the version where the person the process lives in is you. No Table 3 reference; speakers were never asked to brief the tables.
+20. Presenter.
 
 ## Lines to drop verbatim, once each
 
@@ -93,7 +92,7 @@ Henry's five buckets: the Sizers take people and margin, the fireside takes the 
 - [ ] Generate the three prompt/output pairs honestly; save prompts and outputs verbatim
 - [ ] Confirm Aharon's law wording and attribution; second law?
 - [x] Headshot: not needed for this one (Tim, 12 Sep)
-- [ ] Confirm the 30-day action wording fits the Table 3 report-out format
+- [x] Table 3: not the talk's job (run of show read 13 Sep). Slide 14 menu cut.
 - [ ] Tech check at lunch (11:45 to 12:45): laptop, clicker, display. No network dependency by design.
 
 ## Brand rules that constrain copy

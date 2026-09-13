@@ -11,7 +11,6 @@ import DemoStrong from '../components/slides/010-DemoStrong.jsx'
 import AharonsLaw from '../components/slides/011-AharonsLaw.jsx'
 import ExistsMeansSaidOutLoud from '../components/slides/012-ExistsMeansSaidOutLoud.jsx'
 import TheWrongThings from '../components/slides/013-TheWrongThings.jsx'
-import WhereDeliveryLeaks from '../components/slides/014-WhereDeliveryLeaks.jsx'
 import DividerWhereAiBelongs from '../components/slides/015-DividerWhereAiBelongs.jsx'
 import DeterministicVsProbabilistic from '../components/slides/016-DeterministicVsProbabilistic.jsx'
 import GuardrailSandwich from '../components/slides/017-GuardrailSandwich.jsx'
@@ -36,7 +35,6 @@ export const slides = [
   { id: 'aharons-law', component: AharonsLaw, notesKey: 'aharons-law' },
   { id: 'exists-means-said-out-loud', component: ExistsMeansSaidOutLoud, notesKey: 'exists-means-said-out-loud' },
   { id: 'the-wrong-things', component: TheWrongThings, notesKey: 'the-wrong-things' },
-  { id: 'where-delivery-leaks', component: WhereDeliveryLeaks, notesKey: 'where-delivery-leaks' },
   { id: 'divider-where-ai-belongs', component: DividerWhereAiBelongs, notesKey: 'divider-where-ai-belongs' },
   { id: 'deterministic-vs-probabilistic', component: DeterministicVsProbabilistic, notesKey: 'deterministic-vs-probabilistic' },
   { id: 'guardrail-sandwich', component: GuardrailSandwich, notesKey: 'guardrail-sandwich' },

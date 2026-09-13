@@ -3,8 +3,8 @@ import ClosingSlide from '../layouts/ClosingSlide'
 export default function OneAction() {
   return (
     <ClosingSlide
-      title="One hour, this month"
-      action="Pick one of the six. Sit with your best tech for an hour. Write down everything they fill in that you never said. That is your definition of done. Bring the page to Table 3."
+      title="Sit with one employee you would hate to lose"
+      action="Ask them what they do at least once a month that they dread. Work out the unwritten process behind it and write it down. Then ask two questions. Could anyone else follow this? Could some or all of it be automated?"
       ecosystemLine="Global Sync Meetups | Accelerators | Workshops"
       copyrightLine="Copyright Rocket Fuel Factory. All rights reserved."
     />

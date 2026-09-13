@@ -1,7 +1,7 @@
-# Handoff: state of the deck as of 12 September 2026, late afternoon
+# Handoff: state of the deck as of 13 September 2026
 
 Read this, then docs/OUTLINE.md, then src/data/notes.js, then look at
-docs/screenshots/01.png through 21.png. That is the whole state.
+docs/screenshots/01.png through 20.png. That is the whole state.
 
 ## What this is
 
@@ -23,15 +23,15 @@ process that doesn't exist, and "exists" means said out loud. Most MSPs
 automate the wrong things (the customer away). Automate the automaton work
 instead, yours first, then your customers'. That is the more.
 
-## Slides (21)
+## Slides (20, after cutting the six-process menu on 13 Sep)
 
 1 cover, 2 automatons (pull statement), 3 the typing is hiding a decision
 (illustrated, see below), 4 abdicate vs delegate, 5 the demo never had a
 client, 6 to 10 the mirror demo, 11 Aharon's law, 12 the list was followed
 and the process still didn't exist (Mike, Adobe seats), 13 most MSPs automate
-the wrong things, 14 six delivery processes, 15 divider where AI belongs,
-16 deterministic vs probabilistic, 17 guardrail sandwich, 18 the honest limit,
-19 the more, 20 one action (Table 3), 21 presenter.
+the wrong things, 14 divider where AI belongs, 15 deterministic vs
+probabilistic, 16 guardrail sandwich, 17 the honest limit, 18 the more,
+19 one action (Tim's words, no Table 3), 20 presenter.
 
 ## The demo (slides 6 to 10) is real and verified
 
@@ -53,21 +53,19 @@ desk-side example spoiled the demo), two stills from the GPT-6 Astra launch
 video (a picture of a demo does not show the absence of a client), the
 demo's verbatim dialogue (needed explaining), and two "three lines plus a
 colored kicker" statements (Tim: AI-sounding slogans). Lesson: that shape
-reads as a slogan regardless of words; use his sentences. Frames and sources remain in docs/astra/ and
-public/illustrations/astra-*.png in case a use appears. HiddenDecisionSlide.jsx
-is unused.
+reads as a slogan regardless of words; use his sentences. Frames and sources remain in docs/astra/.
+HiddenDecisionSlide.jsx is unused.
 
-## Two open problems, flagged by Tim 12 Sep, nothing applied yet
+## Open problems flagged by Tim 12 Sep
 
-1. Slide 20 asks for a month of work before a same-day table session.
-   Table 3 at 4:15 needs one takeaway per table and one 30-day commitment
-   per attendee. Proposed split: today, pick one of the six and name the
-   person it lives in (that is what goes to Table 3); this month, one hour
-   with that person writing down what they fill in (the 30-day commitment).
-   Tim has not approved wording.
+1. Resolved 13 Sep. The run of show never asks speakers to brief the
+   roundtables; attendees pick a table and bring their own problem. The
+   close is Tim's own wording (sit with one employee you would hate to
+   lose...). The six-process menu (old slide 14) was cut as a Rewst-shaped
+   sales list; the close no longer needs it.
 
 2. The deck leans on a "short sentence, period, twist" pattern in titles
-   and footers (slides 2, 4, 7, 10, 12, 13, 15, 16, 18, 20). Tim: AI slop,
+   and footers (slides 2, 4, 7, 10, 12, 13, 14, 15, 17; numbering after the cut). Tim: AI slop,
    most of these must change. Rewrite as plain single sentences in his
    voice. Slide 8's line is the model's quote and stays; slides 3 and 5 are
    already plain. Do not propose new copy in the same shape.
@@ -91,7 +89,7 @@ the statement with a metaphor. Notes, outline, and screenshot 03 are updated.
 
 Repo: https://github.com/tfournet/globalsync2026 (private), main tracks
 origin/main. No headshot by Tim's decision; the card renders without one.
-The 14 to 15 bridge is written into the slide 14 note. Tim runs fast when
+The bridge into the AI section is in the slide 13 note. Tim runs fast when
 nervous; SLOW slides are marked in notes.
 
 ## How Tim works
