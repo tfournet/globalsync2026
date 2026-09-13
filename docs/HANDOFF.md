@@ -57,6 +57,21 @@ reads as a slogan regardless of words; use his sentences. Frames and sources rem
 public/illustrations/astra-*.png in case a use appears. HiddenDecisionSlide.jsx
 is unused.
 
+## Two open problems, flagged by Tim 12 Sep, nothing applied yet
+
+1. Slide 20 asks for a month of work before a same-day table session.
+   Table 3 at 4:15 needs one takeaway per table and one 30-day commitment
+   per attendee. Proposed split: today, pick one of the six and name the
+   person it lives in (that is what goes to Table 3); this month, one hour
+   with that person writing down what they fill in (the 30-day commitment).
+   Tim has not approved wording.
+
+2. The deck leans on a "short sentence, period, twist" pattern in titles
+   and footers (slides 2, 4, 7, 10, 12, 13, 15, 16, 18, 20). Tim: AI slop,
+   most of these must change. Rewrite as plain single sentences in his
+   voice. Slide 8's line is the model's quote and stays; slides 3 and 5 are
+   already plain. Do not propose new copy in the same shape.
+
 ## What is unresolved
 
 Slide 3 is text-only: three concrete decisions (which alert is noise, which
