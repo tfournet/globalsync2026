@@ -6,8 +6,8 @@ export default function Automatons() {
     <PullStatement
       eyebrow="Where we are"
       accent="blue"
-      statement="We built computers to do the work. Then we became the automatons."
-      attribution="Open one app. Read it. Type into another. Somebody has to, because nobody wrote down the rule."
+      statement="We built computers to be automation machines, but we're afraid to actually automate anything with them."
+      attribution="Open an app, copy something, paste it into another one, over and over."
     />
   )
 }
