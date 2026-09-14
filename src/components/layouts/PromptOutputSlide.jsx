@@ -109,8 +109,8 @@ function Panel({ label, labelClass, text, lines, fontSize, columns, style, empha
       className="absolute flex flex-col overflow-hidden rounded-[4px] bg-rff-light p-[40px]"
       style={style}
     >
-      <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${labelClass}`}>{label}</p>
-      <div className="mt-[24px] min-h-0 flex-1 overflow-hidden">
+      {label && <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${labelClass}`}>{label}</p>}
+      <div className={`${label ? 'mt-[24px]' : ''} min-h-0 flex-1 overflow-hidden`}>
         <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} emphasize={emphasize} emphasisClass={emphasisClass} />
       </div>
 

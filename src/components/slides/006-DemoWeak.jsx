@@ -11,10 +11,10 @@ export default function DemoWeak({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       only="prompt"
-      askLabel="The ask"
+      askLabel=""
       prompt={weakPrompt}
       promptLines={[0, 14]}
-      promptFontSize={28}
+      promptFontSize={34}
       promptColumns={2}
     />
   )
