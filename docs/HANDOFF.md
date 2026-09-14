@@ -1,4 +1,4 @@
-# Handoff: state of the deck as of 14 September 2026, midday
+# Handoff: state of the deck as of 14 September 2026, evening
 
 Read this, then docs/OUTLINE.md, then src/data/notes.js, then look at
 docs/screenshots/01.png through 20.png. That is the whole state.
@@ -16,17 +16,36 @@ origin/main, every change so far is committed and pushed.
 
 ## Where the walk-through stands
 
-Tim is walking the deck slide by slide with the assistant and approving each
-before moving on. Slides 1 to 14 are approved (slide, note, outline beat).
-Slides 15 to 20 still carry old copy and old-style notes. Ask before moving
-from one slide to the next. Next up: slide 15, deterministic vs probabilistic
-(the two-tools comparison, gold accent). Known issues there: footer quip
-"You already run a probabilistic system. It's called a tech at 4pm on a
-Tuesday." (two-sentence shape), and pitch risk: "automation owns the decision
-and the record, AI never" said by someone from an automation vendor; Opus
-suggested first person and evidence before assertion. Slide 17 title is the
-quip shape ("The cost of AI isn't tokens. It's review."). Slide 19 (close) is
-done in Tim's words; do not touch without asking.
+Every slide, 1 to 20, is approved: copy, layout, and note. The slide-by-slide
+walk with Tim is complete. What remains is rehearsal-driven: run the deck
+end to end with the timer (T key), check total time against the 30 minute
+slot with about five minutes of buffer, and adjust notes where Tim trips.
+Tech check at lunch Thursday 17 Sep, 11:45 to 12:45. Nothing on the slides
+should change without Tim asking; if he asks, keep to the rules below.
+
+Slides 15 to 19 as approved (14 Sep, afternoon): 15 "What I hand to each
+kind of step", headers Deterministic (cog) and Probabilistic (sparkles),
+three level rows, footer "You already run a probabilistic system: a tech at
+4pm on a Tuesday." 16 the guardrail sandwich as three bands (grey bread,
+pale gold filling with gold edge), six generic steps, title "You can put AI
+in the middle of a process you wrote", footer "Tell it everything in writing
+before it starts, then check whether it understood." 17 "The check is how you
+know it understood you", three bullets, the run log drawn as an artifact
+(outage email sent by Alex, printer ticket categorized, billing draft over
+150 words held for Chris), closing line "When a client asks what the AI did
+with their data, you read them the run." 18 "Your customers have the same
+problem you do", three concrete examples, card "What you get for it" ending
+"A new revenue stream that makes you harder to replace." 19 the close in
+Tim's words, action at 42px, three questions (follow it without asking for
+help; automated; threatened or relieved). 20 presenter, note is one spoken
+line. lucide-react is a dependency (cog and sparkles icons).
+
+## The theme, in Tim's words (14 Sep)
+
+"The undertext of the whole thing is we need to be armed to better
+communicate with: Our Customers, Our People, and now Our AI." Every failure
+in the deck is a communication failure and every fix is communication. The
+close names the three audiences once, in the note. Do not add a slide for it.
 
 ## Alternatives gallery: decided
 
@@ -140,23 +159,6 @@ Layout changes this weekend: ComparisonSlide takes `top`, `bottom`,
 gutter) and colors the right header by accent; TwoColumnSlide text enlarged;
 Footer `light` uses the lighter blue link; notes HUD is 1040px wide with 20px
 text so notes read without scrolling.
-
-## The theme, as the assistant reads it (Tim asked, 14 Sep)
-
-The only thing you actually own is the intent in your best people's heads,
-and you never had to write it down because they kept guessing right for you.
-Delegation without the rule, the AI demo, Aharon's law, Mike, where to point
-the machine, which machine, and the close are that one idea from different
-sides. The bodies were never the constraint; unspoken intent was.
-
-## Slides 15 to 20, still to do
-
-15 two different tools (footer quip; pitch risk). 16 guardrail sandwich
-(Right of Boom callback in the note; two minutes). 17 the honest limit (title
-quip). 18 the more (SLOW; "Your customers have automatons too"). 19 close in
-Tim's words (done, do not touch without asking). 20 presenter. Every note
-from 15 on is old style (stage directions, "Click", "Line to land") and needs
-converting to spoken script.
 
 ## The argument, in Tim's words
 
