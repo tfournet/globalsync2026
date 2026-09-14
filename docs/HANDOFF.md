@@ -197,3 +197,16 @@ expects you to push back when he is wrong. "No notes" means silence. One
 question at a time. He asked for structure and style before content, then
 content in his voice. He noticed quality drop when the assistant started
 executing suggestions one at a time instead of holding the whole talk.
+
+## Repo, CI, and what is not in it (14 Sep, evening)
+
+The repo is public: https://github.com/tfournet/globalsync2026. GitHub
+Actions (.github/workflows/pdf.yml) runs on every push to main: npm test,
+then builds docs/export/presentation.pdf, docs/export/presentation-notes.pdf
+(slide plus note per page) and docs/screenshots, and commits them back as
+github-actions[bot] with [skip ci]. Pull before pushing, since the bot's
+commit lands after yours. First run passed.
+
+Two organizer files were removed from the repo and from its history before
+it went public: the run of show PDF (other speakers' details) and the RFF
+pptx template. Both are kept locally at ~/code/globalsync2026-private/.
