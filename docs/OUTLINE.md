@@ -35,7 +35,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 21 slides, about 25 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
 
 1. Cover
-2. Pull statement, blue, Tim's line: We built computers to be automation machines, but we're afraid to actually automate anything with them. Footer: open an app, copy something, paste it into another one, over and over. SLOW. The fear is rational; everyone has tried. Bridge: next slide is what happened when you did.
+2. Pull statement, blue, a question with no footer: Whose vacation request do you dread approving? SLOW. Ask it, let the room name someone, click. The answer is the talk. Opens on delivery (what breaks when that person is out) without claiming anything about the room or repeating the Sizers. Tim's automation-fear line moved to the spoken opening of slide 3.
 3. Every automation project stalls at the same step (bullets, blue). You pick a process, and the first six steps go fine. Step seven is the one your tech does from memory. You ask what they decide there, and they say it depends. The tech keeps doing it by hand, and you decide automation is not ready for your shop. Note names the scheduling objection: the second mapping session never happened because the next step had no answer. Bridge: next slide is what it depends is made of.
 4. Which alert is noise. Which client gets the short version. Which ticket gets a phone call. Your best tech decides that all day. Nobody has ever asked them how. (Statement, three navy lines, orange payoff.) SLOW. No illustration. Slide 3 is the stalled attempt, slide 4 names the decisions hiding inside the typing and why they never got written down. No Adobe here; that line belongs to Mike at slide 13. Photographable: concrete lines the room recognizes, not a slogan. Bridge to 5, spoken: why has nobody asked? Because it worked. You handed over the deciding along with the doing and never found out. We call that delegating. It is not. Go to slide 5, not straight to AI.
 
@@ -61,7 +61,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Lines to drop verbatim, once each
 
-- We built computers to be automation machines, but we're afraid to actually automate anything with them.
+- Whose vacation request do you dread approving?
 - Delegating is handing over the work and keeping the definition of done. Abdicating is handing over both.
 - Your best tech has been filling in the blanks for years. The new hire couldn't. Neither can this.
 - The demo never had a client.
