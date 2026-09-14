@@ -13,7 +13,7 @@ export default function ClosingSlide({
       <RffLogo variant="badge" className="h-[282px] w-[282px]" />
       <h1 className="text-[85px] font-bold">{title}</h1>
       <TriColorBar />
-      {action && <p className="max-w-[1400px] text-[37px] text-rff-light-text">{action}</p>}
+      {action && <p className="max-w-[1480px] text-[42px] leading-[1.35] text-rff-light-text">{action}</p>}
       <p className="text-[40px] text-rff-gold">{FOOTER.site}</p>
       {ecosystemLine && <p className="text-[31px] text-rff-muted-dark">{ecosystemLine}</p>}
       {copyrightLine && <p className="text-[24px] text-rff-muted-dark">{copyrightLine}</p>}
