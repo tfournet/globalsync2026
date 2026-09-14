@@ -18,7 +18,7 @@ open metric-compatible clone of Calibri, as local woff2 files under
 ## Logo
 
 `public/brand/rff-logo.png` was extracted directly from
-`docs/reference/RFF-Presentation-Template.pptx` (`ppt/media/image4.png`,
+the RFF template pptx, kept outside the repo at ~/code/globalsync2026-private (`ppt/media/image4.png`,
 720x720, the highest-resolution copy of the rocket logo in the deck). No
 placeholder was needed.
 

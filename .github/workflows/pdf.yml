@@ -1,0 +1,42 @@
+name: Test and export PDFs
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - 'docs/export/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf-export
+  cancel-in-progress: true
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm test
+      - run: npm run pdf
+      - run: npm run pdf:notes
+      - run: npm run screenshots
+      - name: Commit exports if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs/export docs/screenshots
+          if git diff --cached --quiet; then
+            echo "No export changes"
+          else
+            git commit -m "Export PDFs and screenshots [skip ci]"
+            git push
+          fi
