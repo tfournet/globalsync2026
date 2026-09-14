@@ -4,7 +4,7 @@ export default function AbdicateNotDelegate({ slideNumber }) {
   return (
     <ComparisonSlide
       eyebrow="How it got that way"
-      title="You handed over the work and the decisions at the same time"
+      title="The decisions went with the work"
       accent="blue"
       slideNumber={slideNumber}
       left={{
@@ -13,8 +13,9 @@ export default function AbdicateNotDelegate({ slideNumber }) {
       }}
       right={{
         heading: 'When you hand over the decisions too',
-        items: ['The work moves to them.', 'The standard stays with you, unwritten.', 'They guess, and if you are lucky they guess right.'],
+        items: ['The work moves to them.', 'The standard stays with you, unwritten.', 'They guess, and with luck they guess right.'],
       }}
+      closing="Your best employees are the ones who usually guess right."
     />
   )
 }
