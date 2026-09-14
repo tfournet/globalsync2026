@@ -1,12 +1,12 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { askPrompt, askOutputHeadings, askOutputConfession } from '../../data/demo.js'
+import { askPrompt, askOutputHeadings } from '../../data/demo.js'
 
-// The turn. Where most people quit, ask it how to ask better instead.
-// Excerpt of its answer, then one of its own sentences as the punchline.
+// The path: ask it what it needed. Its five items are the rule list slide 3
+// said did not exist. The model's own 50/50 confession is read from the note.
 export default function DemoAsk({ slideNumber }) {
   return (
     <PromptOutputSlide
-      eyebrow="Where most people stop"
+      eyebrow="How to get unstuck"
       title="Ask it how to ask better"
       accent="blue"
       slideNumber={slideNumber}
@@ -14,8 +14,7 @@ export default function DemoAsk({ slideNumber }) {
       promptFontSize={30}
       output={askOutputHeadings}
       outputFontSize={34}
-      punchline={askOutputConfession}
-      punchlineQuoted
+      punchline="Every one of those is a rule you already had in your head."
     />
   )
 }
