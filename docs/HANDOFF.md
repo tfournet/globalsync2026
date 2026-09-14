@@ -22,10 +22,13 @@ layout (checklist, two readings, invoice) that Tim called "still sloppish";
 its note is a DRAFT he has not read. Slides 13 to 20 still carry the old copy
 and old-style notes. Ask before moving from one slide to the next.
 
-## First thing in the morning: the alternatives gallery
+## Alternatives gallery: partly decided
 
-Tim asked, just before sleeping, for three alternative designs of every
-finished slide (1 to 12) so he can pick per slide. They exist. Read
+Tim asked for three alternative designs of every finished slide (1 to 12).
+On 14 Sep he picked B (Artifacts) for slides 5, 6, 7, 8, 9, 10 and 12; those
+are now the originals in src/components/slides/ and their variants are gone.
+Slides 1, 2, 3, 4 and 11 keep their originals for now; their A/B/C variants
+are still in the gallery in case he wants them. Read
 docs/ALTERNATIVES.md for the three directions (A Editorial, B Artifacts,
 C Stage; the same letter means the same visual language on every slide, so
 mixed picks still hang together). To review: `npm run dev`, then
