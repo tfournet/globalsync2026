@@ -17,7 +17,7 @@ export default function TheTypingIsHidingADecision({ slideNumber }) {
       </p>
       <p
         className="absolute font-bold text-rff-orange"
-        style={{ left: 106, top: 620, width: 1708, fontSize: 72, lineHeight: 1.2, letterSpacing: '-0.02em' }}
+        style={{ left: 106, top: 620, width: 1708, fontSize: 64, lineHeight: 1.2, letterSpacing: '-0.02em', whiteSpace: 'nowrap' }}
       >
         Those are decisions, and they are not in any document.
       </p>
