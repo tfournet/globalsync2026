@@ -5,7 +5,7 @@ export default function DemoStrong({ slideNumber }) {
   return (
     <PromptOutputSlide
       eyebrow="The second try"
-      title="Read it, put your name on it, send it"
+      title="A draft you can put your name on"
       accent="blue"
       slideNumber={slideNumber}
       only="output"
