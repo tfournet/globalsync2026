@@ -4,8 +4,8 @@ import ContentFrame from '../chrome/ContentFrame'
 export default function TheDemoNeverHadAClient({ slideNumber }) {
   return (
     <ContentFrame
-      eyebrow="Where the two-sentence brief came from"
-      title="The demo was impressive because nobody checked the details"
+      eyebrow="What AI taught us to expect"
+      title="We expect AI to do wonders with a little instruction"
       accent="blue"
       slideNumber={slideNumber}
     >
