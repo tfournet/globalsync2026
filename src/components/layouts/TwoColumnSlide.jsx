@@ -36,11 +36,11 @@ export default function TwoColumnSlide({
         className="absolute flex flex-col justify-center gap-[40px]"
         style={{ left: 106, top: TOP, width: LEFT_WIDTH, height: BOTTOM - TOP }}
       >
-        {paragraph && <p className="text-[40px] leading-snug text-rff-navy">{paragraph}</p>}
+        {paragraph && <p className="text-[56px] leading-snug text-rff-navy">{paragraph}</p>}
         {points.length > 0 && (
-          <ul className={`list-disc pl-[40px] text-[35px] leading-snug text-rff-body ${ACCENT_MARKER[accent]}`}>
+          <ul className={`list-disc pl-[48px] text-[46px] leading-snug text-rff-body ${ACCENT_MARKER[accent]}`}>
             {points.map((point, i) => (
-              <li key={i} className="mt-[20px] first:mt-0">
+              <li key={i} className="mt-[28px] first:mt-0">
                 {point}
               </li>
             ))}
@@ -53,10 +53,10 @@ export default function TwoColumnSlide({
           style={{ left: CARD_LEFT, top: TOP, width: CARD_WIDTH, height: BOTTOM - TOP }}
         >
           <div className="rounded-[4px] bg-rff-light p-[48px]">
-            <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${ACCENT_TEXT[accent]}`}>{cardTitle}</p>
-            <ul className={`mt-[24px] list-disc pl-[36px] text-[33px] leading-snug text-rff-body ${ACCENT_MARKER[accent]}`}>
+            <p className={`text-[32px] font-bold uppercase tracking-[0.12em] ${ACCENT_TEXT[accent]}`}>{cardTitle}</p>
+            <ul className={`mt-[24px] list-disc pl-[44px] text-[44px] leading-snug text-rff-body ${ACCENT_MARKER[accent]}`}>
               {cardItems.map((item, i) => (
-                <li key={i} className="mt-[20px] first:mt-0">
+                <li key={i} className="mt-[28px] first:mt-0">
                   {item}
                 </li>
               ))}
