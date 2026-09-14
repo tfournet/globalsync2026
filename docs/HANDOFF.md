@@ -10,7 +10,7 @@ Web deck (Vite, React 19, Tailwind 4) for Tim Fournet's 30 minute talk
 17 September 2026, 1:45pm. Room: up to 100 MSP business owners. Organizer
 (Rocket Fuel Factory) bans product pitches. Tim works at Rewst. Brand is the
 RFF template; rules in AGENTS.md. Dev server: `npm run dev` on :1745.
-`npm test`, `npm run build`, `npm run pdf`, `npm run screenshots` all pass.
+`npm test`, `npm run build`, `npm run pdf`, `npm run pdf:notes` (slide plus note per page), `npm run screenshots` all pass. PDFs land in docs/export/.
 Repo: https://github.com/tfournet/globalsync2026 (private), main tracks
 origin/main, every change so far is committed and pushed.
 

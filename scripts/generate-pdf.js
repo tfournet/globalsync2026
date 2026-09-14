@@ -9,8 +9,9 @@ import { build, preview } from 'vite'
 import { chromium } from 'playwright'
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
-const OUT_PATH = path.join(root, 'dist', 'presentation.pdf')
-const PORT = 4173
+const NOTES = process.argv.includes('--notes')
+const OUT_PATH = path.join(root, 'docs', 'export', NOTES ? 'presentation-notes.pdf' : 'presentation.pdf')
+const PORT = NOTES ? 4176 : 4173
 
 function countPdfPages(bytes) {
   const text = bytes.toString('latin1')
@@ -22,7 +23,7 @@ async function main() {
   await build({ root })
 
   const server = await preview({ root, preview: { port: PORT, strictPort: true } })
-  const url = `http://localhost:${PORT}/?print=1`
+  const url = `http://localhost:${PORT}/?print=1${NOTES ? '&notes=1' : ''}`
 
   const browser = await chromium.launch()
   try {

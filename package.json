@@ -8,6 +8,7 @@
     "build": "vite build",
     "preview": "vite preview",
     "pdf": "node scripts/generate-pdf.js",
+    "pdf:notes": "node scripts/generate-pdf.js --notes",
     "screenshots": "node scripts/screenshots.js",
     "screenshots:alt": "node scripts/screenshots.js --alt",
     "lint:copy": "node scripts/lint-copy.js",

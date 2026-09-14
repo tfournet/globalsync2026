@@ -8,9 +8,10 @@ import AlternativesGallery, { AlternativesPrint } from './AlternativesDeck.jsx'
 const params = new URLSearchParams(window.location.search)
 const isPrint = params.get('print') === '1'
 const isAlt = params.get('alt') === '1'
+const withNotes = params.get('notes') === '1'
 
 let app = <PresentationApp />
 if (isAlt) app = isPrint ? <AlternativesPrint /> : <AlternativesGallery />
-else if (isPrint) app = <PrintDeck />
+else if (isPrint) app = <PrintDeck withNotes={withNotes} />
 
 createRoot(document.getElementById('root')).render(<StrictMode>{app}</StrictMode>)
