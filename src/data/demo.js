@@ -138,3 +138,9 @@ export const askOutputHeadings = `Fair. Here's what was missing, concretely:
 
 // Two sentences from item 3 of the same answer, unedited.
 export const askOutputConfession = `I put it in. That's a 50/50 guess I shouldn't have made silently.`
+
+// Slides show a stand-in name; the recorded outputs above keep the real one.
+export const SPEAKER_STAND_IN = 'Alex'
+export function withoutTim(text) {
+  return text.replace(/\bTim\b/g, SPEAKER_STAND_IN)
+}

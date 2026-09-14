@@ -1,5 +1,5 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { strongOutput } from '../../data/demo.js'
+import { strongOutput, withoutTim } from '../../data/demo.js'
 
 export default function DemoStrong({ slideNumber }) {
   return (
@@ -9,7 +9,7 @@ export default function DemoStrong({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       only="output"
-      output={strongOutput}
+      output={withoutTim(strongOutput)}
       outputFontSize={28}
       punchline="Same tool. Same task. The only thing that changed was how you asked."
     />

@@ -1,5 +1,5 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { weakOutput } from '../../data/demo.js'
+import { weakOutput, withoutTim } from '../../data/demo.js'
 
 // Shown whole, two columns. Ticket number in the subject, a template with bold
 // headers, a placeholder sign-off, and the Q2 flag disclosed to the client in
@@ -12,7 +12,7 @@ export default function DemoWeakOutput({ slideNumber }) {
       accent="blue"
       slideNumber={slideNumber}
       only="output"
-      output={weakOutput}
+      output={withoutTim(weakOutput)}
       outputFontSize={22}
       outputColumns={2}
       outputEmphasize={[

@@ -28,7 +28,10 @@ and the one thing she is afraid of (patient data). That is abdication.
 
 Notes for the deck
 
-- Outputs are quoted verbatim on the slides, including the model's em dashes.
+- Outputs are quoted verbatim on the slides, including the model's em dashes,
+  with one exception: Tim asked that his name not appear, so the slides swap
+  "Tim" for a stand-in (`withoutTim` in src/data/demo.js). The recorded
+  prompts and outputs in this folder and in demo.js keep the real name.
   The brand copy lint exempts src/data/demo.js for that reason; everything
   Tim writes still follows the no-em-dash rule.
 - The weak output signed itself "Tim" only; the slide window ends before the

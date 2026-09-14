@@ -1,5 +1,5 @@
 import PromptOutputSlide from '../layouts/PromptOutputSlide'
-import { strongBrief } from '../../data/demo.js'
+import { strongBrief, withoutTim } from '../../data/demo.js'
 
 // Earned by the previous slide: the machine said what was missing, this
 // supplies it. Same ticket pasted underneath, not shown.
@@ -12,7 +12,7 @@ export default function DemoBrief({ slideNumber }) {
       slideNumber={slideNumber}
       only="prompt"
       askLabel="Same ticket pasted below. This went above it this time."
-      prompt={strongBrief}
+      prompt={withoutTim(strongBrief)}
       promptFontSize={28}
       promptColumns={2}
       promptEmphasize={[
@@ -23,7 +23,7 @@ export default function DemoBrief({ slideNumber }) {
         "that's what she asked me on the phone and what she's afraid of",
         'That\'s what "on top of it" actually means, so say that',
         'Do not use the phrase "on top of it" anywhere in the email',
-        'Sign it from me, Tim at Northline IT',
+        withoutTim('Sign it from me, Tim at Northline IT'),
       ]}
     />
   )
