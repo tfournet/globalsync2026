@@ -133,8 +133,7 @@ here is the problem" beat (the call you did not take is where you hear Dana
 is shopping; the review meeting is where the next thing gets sold), the demo
 split (machine drafted, I called Dana), and points the machine at our side of
 the desk. 14 divider: eyebrow "Two machines", title "Which machine gets what",
-line "One follows the rules exactly, one makes a good guess, and that
-difference decides what I hand it." Note promises the three-slide arc.
+no tagline (Tim: a tagline there "smells like slop"). Note promises the three-slide arc.
 
 Layout changes this weekend: ComparisonSlide takes `top`, `bottom`,
 `fontSize`, `itemGap`, `aligned` (paired grey boxes with arrows in the

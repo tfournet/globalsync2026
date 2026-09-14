@@ -9,7 +9,6 @@ export default function DividerWhereAiBelongs() {
       pillar="gold"
       eyebrow="Two machines"
       title="Which machine gets what"
-      description="One follows the rules exactly, one makes a good guess, and that difference decides what I hand it."
     />
   )
 }
