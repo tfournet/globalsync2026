@@ -180,7 +180,7 @@ export default function PresentationApp() {
       </div>
 
       {showHud && (
-        <div className="absolute bottom-[24px] right-[24px] flex w-[480px] flex-col gap-[10px] rounded-[4px] bg-white/95 p-[24px] text-rff-body shadow-2xl">
+        <div className="absolute bottom-[24px] right-[24px] flex w-[1040px] max-w-[calc(100vw-48px)] flex-col gap-[12px] rounded-[4px] bg-white/95 p-[28px] text-rff-body shadow-2xl">
           <p className="text-[16px] font-bold text-rff-navy">
             Slide {index + 1} of {slides.length}
           </p>
@@ -190,7 +190,7 @@ export default function PresentationApp() {
               {timerRunning ? 'Running' : 'Stopped'}
             </span>
           </div>
-          <p className="max-h-[280px] overflow-y-auto whitespace-pre-wrap text-[15px]">
+          <p className="max-h-[calc(100vh-200px)] overflow-y-auto whitespace-pre-wrap text-[20px] leading-[1.45]">
             {slideNotes || 'No notes for this slide.'}
           </p>
         </div>
