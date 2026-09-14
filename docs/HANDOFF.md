@@ -1,7 +1,7 @@
 # Handoff: state of the deck as of 13 September 2026
 
 Read this, then docs/OUTLINE.md, then src/data/notes.js, then look at
-docs/screenshots/01.png through 21.png. That is the whole state.
+docs/screenshots/01.png through 20.png. That is the whole state.
 
 ## What this is
 
@@ -23,17 +23,18 @@ process that doesn't exist, and "exists" means said out loud. Most MSPs
 automate the wrong things (the customer away). Automate the automaton work
 instead, yours first, then your customers'. That is the more.
 
-## Slides (21)
+## Slides (20)
 
-1 cover, 2 afraid to automate (pull statement, Tim's line), 3 where the
-automation project stops (bridge, added 13 Sep), 4 the three decisions
-nobody asked about, 5 abdicate vs delegate, 6 the demo never had a client,
-7 to 11 the mirror demo, 12 Aharon's law, 13 the list was followed and the
-process still didn't exist (Mike, Adobe seats), 14 most MSPs automate the
-wrong things, 15 divider where AI belongs, 16 deterministic vs
-probabilistic, 17 guardrail sandwich, 18 the honest limit, 19 the more,
-20 one action (Tim's words, no Table 3), 21 presenter. Slide numbers in the
-sections below predate the 13 Sep insert and cut; add one from slide 3 on.
+1 cover, 2 whose vacation request do you dread approving (question, no
+footer), 3 the three decisions nobody asked about, 4 abdicate vs delegate,
+5 the demo never had a client, 6 to 10 the mirror demo, 11 Aharon's law
+(Tim's afraid-to-automate line is spoken here), 12 the list was followed and
+the process still didn't exist (Mike, Adobe seats), 13 most MSPs automate
+the wrong things, 14 divider where AI belongs, 15 deterministic vs
+probabilistic, 16 guardrail sandwich, 17 the honest limit, 18 the more,
+19 one action (Tim's words, no Table 3), 20 presenter. A bridge slide on a
+stalled automation attempt was added and cut the same day; see OUTLINE
+beat 2.
 
 ## The demo (slides 6 to 10) is real and verified
 
@@ -67,7 +68,7 @@ HiddenDecisionSlide.jsx is unused.
    sales list; the close no longer needs it.
 
 2. The deck leans on a "short sentence, period, twist" pattern in titles
-   and footers (current numbering: 5, 8, 11, 13, 14, 15, 16, 18; slide 2 resolved with Tim's line). Tim: AI slop,
+   and footers (current numbering: 4, 7, 10, 12, 13, 14, 15, 17; slide 2 resolved as a question). Tim: AI slop,
    most of these must change. Rewrite as plain single sentences in his
    voice. Slide 8's line is the model's quote and stays; slides 3 and 5 are
    already plain. Do not propose new copy in the same shape.
