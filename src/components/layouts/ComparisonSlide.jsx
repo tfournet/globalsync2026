@@ -21,17 +21,15 @@ function Arrow({ accent }) {
 }
 
 // One pair: a grey box on each side, an arrow in the gutter between them.
-function Row({ leftText, rightText, fontSize, accent }) {
+function Row({ leftText, rightText, fontSize, accent, arrows, emphasizeRight }) {
   const cell = 'flex items-center rounded-[4px] bg-rff-light leading-snug text-rff-body'
   return (
     <>
       <div className={cell} style={{ padding: '10px 36px', fontSize }}>
         {leftText}
       </div>
-      <div className="flex items-center justify-center">
-        <Arrow accent={accent} />
-      </div>
-      <div className={`${cell} font-bold text-rff-navy`} style={{ padding: '10px 36px', fontSize }}>
+      <div className="flex items-center justify-center">{arrows && <Arrow accent={accent} />}</div>
+      <div className={`${cell} ${emphasizeRight ? 'font-bold text-rff-navy' : ''}`} style={{ padding: '10px 36px', fontSize }}>
         {rightText}
       </div>
     </>
@@ -51,6 +49,8 @@ export default function ComparisonSlide({
   fontSize = 40,
   itemGap = 28,
   aligned = false,
+  arrows = true,
+  emphasizeRight = true,
 }) {
   const gap = aligned ? ALIGNED_GAP : GAP
   const headerHeight = aligned ? 96 : HEADER_HEIGHT
@@ -65,6 +65,7 @@ export default function ComparisonSlide({
       {panels.map((panel, i) => (
         <div key={i} className="absolute" style={{ left: COL_X[i], top, width: COL_WIDTH }}>
           <div className={`flex items-center px-[48px] ${panel.headerBg}`} style={{ height: headerHeight }}>
+            {panel.data.icon && <panel.data.icon size={44} strokeWidth={2.25} className={`mr-[22px] shrink-0 ${panel.headerText}`} aria-hidden="true" />}
             <p className={`text-[32px] font-bold uppercase tracking-[0.1em] ${panel.headerText}`}>{panel.data.heading}</p>
           </div>
           {!aligned && (
@@ -96,7 +97,7 @@ export default function ComparisonSlide({
           }}
         >
           {left.items.map((item, j) => (
-            <Row key={j} leftText={item} rightText={right.items[j]} fontSize={fontSize} accent={accent} />
+            <Row key={j} leftText={item} rightText={right.items[j]} fontSize={fontSize} accent={accent} arrows={arrows} emphasizeRight={emphasizeRight} />
           ))}
         </div>
       )}
