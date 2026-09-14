@@ -17,13 +17,13 @@ export default function TheMore({ slideNumber }) {
       points={[
         'Invoices that get retyped from one system into another.',
         'Approvals that wait on one manager\'s inbox.',
-        'A new employee set up by hand, the same eleven steps every time.',
+        'A month-end report built by hand from three spreadsheets.',
       ]}
       cardTitle="What you get for it"
       cardItems={[
         'Hours you spend in front of them instead of behind a screen.',
         'A story about your own operations they watched you live.',
-        'A line on the invoice nobody else in their building can sell them.',
+        'A new service, sold to someone who already trusts you.',
       ]}
     />
   )
