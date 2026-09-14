@@ -24,7 +24,7 @@ export default function DeterministicVsProbabilistic({ slideNumber }) {
         items: [
           'Work with an exact rule, if this then that.',
           'It does the same thing every time, so you check it once.',
-          'It follows the rule you wrote, and the record says what it did.',
+          'A gap in the rule shows up as an error.',
         ],
       }}
       right={{
@@ -33,7 +33,7 @@ export default function DeterministicVsProbabilistic({ slideNumber }) {
         items: [
           'Work where a good guess is enough: drafting, sorting, summarizing.',
           'It does something a little different every run, so someone checks every time.',
-          'Nothing it produces reaches the customer or the record until a person or a rule has checked it.',
+          'A gap in the brief shows up in the answer.',
         ],
       }}
       closing="You already run a probabilistic system: a tech at 4pm on a Tuesday."
