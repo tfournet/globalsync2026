@@ -17,7 +17,7 @@ export default function WhereTheProjectStops({ slideNumber }) {
         <li className="mt-[36px]">Step seven is the one they do from memory.</li>
         <li className="mt-[36px]">You ask what they decide there, and they say it depends.</li>
         <li className="mt-[36px]">
-          The tech keeps doing it by hand, and you decide automation is not ready for your shop.
+          They keep doing it by hand, and you decide automation is not ready for your shop.
         </li>
       </ul>
     </ContentFrame>
