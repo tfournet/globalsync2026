@@ -23,7 +23,7 @@ export default function TheMore({ slideNumber }) {
       cardItems={[
         'Hours you spend in front of them instead of behind a screen.',
         'A story about your own operations they watched you live.',
-        'A new revenue stream that solidifies your value to the customer.',
+        'A new revenue stream that makes you harder to replace.',
       ]}
     />
   )
