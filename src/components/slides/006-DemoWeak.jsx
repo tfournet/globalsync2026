@@ -11,7 +11,7 @@ export default function DemoWeak({ slideNumber }) {
   return (
     <PromptOutputSlide
       eyebrow="One sentence and a paste"
-      title="What most of us actually type"
+      title="How most people prompt"
       accent="blue"
       slideNumber={slideNumber}
       only="prompt"
