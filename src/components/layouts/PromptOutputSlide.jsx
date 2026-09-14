@@ -141,18 +141,19 @@ export default function PromptOutputSlide({
   punchline,
   punchlineQuoted = false,
   footnote,
+  panelTop = TOP,
 }) {
   const hasExtraLine = Boolean(punchline || footnote)
   const bottom = FOOTER_TOP - BOTTOM_MARGIN - (hasExtraLine ? (punchlineQuoted ? QUOTED_LINE_SPACE : EXTRA_LINE_SPACE) : 0)
-  const height = bottom - TOP
+  const height = bottom - panelTop
   const labelClass = ACCENT_TEXT[accent]
 
   const leftStyle = only
-    ? { left: LEFT, top: TOP, width: CONTENT_WIDTH, height }
-    : { left: LEFT, top: TOP, width: LEFT_WIDTH, height }
+    ? { left: LEFT, top: panelTop, width: CONTENT_WIDTH, height }
+    : { left: LEFT, top: panelTop, width: LEFT_WIDTH, height }
   const rightStyle = only
-    ? { left: LEFT, top: TOP, width: CONTENT_WIDTH, height }
-    : { left: LEFT + LEFT_WIDTH + GAP, top: TOP, width: RIGHT_WIDTH, height }
+    ? { left: LEFT, top: panelTop, width: CONTENT_WIDTH, height }
+    : { left: LEFT + LEFT_WIDTH + GAP, top: panelTop, width: RIGHT_WIDTH, height }
 
   return (
     <ContentFrame eyebrow={eyebrow} title={title} accent={accent} slideNumber={slideNumber}>

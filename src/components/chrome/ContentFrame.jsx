@@ -10,9 +10,11 @@ import Footer from './Footer'
 export default function ContentFrame({ eyebrow, title, accent = 'blue', slideNumber, children }) {
   return (
     <div className="relative h-full w-full bg-white">
-      <Eyebrow accent={accent} className="absolute left-[106px] top-[48px]">
-        {eyebrow}
-      </Eyebrow>
+      {eyebrow && (
+        <Eyebrow accent={accent} className="absolute left-[106px] top-[48px]">
+          {eyebrow}
+        </Eyebrow>
+      )}
       <SlideTitle className="absolute left-[106px] right-[106px] top-[96px]">{title}</SlideTitle>
       <div className="absolute inset-0">{children}</div>
       <Footer slideNumber={slideNumber} />

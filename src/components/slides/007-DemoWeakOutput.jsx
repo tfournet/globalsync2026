@@ -7,18 +7,20 @@ import { weakOutput, withoutTim } from '../../data/demo.js'
 export default function DemoWeakOutput({ slideNumber }) {
   return (
     <PromptOutputSlide
-      eyebrow="The mirror"
+      eyebrow=""
       title="What the client would have received"
       accent="blue"
       slideNumber={slideNumber}
       only="output"
+      outputLabel=""
       output={withoutTim(weakOutput)}
-      outputFontSize={22}
+      outputFontSize={26}
+      panelTop={215}
       outputColumns={2}
       outputEmphasize={[
         'This certificate had actually been flagged for renewal in our Q2 review, and we\'re correcting the gap that let it lapse.',
       ]}
-      punchline="You pasted the ticket. It told your client what you never approved."
+      punchline="It leaked that line in two of three runs, and you had no say in which."
     />
   )
 }
