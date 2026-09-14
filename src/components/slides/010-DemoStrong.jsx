@@ -5,13 +5,14 @@ export default function DemoStrong({ slideNumber }) {
   return (
     <PromptOutputSlide
       eyebrow="The second try"
-      title="Forwardable without edits"
+      title="Read it, put your name on it, send it"
       accent="blue"
       slideNumber={slideNumber}
       only="output"
+      outputLabel=""
       output={withoutTim(strongOutput)}
-      outputFontSize={28}
-      punchline="Same tool. Same task. The only thing that changed was how you asked."
+      outputFontSize={30}
+      punchline="Those five questions work on any brief, to a person or a machine."
     />
   )
 }
