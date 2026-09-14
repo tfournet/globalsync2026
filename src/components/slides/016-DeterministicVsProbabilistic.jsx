@@ -8,7 +8,7 @@ export default function DeterministicVsProbabilistic({ slideNumber }) {
   return (
     <ComparisonSlide
       eyebrow="Two machines"
-      title="What I hand to each machine"
+      title="What I hand to each kind of step"
       accent="gold"
       slideNumber={slideNumber}
       top={265}
@@ -19,7 +19,7 @@ export default function DeterministicVsProbabilistic({ slideNumber }) {
       arrows={false}
       emphasizeRight={false}
       left={{
-        heading: 'Automation',
+        heading: 'Deterministic',
         icon: Cog,
         items: [
           'Work with an exact rule, if this then that.',
@@ -28,7 +28,7 @@ export default function DeterministicVsProbabilistic({ slideNumber }) {
         ],
       }}
       right={{
-        heading: 'AI',
+        heading: 'Probabilistic',
         icon: Sparkles,
         items: [
           'Work where a good guess is enough: drafting, sorting, summarizing.',
