@@ -32,7 +32,7 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 
 ## Beats and slides
 
-20 slides, about 25 minutes, one accent per slide. SLOW marks where Tim spends the time he saves by running fast.
+20 slides, about 25 minutes, one accent per slide. All 20 approved 14 Sep 2026. SLOW marks where Tim spends the time he saves by running fast.
 
 1. Cover
 2. Pull statement, blue, a question with no footer: Whose vacation request do you dread approving? SLOW. Ask it, let the room name someone, click. The answer is the talk. Opens on delivery (what breaks when that person is out) without claiming anything about the room or repeating the Sizers. Tim's automation-fear line is spoken at slide 11, where Aharon's law answers it. A bridge slide about a stalled automation attempt was tried on 13 Sep and cut: it generalized, brought automation in at minute one, and duplicated the three-decisions slide.
@@ -61,13 +61,15 @@ Closing line: If you can't write the rule, you can't hire your way out of it eit
 ## Lines to drop verbatim, once each
 
 - Whose vacation request do you dread approving?
+- Your best employees are the ones who usually guess right.
 - Aharon's first law: you can't automate a process that doesn't exist.
-- Automate to give time back to the customer. Not to hide from them.
-- You already run a probabilistic system. It's called a tech at 4pm on a Tuesday.
-- The cost of AI isn't tokens. It's review.
-- Your customers have automatons too.
+- A step is only documented if someone else can follow it without asking for help.
+- Automate to give time back to the customer, not to hide from them.
+- You already run a probabilistic system: a tech at 4pm on a Tuesday.
+- Tell it everything in writing before it starts, then check whether it understood.
+- Better communication with your people, your customers, and your AI.
 
-Not every one needs to land. The first three and the last one are the talk.
+Not every one needs to land. The first, the fourth, and the last are the talk.
 
 ## Delivery lane
 
