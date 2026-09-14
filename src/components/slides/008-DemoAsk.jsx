@@ -10,10 +10,12 @@ export default function DemoAsk({ slideNumber }) {
       title="Ask it how to ask better"
       accent="blue"
       slideNumber={slideNumber}
+      askLabel=""
+      outputLabel=""
       prompt={askPrompt}
-      promptFontSize={30}
+      promptFontSize={34}
       output={askOutputHeadings}
-      outputFontSize={34}
+      outputFontSize={38}
       punchline="Every one of those is a rule you already had in your head."
     />
   )
