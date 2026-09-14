@@ -103,7 +103,7 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
 
       {/* The test, which is what Aharon's law means here */}
       <p className="absolute text-[34px] font-bold text-rff-orange" style={{ left: 106, top: 912, width: 1708 }}>
-        A step is written down when someone who was not in the room can follow it without asking.
+        A step is only documented if someone else can follow it without asking for help.
       </p>
 
       {/* What the line meant */}
