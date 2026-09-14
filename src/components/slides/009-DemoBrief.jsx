@@ -20,7 +20,7 @@ export default function DemoBrief({ slideNumber }) {
         "She isn't technical and doesn't want to be",
         "She'll forward whatever I send straight to Dr. Patel",
         "don't quote them",
-        "That's a conversation for me and Dr. Patel, not this email",
+        "she definitely doesn't need to hear that we flagged this cert in the spring and the renewal never got approved",
         "that's what she asked me on the phone and what she's afraid of",
         'That\'s what "on top of it" actually means, so say that',
         'Do not use the phrase "on top of it" anywhere in the email',
