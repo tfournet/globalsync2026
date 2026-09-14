@@ -16,10 +16,10 @@ export default function TheDemoNeverHadAClient({ slideNumber }) {
         <li>AI demos give a little instruction and show something beautiful built from it.</li>
         <li className="mt-[32px]">Beautiful does not mean the details are where you want them.</li>
         <li className="mt-[32px]">
-          Hand a junior tech a ticket with the same little instruction and they work hard, do what they think is right,
-          and give you something you would not put your name on.
+          You already know what a junior tech does with a ticket that thin: real effort, a reasonable guess, and
+          something you would not put your name on.
         </li>
-        <li className="mt-[32px]">AI does exactly the same thing, faster.</li>
+        <li className="mt-[32px]">AI does that too, without the pause where a person asks you a question.</li>
       </ul>
     </ContentFrame>
   )
