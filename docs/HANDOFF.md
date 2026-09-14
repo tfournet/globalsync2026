@@ -1,4 +1,4 @@
-# Handoff: state of the deck as of 14 September 2026, about 4am
+# Handoff: state of the deck as of 14 September 2026, midday
 
 Read this, then docs/OUTLINE.md, then src/data/notes.js, then look at
 docs/screenshots/01.png through 20.png. That is the whole state.
@@ -17,37 +17,26 @@ origin/main, every change so far is committed and pushed.
 ## Where the walk-through stands
 
 Tim is walking the deck slide by slide with the assistant and approving each
-before moving on. Slides 1 to 11 are done. Slide 12 has new copy and a drawn
-layout (checklist, two readings, invoice) that Tim called "still sloppish";
-its note is approved. Slides 13 to 20 still carry the old copy
-and old-style notes. Ask before moving from one slide to the next.
+before moving on. Slides 1 to 14 are approved (slide, note, outline beat).
+Slides 15 to 20 still carry old copy and old-style notes. Ask before moving
+from one slide to the next. Next up: slide 15, deterministic vs probabilistic
+(the two-tools comparison, gold accent). Known issues there: footer quip
+"You already run a probabilistic system. It's called a tech at 4pm on a
+Tuesday." (two-sentence shape), and pitch risk: "automation owns the decision
+and the record, AI never" said by someone from an automation vendor; Opus
+suggested first person and evidence before assertion. Slide 17 title is the
+quip shape ("The cost of AI isn't tokens. It's review."). Slide 19 (close) is
+done in Tim's words; do not touch without asking.
 
-## Alternatives gallery: partly decided
+## Alternatives gallery: decided
 
-Tim asked for three alternative designs of every finished slide (1 to 12).
-On 14 Sep he picked B (Artifacts) for slides 5, 6, 7, 8, 9, 10 and 12; those
-are now the originals in src/components/slides/ and their variants are gone.
-Slides 1, 2, 3, 4 and 11 keep their originals for now; their A/B/C variants
-are still in the gallery in case he wants them. Read
-docs/ALTERNATIVES.md for the three directions (A Editorial, B Artifacts,
-C Stage; the same letter means the same visual language on every slide, so
-mixed picks still hang together). To review: `npm run dev`, then
-http://localhost:1745/?alt=1 (row per slide: original, A, B, C; click to
-enlarge, Escape to close). Screenshots in docs/alternatives/NN-{orig,A,B,C}.png.
-Originals are untouched; variants live in src/components/alternatives/ and
-are discovered by filename. To adopt a pick: copy the variant's JSX over the
-original slide file (keep the original's export name), delete the variant
-files for that slide, rerun `npm test` and `npm run screenshots`. Copy is
-verbatim on every variant; only artifact chrome (labels such as Owner, To,
-Subject) was added. Known soft spots: slide 4 variants run body text near
-32px; slide 3 B has dead space above the sentences; slide 1 B has a large
-empty calendar block.
-
-New rule learned at slide 12: no two-short-sentence titles, paragraphs, or
-footers, even when the second sentence is a fact ("The list was followed.
-The process still didn't exist." was rejected). One plain sentence each.
-Also: scenarios are told in present tense, not past ("he cancels", not "he
-canceled"); Tim does not want rhetorical scenarios narrated as history.
+Tim asked for three alternative designs (A Editorial, B Artifacts, C Stage)
+of slides 1 to 12. He picked B for 5, 6, 7, 8, 9, 10 and 12; those are now the
+originals and their variants are deleted. Slides 1, 2, 3, 4 and 11 keep their
+originals; their A/B/C variants remain in src/components/alternatives/ and the
+gallery (http://localhost:1745/?alt=1, `npm run screenshots:alt`) in case he
+wants them. Slide 13 also has A/B/C variants in the gallery; he rejected all
+three and the current slide 13 is his own direction. See docs/ALTERNATIVES.md.
 
 ## Rules Tim set this weekend (all of these were learned from rejections)
 
@@ -78,6 +67,17 @@ canceled"); Tim does not want rhetorical scenarios narrated as history.
   now accept empty eyebrow/label, plus `panelTop` and `promptFlow` props).
 - When asked for a critique or options, spawn an Opus agent with full
   context and Tim's rules; relay condensed, add own read, ask before applying.
+- No two-short-sentence titles, paragraphs, or footers, even when the second
+  sentence is a fact. One plain sentence each.
+- Scenarios are told in present tense (he cancels, not he canceled).
+- If some people in a scenario are named, name everyone who acts (Mike,
+  Chris, you). Do not leave "whoever covers for him".
+- No vendor names on slides. Tim will push against their model but not name
+  them; the room will not contain them.
+- Resolutions belong on the slide as a general principle, not a situational
+  fix ("an hour with Mike" was rejected as hand-wavy and too situational).
+- A slide's title in Tim's own first-person observation beats a verdict on
+  the room ("I keep seeing MSPs..." not "Most MSPs...").
 
 ## Slides 1 to 10 as approved
 
@@ -107,27 +107,57 @@ menu (a Rewst-shaped sales list). Tim's line "we built computers to be
 automation machines, but we're afraid to actually automate anything with
 them" is spoken at slide 11, where Aharon's law answers it.
 
-## Slides 11 and 12
+## Slides 11 to 14 as approved
 
-11 approved: pull statement unchanged; note rewritten (a424eae) and opens
-with the fear line, then "having a process is not the same as having someone
-who knows how it is done", ends "Here is the same thing happening to a
-checklist instead of an email." 12: title "A client's employee leaves while
-Mike is on vacation", eyebrow "What the law means here", drawn checklist with
-"Cancel software licenses" lit, two readings, invoice line "Adobe Creative
-Cloud, 9 seats". Tim wants the image drawn in the attendee's mind, in the
-order it happens: covered, a year passes, invoice, then what Mike meant.
-Note approved 14 Sep.
+11 pull statement unchanged; note opens with the fear line, then "having a
+process is not the same as having someone who knows how it is done", ends
+"Here is the same thing happening to a checklist instead of an email."
+12 title "A client's employee leaves while Mike is on vacation"; drawn ticked
+checklist (Owner Mike, 6 of 6), "Cancel software licenses" lit; right column
+"That line means": to Chris, covering for Mike, Microsoft 365; to Mike,
+Microsoft 365, Adobe, and the two tools he set up for that client; Adobe
+invoice twelve months later, 9 seats, bottom right; orange line across the
+bottom: "A step is only documented if someone else can follow it without
+asking for help." (Tim's wording, the principle not the fix). Note approved.
+13 title (Tim's) "I keep seeing MSPs try to automate the wrong side of
+operations"; paired rows with orange arrows (ComparisonSlide `aligned`):
+what is sold to answer the customer (agent on the support line, agent in the
+client's Teams, password resets with no tech, quarterly review from the data)
+against what we are actually buying (a phone that does not ring, a ticket that
+closes without a conversation, an end user we never have to talk to, a review
+meeting we do not have to sit in). Footer "Automate to give time back to the
+customer, not to hide from them." Left column came from web research on what
+vendors sell MSPs in 2026 (summary in the session; no brands on the slide).
+Note says the fear out loud in first person, adds the "sounds like relief,
+here is the problem" beat (the call you did not take is where you hear Dana
+is shopping; the review meeting is where the next thing gets sold), the demo
+split (machine drafted, I called Dana), and points the machine at our side of
+the desk. 14 divider: eyebrow "Two machines", title "Which machine gets what",
+line "One follows the rules exactly, one makes a good guess, and that
+difference decides what I hand it." Note promises the three-slide arc.
 
-## Slides 13 to 20, still to do
+Layout changes this weekend: ComparisonSlide takes `top`, `bottom`,
+`fontSize`, `itemGap`, `aligned` (paired grey boxes with arrows in the
+gutter) and colors the right header by accent; TwoColumnSlide text enlarged;
+Footer `light` uses the lighter blue link; notes HUD is 1040px wide with 20px
+text so notes read without scrolling.
 
-13 most MSPs automate the
-wrong things (footer is the quip shape; this is where Opus said the
-client-email demo should be collected: the machine never talked to Dana).
-14 divider, eyebrow "The second machine". 15 two different tools (footer
-quip). 16 guardrail sandwich. 17 the honest limit (title quip). 18 the
-more. 19 close in Tim's words (done, do not touch without asking). 20
-presenter. Every note from 11 on is old style and needs converting.
+## The theme, as the assistant reads it (Tim asked, 14 Sep)
+
+The only thing you actually own is the intent in your best people's heads,
+and you never had to write it down because they kept guessing right for you.
+Delegation without the rule, the AI demo, Aharon's law, Mike, where to point
+the machine, which machine, and the close are that one idea from different
+sides. The bodies were never the constraint; unspoken intent was.
+
+## Slides 15 to 20, still to do
+
+15 two different tools (footer quip; pitch risk). 16 guardrail sandwich
+(Right of Boom callback in the note; two minutes). 17 the honest limit (title
+quip). 18 the more (SLOW; "Your customers have automatons too"). 19 close in
+Tim's words (done, do not touch without asking). 20 presenter. Every note
+from 15 on is old style (stage directions, "Click", "Line to land") and needs
+converting to spoken script.
 
 ## The argument, in Tim's words
 
