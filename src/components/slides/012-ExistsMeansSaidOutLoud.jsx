@@ -52,7 +52,7 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       {/* The task list, closed */}
       <div
         className="absolute rounded-[4px] bg-rff-light"
-        style={{ left: L, top: 248, width: LW, padding: '32px 40px 36px' }}
+        style={{ left: L, top: 222, width: LW, padding: '30px 40px 30px' }}
       >
         <p className="text-[26px] font-bold uppercase tracking-[0.12em] text-rff-muted">
           Checklist: employee departure
@@ -86,7 +86,7 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       {/* The bill */}
       <div
         className="absolute overflow-hidden rounded-[4px] border-[3px] border-rff-gray-line bg-white"
-        style={{ left: R, top: 682, width: RW }}
+        style={{ left: R, top: 668, width: RW }}
       >
         <div className="absolute left-0 top-0 h-full w-[10px] bg-rff-orange" />
         <div style={{ padding: '28px 36px 30px 46px' }}>
@@ -102,12 +102,12 @@ export default function ExistsMeansSaidOutLoud({ slideNumber }) {
       </div>
 
       {/* The fix, Tim's words */}
-      <p className="absolute text-[34px] font-bold text-rff-orange" style={{ left: 106, top: 906, width: 1708 }}>
+      <p className="absolute text-[34px] font-bold text-rff-orange" style={{ left: 106, top: 912, width: 1708 }}>
         The fix is an hour with Mike, writing down which licenses.
       </p>
 
       {/* What the line meant */}
-      <div className="absolute" style={{ left: R, top: 232, width: RW }}>
+      <div className="absolute" style={{ left: R, top: 226, width: RW }}>
         <p className="text-[26px] font-bold uppercase tracking-[0.12em] text-rff-orange">That line means</p>
         <p className="mt-[30px] text-[28px] text-rff-muted">To Chris, covering for Mike</p>
         <p className="mt-[6px] text-[40px] font-bold leading-[1.15] text-rff-navy">Microsoft 365</p>
