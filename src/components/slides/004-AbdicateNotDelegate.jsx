@@ -3,19 +3,18 @@ import ComparisonSlide from '../layouts/ComparisonSlide'
 export default function AbdicateNotDelegate({ slideNumber }) {
   return (
     <ComparisonSlide
-      eyebrow="The habit"
-      title="We abdicate. We think we delegate."
+      eyebrow="How it got that way"
+      title="You handed over the work and the decisions at the same time"
       accent="blue"
       slideNumber={slideNumber}
       left={{
-        heading: 'Delegate',
-        items: ['Hand over the work', 'Keep the definition of done', 'Say what good looks like'],
+        heading: 'When you delegate',
+        items: ['The work moves to them.', 'The standard stays with you, written down.', 'They can check themselves against it.'],
       }}
       right={{
-        heading: 'Abdicate',
-        items: ['Hand over both', 'Grade against the version in your head', 'Get away with it, until you don\'t'],
+        heading: 'When you hand over the decisions too',
+        items: ['The work moves to them.', 'The standard stays with you, unwritten.', 'They guess, and if you are lucky they guess right.'],
       }}
-      closing="Your best tech has been filling in the blanks for years. The new hire couldn't. Neither can this."
     />
   )
 }
