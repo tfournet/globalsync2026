@@ -7,13 +7,14 @@ export default function DemoBrief({ slideNumber }) {
   return (
     <PromptOutputSlide
       eyebrow="The second try"
-      title="Now with the judgment calls"
+      title="The same ask, with the rules written down"
       accent="blue"
       slideNumber={slideNumber}
       only="prompt"
-      askLabel="Same ticket pasted below. This went above it this time."
+      askLabel="Same ticket pasted below"
       prompt={withoutTim(strongBrief)}
-      promptFontSize={28}
+      promptFontSize={32}
+      promptFlow
       promptColumns={2}
       promptEmphasize={[
         "She isn't technical and doesn't want to be",

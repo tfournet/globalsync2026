@@ -71,7 +71,7 @@ function renderInline(line, key, emphasize = [], emphasisClass = '') {
 
 // Blank source lines become paragraph gaps (about a third of a line) instead
 // of full empty lines, which is what buys the room-legible font size.
-function Paragraphs({ lines, fontSize, columns, emphasize, emphasisClass }) {
+function Paragraphs({ lines, fontSize, columns, emphasize, emphasisClass, flow = false }) {
   const paras = []
   let cur = []
   for (const l of lines) {
@@ -89,7 +89,7 @@ function Paragraphs({ lines, fontSize, columns, emphasize, emphasisClass }) {
       style={{ fontSize, columnCount: columns, columnGap: 48 }}
     >
       {paras.map((p, i) => (
-        <p key={i} className={i === 0 ? '' : 'mt-[0.45em]'} style={{ breakInside: 'avoid' }}>
+        <p key={i} className={i === 0 ? '' : 'mt-[0.45em]'} style={{ breakInside: flow ? 'auto' : 'avoid' }}>
           {p.map((l, j) => (
             <span key={j}>
               {renderInline(l, j, emphasize, emphasisClass)}
@@ -102,7 +102,7 @@ function Paragraphs({ lines, fontSize, columns, emphasize, emphasisClass }) {
   )
 }
 
-function Panel({ label, labelClass, text, lines, fontSize, columns, style, emphasize, emphasisClass }) {
+function Panel({ label, labelClass, text, lines, fontSize, columns, style, emphasize, emphasisClass, flow }) {
   const w = sliceLines(text, lines)
   return (
     <div
@@ -111,7 +111,7 @@ function Panel({ label, labelClass, text, lines, fontSize, columns, style, empha
     >
       {label && <p className={`text-[27px] font-bold uppercase tracking-[0.12em] ${labelClass}`}>{label}</p>}
       <div className={`${label ? 'mt-[24px]' : ''} min-h-0 flex-1 overflow-hidden`}>
-        <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} emphasize={emphasize} emphasisClass={emphasisClass} />
+        <Paragraphs lines={w.lines} fontSize={fontSize} columns={columns} emphasize={emphasize} emphasisClass={emphasisClass} flow={flow} />
       </div>
 
     </div>
@@ -142,6 +142,7 @@ export default function PromptOutputSlide({
   punchlineQuoted = false,
   footnote,
   panelTop = TOP,
+  promptFlow = false,
 }) {
   const hasExtraLine = Boolean(punchline || footnote)
   const bottom = FOOTER_TOP - BOTTOM_MARGIN - (hasExtraLine ? (punchlineQuoted ? QUOTED_LINE_SPACE : EXTRA_LINE_SPACE) : 0)
@@ -168,6 +169,7 @@ export default function PromptOutputSlide({
           style={leftStyle}
           emphasize={promptEmphasize}
           emphasisClass={labelClass}
+          flow={promptFlow}
         />
       )}
       {only !== 'prompt' && (
