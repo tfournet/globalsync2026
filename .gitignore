@@ -7,3 +7,4 @@ blob-report/
 playwright/.cache/
 .tmp/
 *.log
+dist-alt-*

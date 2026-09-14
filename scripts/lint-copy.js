@@ -3,12 +3,13 @@
 // Chrome and shell code (src/components/**, src/PresentationApp.jsx) is also
 // scanned, but only for em dashes, since that code is UI copy rather than
 // session content and can legitimately contain "!" (JS operators, etc).
-import { readdirSync, readFileSync, statSync } from 'node:fs'
+import { existsSync, readdirSync, readFileSync, statSync } from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const root = path.dirname(path.dirname(fileURLToPath(import.meta.url)))
 const slidesDir = path.join(root, 'src', 'components', 'slides')
+const alternativesDir = path.join(root, 'src', 'components', 'alternatives')
 const componentsDir = path.join(root, 'src', 'components')
 const presentationApp = path.join(root, 'src', 'PresentationApp.jsx')
 
@@ -52,9 +53,9 @@ function report(file, issues) {
 }
 
 function main() {
-  const slideFiles = readdirSync(slidesDir)
-    .filter((f) => f.endsWith('.jsx'))
-    .map((f) => path.join(slidesDir, f))
+  const slideFiles = [slidesDir, alternativesDir]
+    .filter((dir) => existsSync(dir))
+    .flatMap((dir) => readdirSync(dir).filter((f) => f.endsWith('.jsx')).map((f) => path.join(dir, f)))
 
   let total = 0
   let filesChecked = 0
@@ -64,7 +65,7 @@ function main() {
     filesChecked += 1
   }
 
-  const chromeFiles = listFilesRecursive(componentsDir).filter((f) => !f.startsWith(slidesDir))
+  const chromeFiles = listFilesRecursive(componentsDir).filter((f) => !f.startsWith(slidesDir) && !f.startsWith(alternativesDir))
   for (const file of [...chromeFiles, presentationApp]) {
     total += report(file, lintFile(file, { emDashOnly: true }))
     filesChecked += 1
