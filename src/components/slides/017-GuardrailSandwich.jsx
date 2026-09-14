@@ -73,7 +73,7 @@ export default function GuardrailSandwich({ slideNumber }) {
   return (
     <ContentFrame
       eyebrow="The Guardrail Sandwich"
-      title="Put the probabilistic part in the middle"
+      title="You can put AI in the middle of a process you wrote"
       accent="gold"
       slideNumber={slideNumber}
     >
@@ -90,7 +90,7 @@ export default function GuardrailSandwich({ slideNumber }) {
         <div className="flex-1"><Step n={6} text="Log what happened and tell the person who owns it." /></div>
       </Band>
       <p className="absolute text-center text-[33px] font-bold text-rff-navy" style={{ left: LEFT, top: 916, width: WIDTH }}>
-        The AI never touches the customer or the record unguarded.
+        Tell it everything in writing before it starts, then check whether it understood.
       </p>
     </ContentFrame>
   )
