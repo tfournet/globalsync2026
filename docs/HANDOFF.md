@@ -1,4 +1,4 @@
-# Handoff: state of the deck as of 14 September 2026, early morning
+# Handoff: state of the deck as of 14 September 2026, about 4am
 
 Read this, then docs/OUTLINE.md, then src/data/notes.js, then look at
 docs/screenshots/01.png through 20.png. That is the whole state.
@@ -17,9 +17,34 @@ origin/main, every change so far is committed and pushed.
 ## Where the walk-through stands
 
 Tim is walking the deck slide by slide with the assistant and approving each
-before moving on. Slides 1 to 10 are done as of this handoff. Slides 11 to
-20 still carry the old copy and the old-style notes and are next. Ask before
-moving from one slide to the next; he said so explicitly.
+before moving on. Slides 1 to 11 are done. Slide 12 has new copy and a drawn
+layout (checklist, two readings, invoice) that Tim called "still sloppish";
+its note is a DRAFT he has not read. Slides 13 to 20 still carry the old copy
+and old-style notes. Ask before moving from one slide to the next.
+
+## First thing in the morning: the alternatives gallery
+
+Tim asked, just before sleeping, for three alternative designs of every
+finished slide (1 to 12) so he can pick per slide. They exist. Read
+docs/ALTERNATIVES.md for the three directions (A Editorial, B Artifacts,
+C Stage; the same letter means the same visual language on every slide, so
+mixed picks still hang together). To review: `npm run dev`, then
+http://localhost:1745/?alt=1 (row per slide: original, A, B, C; click to
+enlarge, Escape to close). Screenshots in docs/alternatives/NN-{orig,A,B,C}.png.
+Originals are untouched; variants live in src/components/alternatives/ and
+are discovered by filename. To adopt a pick: copy the variant's JSX over the
+original slide file (keep the original's export name), delete the variant
+files for that slide, rerun `npm test` and `npm run screenshots`. Copy is
+verbatim on every variant; only artifact chrome (labels such as Owner, To,
+Subject) was added. Known soft spots: slide 4 variants run body text near
+32px; slide 3 B has dead space above the sentences; slide 1 B has a large
+empty calendar block.
+
+New rule learned at slide 12: no two-short-sentence titles, paragraphs, or
+footers, even when the second sentence is a fact ("The list was followed.
+The process still didn't exist." was rejected). One plain sentence each.
+Also: scenarios are told in present tense, not past ("he cancels", not "he
+canceled"); Tim does not want rhetorical scenarios narrated as history.
 
 ## Rules Tim set this weekend (all of these were learned from rejections)
 
@@ -79,10 +104,21 @@ menu (a Rewst-shaped sales list). Tim's line "we built computers to be
 automation machines, but we're afraid to actually automate anything with
 them" is spoken at slide 11, where Aharon's law answers it.
 
-## Slides 11 to 20, still to do
+## Slides 11 and 12
 
-11 Aharon's law (pull statement; note opens with the fear line). 12 Mike
-and the Adobe seats (title is the quip shape). 13 most MSPs automate the
+11 approved: pull statement unchanged; note rewritten (a424eae) and opens
+with the fear line, then "having a process is not the same as having someone
+who knows how it is done", ends "Here is the same thing happening to a
+checklist instead of an email." 12: title "A client's employee leaves while
+Mike is on vacation", eyebrow "What the law means here", drawn checklist with
+"Cancel software licenses" lit, two readings, invoice line "Adobe Creative
+Cloud, 9 seats". Tim wants the image drawn in the attendee's mind, in the
+order it happens: covered, a year passes, invoice, then what Mike meant.
+Note is a draft marked DRAFT in notes.js.
+
+## Slides 13 to 20, still to do
+
+13 most MSPs automate the
 wrong things (footer is the quip shape; this is where Opus said the
 client-email demo should be collected: the machine never talked to Dana).
 14 divider, eyebrow "The second machine". 15 two different tools (footer
