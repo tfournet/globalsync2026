@@ -5,7 +5,7 @@ export default function TheTypingIsHidingADecision({ slideNumber }) {
   return (
     <div className="relative h-full w-full bg-white">
       <Eyebrow accent="orange" className="absolute left-[106px] top-[48px]">
-        Why the rule never got written
+        What they decide all day
       </Eyebrow>
       <p
         className="absolute font-bold text-rff-navy"
@@ -19,7 +19,7 @@ export default function TheTypingIsHidingADecision({ slideNumber }) {
         className="absolute font-bold text-rff-orange"
         style={{ left: 106, top: 620, width: 1708, fontSize: 72, lineHeight: 1.2, letterSpacing: '-0.02em' }}
       >
-        Your best tech decides that all day. Nobody has ever asked them how.
+        Those are decisions, and they are not in any document you own.
       </p>
       <Footer slideNumber={slideNumber} />
     </div>
