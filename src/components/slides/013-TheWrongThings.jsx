@@ -12,10 +12,10 @@ export default function TheWrongThings({ slideNumber }) {
       title="I keep seeing MSPs try to automate the wrong side of operations"
       accent="orange"
       slideNumber={slideNumber}
-      top={330}
-      bottom={878}
-      fontSize={36}
-      itemGap={22}
+      top={300}
+      bottom={888}
+      fontSize={33}
+      itemGap={14}
       aligned
       left={{
         heading: 'What is sold to answer the customer',
