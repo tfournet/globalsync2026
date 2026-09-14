@@ -19,7 +19,7 @@ origin/main, every change so far is committed and pushed.
 Tim is walking the deck slide by slide with the assistant and approving each
 before moving on. Slides 1 to 11 are done. Slide 12 has new copy and a drawn
 layout (checklist, two readings, invoice) that Tim called "still sloppish";
-its note is a DRAFT he has not read. Slides 13 to 20 still carry the old copy
+its note is approved. Slides 13 to 20 still carry the old copy
 and old-style notes. Ask before moving from one slide to the next.
 
 ## Alternatives gallery: partly decided
@@ -117,7 +117,7 @@ Mike is on vacation", eyebrow "What the law means here", drawn checklist with
 "Cancel software licenses" lit, two readings, invoice line "Adobe Creative
 Cloud, 9 seats". Tim wants the image drawn in the attendee's mind, in the
 order it happens: covered, a year passes, invoice, then what Mike meant.
-Note is a draft marked DRAFT in notes.js.
+Note approved 14 Sep.
 
 ## Slides 13 to 20, still to do
 
