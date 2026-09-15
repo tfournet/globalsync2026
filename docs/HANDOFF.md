@@ -186,7 +186,12 @@ regenerate without reason; if you do, first run stays.
 ## Other state
 
 No headshot by Tim's decision; the presenter card renders without one.
-Tim runs fast when nervous; SLOW marks in notes are where to spend time.
+Presenter mode: press P in the deck to open a second window (?presenter=1)
+with the current slide, next slide, note, and clock. Both windows share a
+broadcast channel, so arrow keys, T and R in either one drive both. Put the
+deck window on the projector (F for fullscreen) and the presenter window on
+the laptop. Tim runs fast when nervous; SLOW marks in notes are where to
+spend time.
 About five minutes of buffer before the hard stop. Tech check at lunch
 Thursday, 11:45 to 12:45.
 

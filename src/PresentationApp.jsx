@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { slides } from './data/slides.jsx'
 import { notes } from './data/notes.js'
 import { EVENT } from './config/tokens.js'
+import { deckChannel } from './deckChannel.js'
 
 const STAGE_WIDTH = 1920
 const STAGE_HEIGHT = 1080
@@ -50,10 +51,34 @@ export default function PresentationApp() {
 
   const breakIndex = useMemo(() => slides.findIndex((s) => s.id === 'break'), [])
 
-  const goTo = useCallback((next) => {
+  const goTo = useCallback((next, { broadcast = true } = {}) => {
     const clamped = Math.max(0, Math.min(slides.length - 1, next))
     setIndex(clamped)
+    if (broadcast) deckChannel.send({ type: 'index', index: clamped })
   }, [])
+
+  // Presenter window sync: it may move the deck, ask for state, or toggle the timer.
+  useEffect(() => {
+    const snapshot = () => ({ type: 'timer', running: timerRunning, elapsed, at: Date.now() })
+    return deckChannel.listen((msg) => {
+      if (msg.type === 'index') goTo(msg.index, { broadcast: false })
+      if (msg.type === 'hello') {
+        deckChannel.send({ type: 'index', index })
+        deckChannel.send(snapshot())
+      }
+      if (msg.type === 'toggle-timer') setTimerRunning((v) => !v)
+      if (msg.type === 'reset-timer') {
+        setElapsed(0)
+        setTimerRunning(false)
+      }
+    })
+  }, [index, timerRunning, elapsed, goTo])
+
+  const atZero = elapsed === 0
+  useEffect(() => {
+    deckChannel.send({ type: 'timer', running: timerRunning, elapsed, at: Date.now() })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [timerRunning, atZero])
 
   useEffect(() => {
     window.history.replaceState(null, '', `#/${index + 1}`)
@@ -131,6 +156,10 @@ export default function PresentationApp() {
         case 'b':
         case 'B':
           if (breakIndex >= 0) goTo(breakIndex)
+          break
+        case 'p':
+        case 'P':
+          window.open(`${window.location.pathname}?presenter=1`, 'globalsync2026-presenter', 'width=1400,height=860')
           break
         case 'f':
         case 'F':
