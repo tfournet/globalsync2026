@@ -73,7 +73,10 @@ three and the current slide 13 is his own direction. See docs/ALTERNATIVES.md.
 - His name does not appear on demo slides. `withoutTim()` in
   src/data/demo.js swaps "Tim" for "Alex" at display time; the recorded
   prompts and outputs stay verbatim (docs/demo/README.md notes this).
-- Presenter notes are the words he says, in prose, with a target time. No
+- Presenter notes are bullets as of 17 Sep (talk day): a target time, then one
+  sayable sentence per bullet; the line break is the pause. The prose versions
+  are at git tag notes-prose-checkpoint. To revert:
+  `git checkout notes-prose-checkpoint -- src/data/notes.js`. No
   stage directions, no predictions about the room, no reading the slide
   aloud, no switching into the model's voice mid-note (paraphrase it).
   "We" for shared demo steps; "I" only for his own experience.

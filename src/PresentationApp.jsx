@@ -3,6 +3,7 @@ import { slides } from './data/slides.jsx'
 import { notes } from './data/notes.js'
 import { EVENT } from './config/tokens.js'
 import { deckChannel } from './deckChannel.js'
+import NoteText from './NoteText.jsx'
 
 const STAGE_WIDTH = 1920
 const STAGE_HEIGHT = 1080
@@ -219,9 +220,9 @@ export default function PresentationApp() {
               {timerRunning ? 'Running' : 'Stopped'}
             </span>
           </div>
-          <p className="max-h-[calc(100vh-200px)] overflow-y-auto whitespace-pre-wrap text-[20px] leading-[1.45]">
-            {slideNotes || 'No notes for this slide.'}
-          </p>
+          <div className="max-h-[calc(100vh-200px)] overflow-y-auto">
+            <NoteText note={slideNotes} size={20} gap={10} />
+          </div>
         </div>
       )}
 

@@ -3,6 +3,7 @@ import { slides } from './data/slides.jsx'
 import { notes } from './data/notes.js'
 import { EVENT } from './config/tokens.js'
 import { deckChannel } from './deckChannel.js'
+import NoteText from './NoteText.jsx'
 
 const W = 1920
 const H = 1080
@@ -111,7 +112,7 @@ export default function PresenterView() {
         </div>
       </div>
       <div className="min-h-0 flex-1 overflow-y-auto rounded-[4px] bg-white/95 p-[24px] text-rff-body">
-        <p className="whitespace-pre-wrap text-[24px] leading-[1.45]">{note || 'No notes for this slide.'}</p>
+        <NoteText note={note} size={24} gap={12} />
       </div>
     </div>
   )

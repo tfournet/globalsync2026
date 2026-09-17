@@ -1,5 +1,6 @@
 import { slides } from './data/slides.jsx'
 import { notes } from './data/notes.js'
+import NoteText from './NoteText.jsx'
 
 const W = 1920
 const H = 1080
@@ -47,9 +48,9 @@ export default function PrintDeck({ withNotes = false }) {
             <p className="mt-[22px] text-[20px] font-bold uppercase tracking-[0.12em] text-rff-muted">
               Slide {i + 1} of {slides.length}
             </p>
-            <p className="mt-[8px] whitespace-pre-wrap text-[22px] leading-[1.4]">
-              {note || 'No notes for this slide.'}
-            </p>
+            <div className="mt-[8px]">
+              <NoteText note={note} size={20} gap={7} />
+            </div>
           </div>
         )
       })}
