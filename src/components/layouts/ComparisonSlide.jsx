@@ -21,11 +21,11 @@ function Arrow({ accent }) {
 }
 
 // One pair: a grey box on each side, an arrow in the gutter between them.
-function Row({ leftText, rightText, fontSize, accent, arrows, emphasizeRight }) {
+function Row({ leftText, rightText, fontSize, accent, arrows, emphasizeRight, emphasizeLeft }) {
   const cell = 'flex items-center rounded-[4px] bg-rff-light leading-snug text-rff-body'
   return (
     <>
-      <div className={cell} style={{ padding: '10px 36px', fontSize }}>
+      <div className={`${cell} ${emphasizeLeft ? 'font-bold text-rff-navy' : ''}`} style={{ padding: '10px 36px', fontSize }}>
         {leftText}
       </div>
       <div className="flex items-center justify-center">{arrows && <Arrow accent={accent} />}</div>
@@ -51,6 +51,7 @@ export default function ComparisonSlide({
   aligned = false,
   arrows = true,
   emphasizeRight = true,
+  emphasizeLeft = false,
 }) {
   const gap = aligned ? ALIGNED_GAP : GAP
   const headerHeight = aligned ? 96 : HEADER_HEIGHT
@@ -97,7 +98,7 @@ export default function ComparisonSlide({
           }}
         >
           {left.items.map((item, j) => (
-            <Row key={j} leftText={item} rightText={right.items[j]} fontSize={fontSize} accent={accent} arrows={arrows} emphasizeRight={emphasizeRight} />
+            <Row key={j} leftText={item} rightText={right.items[j]} fontSize={fontSize} accent={accent} arrows={arrows} emphasizeRight={emphasizeRight} emphasizeLeft={emphasizeLeft} />
           ))}
         </div>
       )}

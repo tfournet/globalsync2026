@@ -16,8 +16,9 @@ import DeterministicVsProbabilistic from '../components/slides/016-Deterministic
 import GuardrailSandwich from '../components/slides/017-GuardrailSandwich.jsx'
 import HonestLimit from '../components/slides/018-HonestLimit.jsx'
 import TheMore from '../components/slides/019-TheMore.jsx'
-import OneAction from '../components/slides/020-OneAction.jsx'
-import Presenter from '../components/slides/021-Presenter.jsx'
+import ThreeConversations from '../components/slides/020-ThreeConversations.jsx'
+import OneAction from '../components/slides/021-OneAction.jsx'
+import Presenter from '../components/slides/022-Presenter.jsx'
 
 // Ordered slide registry. Each slide component owns its own content
 // (see AGENTS.md); this file only wires order, identity, and notes.
@@ -40,6 +41,7 @@ export const slides = [
   { id: 'guardrail-sandwich', component: GuardrailSandwich, notesKey: 'guardrail-sandwich' },
   { id: 'honest-limit', component: HonestLimit, notesKey: 'honest-limit' },
   { id: 'the-more', component: TheMore, notesKey: 'the-more' },
+  { id: 'three-conversations', component: ThreeConversations, notesKey: 'three-conversations' },
   { id: 'one-action', component: OneAction, notesKey: 'one-action' },
   { id: 'presenter', component: Presenter, notesKey: 'presenter' },
 ]

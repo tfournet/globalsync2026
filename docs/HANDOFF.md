@@ -16,7 +16,10 @@ origin/main, every change so far is committed and pushed.
 
 ## Where the walk-through stands
 
-Every slide, 1 to 20, is approved: copy, layout, and note. The slide-by-slide
+A summary slide was added on talk day (17 Sep) as slide 19, "Better
+communication with your people, your AI, and your customers", three paired
+rows built from lines already on slides 12, 16 and 13. The close is now 20
+and the presenter card 21. Every slide, 1 to 21, is approved: copy, layout, and note. The slide-by-slide
 walk with Tim is complete. What remains is rehearsal-driven: run the deck
 end to end with the timer (T key), check total time against the 30 minute
 slot with about five minutes of buffer, and adjust notes where Tim trips.
