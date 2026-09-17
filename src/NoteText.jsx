@@ -6,7 +6,7 @@ export default function NoteText({ note, size = 24, gap = 12 }) {
   const [target, ...lines] = note.split('\n').filter((l) => l.trim() !== '')
   return (
     <div style={{ fontSize: size, lineHeight: 1.4 }}>
-      <p className="font-bold uppercase tracking-[0.1em] text-rff-muted" style={{ fontSize: size * 0.7 }}>
+      <p className="font-bold uppercase tracking-[0.1em] text-rff-muted" style={{ fontSize: '0.7em' }}>
         {target}
       </p>
       {lines.map((line, i) => {

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react'
 import { slides } from './data/slides.jsx'
 import { notes } from './data/notes.js'
 import { EVENT } from './config/tokens.js'
@@ -9,6 +9,8 @@ const W = 1920
 const H = 1080
 const BUDGET = EVENT.sessionDurationMinutes * 60
 const WARN = 25 * 60
+const NOTE_MAX = 28
+const NOTE_MIN = 13
 
 function fmt(total) {
   const m = Math.floor(total / 60)
@@ -39,6 +41,10 @@ export default function PresenterView() {
   const [index, setIndex] = useState(0)
   const [timer, setTimer] = useState({ running: false, elapsed: 0, at: Date.now() })
   const [now, setNow] = useState(Date.now())
+  const [noteSize, setNoteSize] = useState(NOTE_MAX)
+  const [fitTick, setFitTick] = useState(0)
+  const noteBox = useRef(null)
+  const [view, setView] = useState({ w: 1400, h: 860 })
 
   useEffect(() => {
     const off = deckChannel.listen((msg) => {
@@ -93,6 +99,39 @@ export default function PresenterView() {
     return () => window.removeEventListener('keydown', onKey)
   }, [index, goTo])
 
+  // Fit the whole note in the panel: start large, shrink until nothing scrolls.
+  useLayoutEffect(() => {
+    const box = noteBox.current
+    if (!box) return
+    let size = NOTE_MAX
+    const inner = box.firstElementChild
+    const apply = (n) => {
+      if (inner) inner.style.fontSize = `${n}px`
+    }
+    apply(size)
+    while (size > NOTE_MIN && box.scrollHeight > box.clientHeight) {
+      size -= 1
+      apply(size)
+    }
+    setNoteSize(size)
+  }, [index, fitTick, view.h, view.w])
+
+  useEffect(() => {
+    const measure = () => setView({ w: window.innerWidth, h: window.innerHeight })
+    measure()
+    window.addEventListener('resize', measure)
+    return () => window.removeEventListener('resize', measure)
+  }, [])
+
+  useEffect(() => {
+    const onResize = () => setFitTick((t) => t + 1)
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
+  const mainScale = Math.min(0.42, (view.h * 0.34) / H, (view.w * 0.55) / W)
+  const nextScale = mainScale * 0.52
+
   const elapsed = timer.running ? timer.elapsed + Math.floor((now - timer.at) / 1000) : timer.elapsed
   const clockClass = elapsed >= BUDGET ? 'text-red-500' : elapsed >= WARN ? 'text-rff-orange' : 'text-white'
   const note = slides[index]?.notesKey ? notes[slides[index].notesKey] : undefined
@@ -100,19 +139,19 @@ export default function PresenterView() {
   return (
     <div className="flex h-screen w-screen flex-col gap-[20px] overflow-hidden bg-rff-dark p-[24px] text-white">
       <div className="flex items-start gap-[24px]">
-        <Thumb index={index} scale={0.42} label={`Slide ${index + 1} of ${slides.length}`} />
+        <Thumb index={index} scale={mainScale} label={`Slide ${index + 1} of ${slides.length}`} />
         <div className="flex flex-1 flex-col gap-[16px]">
-          <Thumb index={index + 1} scale={0.22} label={index + 1 < slides.length ? 'Next' : 'Last slide'} />
+          <Thumb index={index + 1} scale={nextScale} label={index + 1 < slides.length ? 'Next' : 'Last slide'} />
           <div className="rounded-[4px] bg-black/30 p-[16px]">
-            <p className={`font-mono text-[56px] font-bold leading-none ${clockClass}`}>{fmt(elapsed)}</p>
+            <p className={`font-mono text-[44px] font-bold leading-none ${clockClass}`}>{fmt(elapsed)}</p>
             <p className="mt-[6px] text-[14px] uppercase tracking-[0.12em] text-rff-muted-dark">
-              {timer.running ? 'Running' : 'Stopped'}. T starts or stops, R resets, arrows move both windows.
+              {timer.running ? 'Running' : 'Stopped'}. T start or stop, R reset, arrows move both.
             </p>
           </div>
         </div>
       </div>
-      <div className="min-h-0 flex-1 overflow-y-auto rounded-[4px] bg-white/95 p-[24px] text-rff-body">
-        <NoteText note={note} size={24} gap={12} />
+      <div ref={noteBox} className="min-h-0 flex-1 overflow-y-auto rounded-[4px] bg-white/95 p-[24px] text-rff-body">
+        <NoteText note={note} size={noteSize} gap="0.45em" />
       </div>
     </div>
   )
