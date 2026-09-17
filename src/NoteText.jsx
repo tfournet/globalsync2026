@@ -11,7 +11,7 @@ export default function NoteText({ note, size = 24, gap = 12 }) {
       </p>
       {lines.map((line, i) => {
         const text = line.replace(/^•\s*/, '')
-        const pivot = text.startsWith('PIVOT:')
+        const pivot = text.startsWith('PIVOT:') || text.startsWith('NEXT:')
         return (
           <div key={i} className="flex gap-[0.6em]" style={{ marginTop: gap }}>
             <span className="text-rff-muted">{'•'}</span>
